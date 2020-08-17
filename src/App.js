@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Router } from '@reach/router';
 import Homepage from './Pages/HomePage';
 import LeaderBoard from './Pages/LeaderBoard';
@@ -14,17 +13,5 @@ const App = () => {
     </Router>
   );
 };
-=======
-import LeaderBoard from './components/LeaderBoard';
-
-const App = () => {
-    return (
-        <div>
-            <h1>Homepage</h1>
-            <LeaderBoard />
-        </div>
-    );
-}
->>>>>>> leaderboard
 
 export default App;
