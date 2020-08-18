@@ -16,6 +16,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage'
 import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 import LeaderBoardEntry from '../components/LeaderBoardEntry';
@@ -107,6 +108,7 @@ const LeaderBoard = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(8);
+  const [loaded, setLoaded] = React.useState(false);
 
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, users.length - page * rowsPerPage);
 
@@ -125,62 +127,74 @@ const LeaderBoard = () => {
       const response = await axios.get("https://script.google.com/macros/s/AKfycbxAfEhHRFKiwJ05oG1Zw4vF5sXqdnXKm2d6NP3QrF7C3oIhbxY/exec");
       let usersList = response.data.user;
       setUsers(usersList);
+      setLoaded(true);
     }
 
     fetchData();
   }, []);
 
   const classes = useStyles();
-  return (
-    <Grid container spacing={3} justify="center" alignItems="center">
-      <Grid item xs={12} sm={10}>
-        <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="customized table">
-            <TableHead>
-              <TableRow>
-                <StyledTableCell align="center">Rank</StyledTableCell>
-                <StyledTableCell align="center">Username</StyledTableCell>
-                <StyledTableCell align="center">Points</StyledTableCell>
-                <StyledTableCell align="center">Pull Requests</StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {
-                (rowsPerPage > 0 ? users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : users)
-                  .map((row, index) => {
-                    return <LeaderBoardEntry
-                      rank={page * rowsPerPage + index + 1}
-                      username={row.username}
-                      points={row.points}
-                      pull_requests={row.pull_request}
-                      key={row.username}
-                    />
-                  })
-              }
-            </TableBody>
-            <TableFooter>
-              <TableRow>
-                <TablePagination
-                  rowsPerPageOptions={[8, 10, 25, { label: 'All', value: -1 }]}
-                  colSpan={3}
-                  count={users.length}
-                  rowsPerPage={rowsPerPage}
-                  page={page}
-                  SelectProps={{
-                    inputProps: { 'aria-label': 'rows per page' },
-                    native: true,
-                  }}
-                  onChangePage={handleChangePage}
-                  onChangeRowsPerPage={handleChangeRowsPerPage}
-                  ActionsComponent={TablePaginationActions}
-                />
-              </TableRow>
-            </TableFooter>
-          </Table>
-        </TableContainer>
+  if (loaded === false) {
+    return (
+      <Grid container spacing={3} justify="center" alignItems="center" style={{ height: '100vh', textAlign: "center" }}>
+        <Grid item>
+          <CircularProgress size={100} />
+        </Grid>
       </Grid>
-    </Grid>
-  );
+    );
+  }
+  else {
+    return (
+      <Grid container spacing={3} justify="center" alignItems="center">
+        <Grid item xs={12} sm={10}>
+          <TableContainer component={Paper}>
+            <Table className={classes.table} aria-label="customized table">
+              <TableHead>
+                <TableRow>
+                  <StyledTableCell align="center">Rank</StyledTableCell>
+                  <StyledTableCell align="center">Username</StyledTableCell>
+                  <StyledTableCell align="center">Points</StyledTableCell>
+                  <StyledTableCell align="center">Pull Requests</StyledTableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {
+                  (rowsPerPage > 0 ? users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : users)
+                    .map((row, index) => {
+                      return <LeaderBoardEntry
+                        rank={page * rowsPerPage + index + 1}
+                        username={row.username}
+                        points={row.points}
+                        pull_requests={row.pull_request}
+                        key={row.username}
+                      />
+                    })
+                }
+              </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TablePagination
+                    rowsPerPageOptions={[8, 10, 25, { label: 'All', value: -1 }]}
+                    colSpan={3}
+                    count={users.length}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    SelectProps={{
+                      inputProps: { 'aria-label': 'rows per page' },
+                      native: true,
+                    }}
+                    onChangePage={handleChangePage}
+                    onChangeRowsPerPage={handleChangeRowsPerPage}
+                    ActionsComponent={TablePaginationActions}
+                  />
+                </TableRow>
+              </TableFooter>
+            </Table>
+          </TableContainer>
+        </Grid>
+      </Grid>
+    );
+  }
 }
 
 export default LeaderBoard;
