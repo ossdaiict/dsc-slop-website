@@ -1,13 +1,17 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 const LeaderBoardEntry = ({ rank, username, points, pull_requests }) => {
     return (
-        <tr>
-            <th scope="row">{rank}</th>
-            <td>{username}</td>
-            <td>{points}</td>
-            <td>{pull_requests}</td>
-        </tr>
+        <TableRow>
+            <TableCell align="center" component="th" scope="row">
+                {rank}
+            </TableCell>
+            <TableCell align="center">{username}</TableCell>
+            <TableCell align="center">{points}</TableCell>
+            <TableCell align="center">{pull_requests}</TableCell>
+        </TableRow>
     );
 }
 

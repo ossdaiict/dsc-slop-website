@@ -1,6 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import LeaderBoardEntry from '../components/LeaderBoardEntry';
 import axios from 'axios';
+import TableContainer from '@material-ui/core/TableContainer';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+import Paper from '@material-ui/core/Paper';
+
+import LeaderBoardEntry from '../components/LeaderBoardEntry';
+import { TableBody } from '@material-ui/core';
+
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+});
+
+const styledTableHeader = withStyles((theme) => ({
+  head: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  body: {
+    fontSize: 14,
+  },
+}))(TableCell);
 
 const LeaderBoard = () => {
   const [renderList, setRenderList] = useState([]);
@@ -24,20 +50,23 @@ const LeaderBoard = () => {
     fetchData();
   }, []);
 
+  const classes = useStyles();
   return (
-    <table className="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Rank</th>
-          <th scope="col">Username</th>
-          <th scope="col">Points</th>
-          <th scope="col">Pull Requests</th>
-        </tr>
-      </thead>
-      <tbody>
-        {renderList}
-      </tbody>
-    </table>
+    <TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="Ranks Table">
+        <TableHead>
+          <TableRow>
+            <TableCell align="center">Rank</TableCell>
+            <TableCell align="center">Username</TableCell>
+            <TableCell align="center">Points</TableCell>
+            <TableCell align="center">Pull Requests</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {renderList}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 
