@@ -14,9 +14,8 @@ import IconButton from '@material-ui/core/IconButton';
 import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import LastPageIcon from '@material-ui/icons/LastPage'
+import LastPageIcon from '@material-ui/icons/LastPage';
 import Grid from '@material-ui/core/Grid';
-
 
 import LeaderBoardEntry from '../components/LeaderBoardEntry';
 import { TableBody } from '@material-ui/core';
@@ -30,7 +29,6 @@ const StyledTableCell = withStyles((theme) => ({
     fontSize: 14,
   },
 }))(TableCell);
-
 
 const useStyles = makeStyles({
   table: {
@@ -75,15 +73,27 @@ function TablePaginationActions(props) {
       >
         {theme.direction === 'rtl' ? <LastPageIcon /> : <FirstPageIcon />}
       </IconButton>
-      <IconButton onClick={handleBackButtonClick} disabled={page === 0} aria-label="previous page">
-        {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+      <IconButton
+        onClick={handleBackButtonClick}
+        disabled={page === 0}
+        aria-label="previous page"
+      >
+        {theme.direction === 'rtl' ? (
+          <KeyboardArrowRight />
+        ) : (
+          <KeyboardArrowLeft />
+        )}
       </IconButton>
       <IconButton
         onClick={handleNextButtonClick}
         disabled={page >= Math.ceil(count / rowsPerPage) - 1}
         aria-label="next page"
       >
-        {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+        {theme.direction === 'rtl' ? (
+          <KeyboardArrowLeft />
+        ) : (
+          <KeyboardArrowRight />
+        )}
       </IconButton>
       <IconButton
         onClick={handleLastPageButtonClick}
@@ -108,7 +118,8 @@ const LeaderBoard = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(8);
 
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, users.length - page * rowsPerPage);
+  const emptyRows =
+    rowsPerPage - Math.min(rowsPerPage, users.length - page * rowsPerPage);
 
   const handleChangePage = (event, newPage) => {
     console.log(newPage);
@@ -122,10 +133,12 @@ const LeaderBoard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("https://script.google.com/macros/s/AKfycbxAfEhHRFKiwJ05oG1Zw4vF5sXqdnXKm2d6NP3QrF7C3oIhbxY/exec");
+      const response = await axios.get(
+        'https://script.google.com/macros/s/AKfycbxAfEhHRFKiwJ05oG1Zw4vF5sXqdnXKm2d6NP3QrF7C3oIhbxY/exec'
+      );
       let usersList = response.data.user;
       setUsers(usersList);
-    }
+    };
 
     fetchData();
   }, []);
@@ -145,18 +158,23 @@ const LeaderBoard = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {
-                (rowsPerPage > 0 ? users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : users)
-                  .map((row, index) => {
-                    return <LeaderBoardEntry
-                      rank={page * rowsPerPage + index + 1}
-                      username={row.username}
-                      points={row.points}
-                      pull_requests={row.pull_request}
-                      key={row.username}
-                    />
-                  })
-              }
+              {(rowsPerPage > 0
+                ? users.slice(
+                    page * rowsPerPage,
+                    page * rowsPerPage + rowsPerPage
+                  )
+                : users
+              ).map((row, index) => {
+                return (
+                  <LeaderBoardEntry
+                    rank={page * rowsPerPage + index + 1}
+                    username={row.username}
+                    points={row.points}
+                    pull_requests={row.pull_request}
+                    key={row.username}
+                  />
+                );
+              })}
             </TableBody>
             <TableFooter>
               <TableRow>
@@ -181,6 +199,6 @@ const LeaderBoard = () => {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default LeaderBoard;
