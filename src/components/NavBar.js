@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     display: 'flex',
+    alignItems: 'center',
   },
 
   sectionDesktop: {
