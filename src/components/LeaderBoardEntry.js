@@ -1,17 +1,32 @@
 import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import { withStyles } from '@material-ui/core/styles';
+
+const StyledTableRow = withStyles((theme) => ({
+    root: {
+        '&:nth-of-type(odd)': {
+            backgroundColor: theme.palette.action.hover,
+        },
+    },
+}))(TableRow);
+
+const StyledTableCell = withStyles((theme) => ({
+    body: {
+        fontSize: 16,
+    }
+}))(TableCell);
 
 const LeaderBoardEntry = ({ rank, username, points, pull_requests }) => {
     return (
-        <TableRow>
-            <TableCell align="center" component="th" scope="row">
+        <StyledTableRow>
+            <StyledTableCell align="center" component="th" scope="row">
                 {rank}
-            </TableCell>
-            <TableCell align="center">{username}</TableCell>
-            <TableCell align="center">{points}</TableCell>
-            <TableCell align="center">{pull_requests}</TableCell>
-        </TableRow>
+            </StyledTableCell>
+            <StyledTableCell align="center">{username}</StyledTableCell>
+            <StyledTableCell align="center">{points}</StyledTableCell>
+            <StyledTableCell align="center">{pull_requests}</StyledTableCell>
+        </StyledTableRow>
     );
 }
 
