@@ -1,33 +1,65 @@
-import React from 'react';
-import {Grid,Grow,makeStyles,Container} from '@material-ui/core';
+import React,{useEffect,useState} from 'react';
+import {Grid,Grow,Container,CircularProgress} from '@material-ui/core';
 import Project from '../components/Project';
-
-
-const useStyles = makeStyles(() => ({
-
-}));
+import axios from 'axios';
 
 export default function Projects() {
 
-  const classes = useStyles();
+  const [data,setData] = useState([]);
+  const [loading,setLoading] = useState(true);
 
-  return (
+  useEffect(()=>{
 
-    <Container>
-      <Grow in>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} md={6}>
-            <Project/>
-          </Grid>
-          <Grid item xs={12} sm={12} md={6}>
-            <Project/>
-          </Grid>
+      const fetch = ()=>{
+        axios.get("https://script.google.com/macros/s/AKfycbw33V3utIboH-9H-S-dZj_zL25_CaHH4-1cyBz1IognJmONis9r/exec")
+        .then(({data})=>{
+          setData(data.projects);
+          setLoading(false);
+        });
+      };
+
+      fetch();
+
+  },[]);
+
+
+  if(loading){
+    return(
+      <Grid container spacing={3} justify="center" alignItems="center" style={{ height: '100vh', textAlign: "center" }}>
+        <Grid item>
+          <CircularProgress size={100} />
         </Grid>
-      </Grow>
-    </Container>
-
-  );
-
-
+      </Grid>
+    )
+  }
+  else{
+    return (
+      <Container>
+        <Grow in>
+          <Grid container spacing={3}>
+            {
+                data.map((obj,index)=>{
+                  if(obj.project!=="")
+                  {
+                    return(
+                      <Grid key={index} item xs={12} sm={12} md={6}>
+                          <Project
+                            id={index}
+                            mentors={obj.mentors}
+                            url = {obj.url}
+                          />
+                      </Grid>
+                    )
+                  }
+                  else{
+                    return null;
+                  }
+                })
+            }
+          </Grid>
+        </Grow>
+      </Container>
+    );
+  }
 
 }
