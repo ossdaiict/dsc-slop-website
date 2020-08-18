@@ -1,36 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LeaderBoardEntry from './LeaderBoardEntry';
+import axios from 'axios';
 
-let data = [
-    {
-        username: "User 1",
-        points: "100",
-        pull_request: 50,
-    },
-    {
-        username: "User 2",
-        points: "90",
-        pull_request: 30,
-    },
-    {
-        username: "User 3",
-        points: "80",
-        pull_request: 20,
-    },
-    {
-        username: "User 4",
-        points: "60",
-        pull_request: 10,
-    }
-]
 const LeaderBoard = () => {
-    const renderList = data.map((row, index) => {
-        return <LeaderBoardEntry
-            rank={index + 1}
-            username={row.username}
-            points={row.points}
-            pull_requests={row.pull_request} />
-    });
+    const [renderList, setRenderList] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const users = await axios.get("https://script.google.com/macros/s/AKfycbxAfEhHRFKiwJ05oG1Zw4vF5sXqdnXKm2d6NP3QrF7C3oIhbxY/exec");
+            console.log(users);
+            const userList = users.data.user.map((row, index) => {
+                return <LeaderBoardEntry
+                    rank={index + 1}
+                    username={row.username}
+                    points={row.points}
+                    pull_requests={row.pull_request}
+                    key={row.username}
+                />
+            });
+            setRenderList(userList);
+        }
+
+        fetchData();
+    }, []);
 
     return (
         <table className="table table-hover">
