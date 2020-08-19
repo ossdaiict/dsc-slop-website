@@ -10,10 +10,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         minHeight:"25%",
       },
-
-    title:{
-          
-    }
 }));
 
 function getColor(id){
@@ -75,10 +71,10 @@ export default function Project({id,mentors,url}) {
         <Paper variant="outlined" className={classes.paper} style={{backgroundColor: getColor(id)}}>
            <Grid container direction="column" spacing={1}>
                <Grid item container direction="row">
-                    <IconButton href={url} aria-label="Github" size="small">
+                    <IconButton href={url} aria-label="Github" size="small" style={{marginRight:8}}>
                         <GitHub size="small" />
                     </IconButton>
-                    <Typography variant="h6" color="textPrimary" align="left" style={{marginLeft:8}}>{info.projecttitle}</Typography>
+                    <Typography variant="h6" color="textPrimary" align="left">{info.projecttitle}</Typography>
                </Grid>
                <Grid item>
                     <Typography variant="body2" color="textSecondary" align="left" style={{height:"40px", overflow:"hidden",textOverflow:"ellipsis"}}>{info.description}</Typography>
