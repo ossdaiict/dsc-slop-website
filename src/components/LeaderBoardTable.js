@@ -17,6 +17,7 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage'
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Grow from '@material-ui/core/Grow';
 
 
 import LeaderBoardEntry from './LeaderBoardEntry';
@@ -144,52 +145,54 @@ const LeaderBoardTable = () => {
     }
     else {
         return (
-            <Grid container spacing={3} justify="center" alignItems="center" style={{ height: '100vh', textAlign: "center" }}>
-                <Grid item xs={12} sm={10}>
-                    <TableContainer component={Paper}>
-                        <Table className={classes.table} aria-label="customized table">
-                            <TableHead>
-                                <TableRow>
-                                    <StyledTableCell align="center">Rank</StyledTableCell>
-                                    <StyledTableCell align="center">Username</StyledTableCell>
-                                    <StyledTableCell align="center">Points</StyledTableCell>
-                                    <StyledTableCell align="center">Pull Requests</StyledTableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {
-                                    (rowsPerPage > 0 ? users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : users)
-                                        .map((row, index) => {
-                                            return <LeaderBoardEntry
-                                                rank={page * rowsPerPage + index + 1}
-                                                username={row.username}
-                                                points={row.points}
-                                                pull_requests={row.pull_request}
-                                                key={row.username}
-                                            />
-                                        })
-                                }
-                            </TableBody>
-                            <TableFooter>
-                                <TableRow>
-                                    <TablePagination
-                                        rowsPerPageOptions={[8, 10, 25, { label: 'All', value: -1 }]}
-                                        colSpan={3}
-                                        count={users.length}
-                                        rowsPerPage={rowsPerPage}
-                                        page={page}
-                                        SelectProps={{
-                                            inputProps: { 'aria-label': 'rows per page' },
-                                            native: true,
-                                        }}
-                                        onChangePage={handleChangePage}
-                                        onChangeRowsPerPage={handleChangeRowsPerPage}
-                                        ActionsComponent={TablePaginationActions}
-                                    />
-                                </TableRow>
-                            </TableFooter>
-                        </Table>
-                    </TableContainer>
+            <Grid container spacing={3} justify="center" alignItems="center">
+                <Grid item xs={12} sm={12}>
+                    <Grow in={true}>
+                        <TableContainer component={Paper}>
+                            <Table className={classes.table} aria-label="customized table">
+                                <TableHead>
+                                    <TableRow>
+                                        <StyledTableCell align="center">Rank</StyledTableCell>
+                                        <StyledTableCell align="center">Username</StyledTableCell>
+                                        <StyledTableCell align="center">Points</StyledTableCell>
+                                        <StyledTableCell align="center">Pull Requests</StyledTableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {
+                                        (rowsPerPage > 0 ? users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : users)
+                                            .map((row, index) => {
+                                                return <LeaderBoardEntry
+                                                    rank={page * rowsPerPage + index + 1}
+                                                    username={row.username}
+                                                    points={row.points}
+                                                    pull_requests={row.pull_request}
+                                                    key={row.username}
+                                                />
+                                            })
+                                    }
+                                </TableBody>
+                                <TableFooter>
+                                    <TableRow>
+                                        <TablePagination
+                                            rowsPerPageOptions={[8, 20, 30, { label: 'All', value: -1 }]}
+                                            colSpan={3}
+                                            count={users.length}
+                                            rowsPerPage={rowsPerPage}
+                                            page={page}
+                                            SelectProps={{
+                                                inputProps: { 'aria-label': 'rows per page' },
+                                                native: true,
+                                            }}
+                                            onChangePage={handleChangePage}
+                                            onChangeRowsPerPage={handleChangeRowsPerPage}
+                                            ActionsComponent={TablePaginationActions}
+                                        />
+                                    </TableRow>
+                                </TableFooter>
+                            </Table>
+                        </TableContainer>
+                    </Grow>
                 </Grid>
             </Grid>
         );
