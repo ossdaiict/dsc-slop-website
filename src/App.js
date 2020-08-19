@@ -3,14 +3,18 @@ import { Router } from '@reach/router';
 import Homepage from './Pages/HomePage';
 import LeaderBoard from './Pages/LeaderBoard';
 import Projects from './Pages/Projects';
+import Navbar from './components/NavBar';
 
 const App = () => {
   return (
-    <Router>
-      <Homepage path="/" />
-      <LeaderBoard path="/leaderboard" />
-      <Projects path="/projects" />
-    </Router>
+    <>
+      <Navbar />
+      <Router>
+        <Homepage path="/" />
+        <LeaderBoard path="/leaderboard" />
+        <Projects path="/projects" />
+      </Router>
+    </>
   );
 };
 
