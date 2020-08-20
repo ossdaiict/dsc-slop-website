@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dsc-slop-website/precache-manifest.2ee33189f0a48ce509d7dbbd238199a5.js"
+  "/dsc-slop-website/precache-manifest.ee8ffad68dd114c561858f269b8a3d9a.js"
 );
 
 self.addEventListener('message', (event) => {
