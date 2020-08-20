@@ -4,6 +4,7 @@ import Homepage from './Pages/HomePage';
 import LeaderBoard from './Pages/LeaderBoard';
 import Projects from './Pages/Projects';
 import Navbar from './components/NavBar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <LeaderBoard path="/leaderboard" />
         <Projects path="/projects" />
       </Router>
+      <Footer/>
     </>
   );
 };
