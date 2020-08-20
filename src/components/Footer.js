@@ -4,17 +4,17 @@ import {GitHub,Mail,Twitter,Instagram} from '@material-ui/icons';
 
 const useStyles = makeStyles((theme)=>({
     paper: {
-        marginTop: theme.spacing(4),
+        marginTop: theme.spacing(2),
         marginRight: theme.spacing(1),
         marginLeft: theme.spacing(1),
         padding: theme.spacing(4),
+        position: "static",
+        flexGrow:1,
         textAlign: 'center',
         minHeight:"25%",
-        width:"100%",
         bottom:0,
         left:0,
         right:0,
-        backgroundColor:"#e0e1ff",
       },
 }));
 

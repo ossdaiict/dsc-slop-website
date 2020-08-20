@@ -58,7 +58,7 @@ export default function Project({id,mentors,url}) {
   {
       return(
         <Paper variant="outlined" className={classes.paper}>
-            <Grid container spacing={2} justify="center" alignItems="center" style={{ height: '50vh', textAlign: "center" }}>
+            <Grid container spacing={2} justify="center" alignItems="center" style={{ height: '25vh', textAlign: "center" }}>
                 <Grid item>
                     <CircularProgress size={50} />
                 </Grid>
@@ -68,7 +68,7 @@ export default function Project({id,mentors,url}) {
   }
   else{
     return (
-        <Paper variant="outlined" className={classes.paper} style={{backgroundColor: getColor(id)}}>
+        <Paper variant="outlined" className={classes.paper}>
            <Grid container direction="column" spacing={1}>
                <Grid item container direction="row">
                     <IconButton href={url} aria-label="Github" size="small" style={{marginRight:8}}>

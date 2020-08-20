@@ -7,10 +7,10 @@ import CustomizedTimeline from '../components/TimeLine';
 const useStyles = makeStyles((theme) => ({
 
   paper: {
+    backgroundColor: "#424242",
     padding: theme.spacing(4),
     textAlign: 'center',
     minHeight: "25%",
-    backgroundColor: "#fff5f9",
   },
 
   button: {
@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   formlink: {
-    backgroundColor: "#bbffba",
     padding: theme.spacing(2),
     textAlign: 'center',
     minHeight: theme.spacing(32),
@@ -126,7 +125,7 @@ export default function HomePage() {
                 <Grid item>
                   <Button
                     variant="contained"
-                    color="secondary"
+                    color="primary"
                     className={classes.button}
                     startIcon={<School />}
                   >Student Manual
@@ -135,7 +134,7 @@ export default function HomePage() {
                 <Grid item>
                   <Button
                     variant="contained"
-                    color="secondary"
+                    color="primary"
                     className={classes.button}
                     startIcon={<LaptopMac />}
                   >Mentor Manual
@@ -154,12 +153,12 @@ export default function HomePage() {
                 <Typography variant="h6">
                   <b> Are You Student ? </b>
                 </Typography>
-                <Typography variant="body2" className={classes.typo}>
+                <Typography variant="body2" className={classes.typo} color="textSecondary">
                   If you are new to the open source world and You want to exlplore things, new techs.
                   or you are just getting started, Don't worry, headout here and fill out the student form.
                   We'll guide you throughout whole project, and you can win exciting prizes.
                     </Typography>
-                <Fab variant="extended">
+                <Fab variant="extended" color="secondary">
                   <School style={{ margin: 8 }} />
                         Be A Winner !
                 </Fab>
@@ -170,12 +169,12 @@ export default function HomePage() {
                 <Typography variant="h6">
                   <b> Are You Mentor ? </b>
                 </Typography>
-                <Typography variant="body2" className={classes.typo}>
+                <Typography variant="body2" className={classes.typo} color="textSecondary">
                   If you are confident, knolwgeble enough and You can teach other's as well, then fill out the Mentor's Form.
                   Even if you know the techs, still you can learn to be better and can help others. Teaching always makes
                   you push to Learning.
                     </Typography>
-                <Fab variant="extended">
+                <Fab variant="extended" color="secondary">
                   <LaptopMac style={{ margin: 8 }} />
                         Be A Techer !
                 </Fab>
@@ -186,7 +185,7 @@ export default function HomePage() {
       </Grid>
       <Grid item xs={12}>
         <Container maxWidth="md">
-          <Paper variant="outlined" className={classes.paper} style={{ backgroundColor: "#fffedb" }}>
+          <Paper variant="outlined" className={classes.paper} style={{backgroundColor:"#424242"}}>
             <Typography variant="h5"><b>Timeline</b></Typography>
             <Divider variant="middle" />
             <CustomizedTimeline />
