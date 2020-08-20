@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/dsc-slop-website/static/js/main.10d12315.chunk.js",
+    "main.js.map": "/dsc-slop-website/static/js/main.10d12315.chunk.js.map",
+    "runtime-main.js": "/dsc-slop-website/static/js/runtime-main.d20f52ad.js",
+    "runtime-main.js.map": "/dsc-slop-website/static/js/runtime-main.d20f52ad.js.map",
+    "static/js/2.7503e9c3.chunk.js": "/dsc-slop-website/static/js/2.7503e9c3.chunk.js",
+    "static/js/2.7503e9c3.chunk.js.map": "/dsc-slop-website/static/js/2.7503e9c3.chunk.js.map",
+    "index.html": "/dsc-slop-website/index.html",
+    "precache-manifest.a7bd1f023a882a0df3cc24d3b89feedb.js": "/dsc-slop-website/precache-manifest.a7bd1f023a882a0df3cc24d3b89feedb.js",
+    "service-worker.js": "/dsc-slop-website/service-worker.js",
+    "static/js/2.7503e9c3.chunk.js.LICENSE.txt": "/dsc-slop-website/static/js/2.7503e9c3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d20f52ad.js",
+    "static/js/2.7503e9c3.chunk.js",
+    "static/js/main.10d12315.chunk.js"
+  ]
+}
