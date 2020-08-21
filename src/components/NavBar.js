@@ -17,7 +17,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    marginBottom: '1%',
+    marginBottom: '1px',
     '& a': {
       color: 'inherit',
       textDecoration: 'none',
@@ -94,7 +94,7 @@ export default function PrimarySearchAppBar() {
     >
       <Link to="/">
         <MenuItem>
-          <IconButton aria-label="show 4 new mails" color="inherit">
+          <IconButton color="inherit">
             <HomeIcon />
           </IconButton>
           <p>Home</p>
@@ -102,7 +102,7 @@ export default function PrimarySearchAppBar() {
       </Link>
       <Link to="leaderboard">
         <MenuItem>
-          <IconButton aria-label="show 11 new notifications" color="inherit">
+          <IconButton color="inherit">
             <AssessmentIcon />
           </IconButton>
           <p>Leaderboard</p>
@@ -110,12 +110,7 @@ export default function PrimarySearchAppBar() {
       </Link>
       <Link to="projects">
         <MenuItem onClick={handleProfileMenuOpen}>
-          <IconButton
-            aria-label="account of current user"
-            aria-controls="primary-search-account-menu"
-            aria-haspopup="true"
-            color="inherit"
-          >
+          <IconButton color="inherit">
             <GitHubIcon />
           </IconButton>
           <p>Projects</p>
@@ -131,7 +126,12 @@ export default function PrimarySearchAppBar() {
           <Link to="/">
             <div className={classes.logo}>
               <TimelineIcon color="primary" />
-              <Typography className={classes.title} variant="h6" noWrap color="textPrimary">
+              <Typography
+                className={classes.title}
+                variant="h6"
+                noWrap
+                color="textPrimary"
+              >
                 Semester Long Projects
               </Typography>
             </div>
@@ -163,7 +163,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon color="primary"/>
+              <MoreIcon color="primary" />
             </IconButton>
           </div>
         </Toolbar>
