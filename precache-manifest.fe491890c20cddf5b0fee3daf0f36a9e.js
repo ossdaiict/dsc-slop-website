@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "85b9c935814540b9d3a0e47c212051a3",
+    "revision": "81e4de10d789aa0e78dde572f6da64ee",
     "url": "/dsc-slop-website/index.html"
   },
   {
-    "revision": "658fca8eef1cefb70b43",
+    "revision": "8b5e350ce64fa0e6d416",
     "url": "/dsc-slop-website/static/css/main.f878baeb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dsc-slop-website/static/js/2.3f015e87.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "658fca8eef1cefb70b43",
-    "url": "/dsc-slop-website/static/js/main.88acc5fe.chunk.js"
+    "revision": "8b5e350ce64fa0e6d416",
+    "url": "/dsc-slop-website/static/js/main.2ae801ba.chunk.js"
   },
   {
     "revision": "406431086c6f2462d7a4",
