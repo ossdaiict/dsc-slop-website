@@ -58,7 +58,7 @@ export default function Project({id,mentors,url}) {
   if(loading)
   {
       return(
-        <Paper variant="outlined" className={classes.paper}>
+        <Paper variant="elevation" className={classes.paper}>
             <Grid container spacing={2} justify="center" alignItems="center" style={{ height: '25vh', textAlign: "center" }}>
                 <Grid item>
                     <CircularProgress size={50} />
@@ -69,7 +69,7 @@ export default function Project({id,mentors,url}) {
   }
   else{
     return (
-        <Paper variant="outlined" className={classes.paper}>
+        <Paper elevation="5" className={classes.paper}>
            <Grid container direction="column" spacing={1}>
                <Grid item container direction="row">
                     <IconButton href={url} aria-label="Github" size="small" style={{marginRight:8}}>

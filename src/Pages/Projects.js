@@ -1,12 +1,21 @@
 import React,{useEffect,useState} from 'react';
-import {Grid,Grow,Container,CircularProgress} from '@material-ui/core';
+import {Grid,Grow,Container,CircularProgress,makeStyles} from '@material-ui/core';
 import Project from '../components/Project';
 import axios from 'axios';
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+      marginTop: theme.spacing(1),
+      marginBottom: theme.spacing(1),
+    },
+}));
+
 
 export default function Projects() {
 
   const [data,setData] = useState([]);
   const [loading,setLoading] = useState(true);
+  const classes = useStyles();
 
   useEffect(()=>{
 
@@ -37,7 +46,7 @@ export default function Projects() {
       <div>
         <Container>
           <Grow in>
-            <Grid container >
+            <Grid container className={classes.container} >
               {
                   data.map((obj,index)=>{
                     if(obj.project!=="")
