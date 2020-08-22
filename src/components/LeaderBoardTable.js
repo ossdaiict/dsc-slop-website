@@ -152,10 +152,10 @@ const LeaderBoardTable = () => {
                             <Table className={classes.table} aria-label="customized table">
                                 <TableHead>
                                     <TableRow>
-                                        <StyledTableCell align="center">Rank</StyledTableCell>
-                                        <StyledTableCell align="center">Username</StyledTableCell>
-                                        <StyledTableCell align="center">Points</StyledTableCell>
-                                        <StyledTableCell align="center">Pull Requests</StyledTableCell>
+                                        <TableCell align="center">Rank</TableCell>
+                                        <TableCell align="center">Username</TableCell>
+                                        <TableCell align="center">Points</TableCell>
+                                        <TableCell align="center">Pull Requests</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
