@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/dsc-slop-website/static/css/main.68307363.chunk.css",
-    "main.js": "/dsc-slop-website/static/js/main.720842e7.chunk.js",
-    "main.js.map": "/dsc-slop-website/static/js/main.720842e7.chunk.js.map",
+    "main.css": "/dsc-slop-website/static/css/main.f878baeb.chunk.css",
+    "main.js": "/dsc-slop-website/static/js/main.88acc5fe.chunk.js",
+    "main.js.map": "/dsc-slop-website/static/js/main.88acc5fe.chunk.js.map",
     "runtime-main.js": "/dsc-slop-website/static/js/runtime-main.d20f52ad.js",
     "runtime-main.js.map": "/dsc-slop-website/static/js/runtime-main.d20f52ad.js.map",
-    "static/js/2.670e59ee.chunk.js": "/dsc-slop-website/static/js/2.670e59ee.chunk.js",
-    "static/js/2.670e59ee.chunk.js.map": "/dsc-slop-website/static/js/2.670e59ee.chunk.js.map",
+    "static/js/2.3f015e87.chunk.js": "/dsc-slop-website/static/js/2.3f015e87.chunk.js",
+    "static/js/2.3f015e87.chunk.js.map": "/dsc-slop-website/static/js/2.3f015e87.chunk.js.map",
     "index.html": "/dsc-slop-website/index.html",
-    "precache-manifest.bccb2616a868a7fcdcf5ba926529fb01.js": "/dsc-slop-website/precache-manifest.bccb2616a868a7fcdcf5ba926529fb01.js",
+    "precache-manifest.95567c5cabaf24a070617ef57c481e8d.js": "/dsc-slop-website/precache-manifest.95567c5cabaf24a070617ef57c481e8d.js",
     "service-worker.js": "/dsc-slop-website/service-worker.js",
-    "static/css/main.68307363.chunk.css.map": "/dsc-slop-website/static/css/main.68307363.chunk.css.map",
-    "static/js/2.670e59ee.chunk.js.LICENSE.txt": "/dsc-slop-website/static/js/2.670e59ee.chunk.js.LICENSE.txt",
-    "static/media/bg.jpg": "/dsc-slop-website/static/media/bg.1bf3ab4e.jpg"
+    "static/css/main.f878baeb.chunk.css.map": "/dsc-slop-website/static/css/main.f878baeb.chunk.css.map",
+    "static/js/2.3f015e87.chunk.js.LICENSE.txt": "/dsc-slop-website/static/js/2.3f015e87.chunk.js.LICENSE.txt",
+    "static/media/bg.png": "/dsc-slop-website/static/media/bg.860446a5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d20f52ad.js",
-    "static/js/2.670e59ee.chunk.js",
-    "static/css/main.68307363.chunk.css",
-    "static/js/main.720842e7.chunk.js"
+    "static/js/2.3f015e87.chunk.js",
+    "static/css/main.f878baeb.chunk.css",
+    "static/js/main.88acc5fe.chunk.js"
   ]
 }
