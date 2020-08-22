@@ -62,14 +62,15 @@ export default function HomePage() {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={2} justify="center" direction="column">
+    <Grid container justify="center" direction="column">
       <Grid item xs={12}>
-      <CardMedia
-              component="img"
-              alt="Contemplative Reptile"
-              className="min-h-screen"
-              image={bg}
-              title="Contemplative Reptile" />
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          className="min-h-screen"
+          image={bg}
+          title="Contemplative Reptile"
+        />
       </Grid>
       <Grid item xs={12}>
         <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
