@@ -34,31 +34,33 @@ export default function Projects() {
   }
   else{
     return (
-      <Container>
-        <Grow in>
-          <Grid container spacing={3}>
-            {
-                data.map((obj,index)=>{
-                  if(obj.project!=="")
-                  {
-                    return(
-                      <Grid key={index} item xs={12} sm={12} md={6}>
-                          <Project
-                            id={index}
-                            mentors={obj.mentors}
-                            url = {obj.url}
-                          />
-                      </Grid>
-                    )
-                  }
-                  else{
-                    return null;
-                  }
-                })
-            }
-          </Grid>
-        </Grow>
-      </Container>
+      <div style={{marginTop:16}}>
+        <Container>
+          <Grow in>
+            <Grid container spacing={3}>
+              {
+                  data.map((obj,index)=>{
+                    if(obj.project!=="")
+                    {
+                      return(
+                        <Grid key={index} item xs={12} sm={12} md={6}>
+                            <Project
+                              id={index}
+                              mentors={obj.mentors}
+                              url = {obj.url}
+                            />
+                        </Grid>
+                      )
+                    }
+                    else{
+                      return null;
+                    }
+                  })
+              }
+            </Grid>
+          </Grow>
+        </Container>
+      </div>
     );
   }
 

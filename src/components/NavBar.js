@@ -17,7 +17,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    marginBottom: '1%',
+    marginBottom: '1px',
     '& a': {
       color: 'inherit',
       textDecoration: 'none',
@@ -94,7 +94,7 @@ export default function PrimarySearchAppBar() {
     >
       <Link to="/">
         <MenuItem>
-          <IconButton aria-label="show 4 new mails" color="inherit">
+          <IconButton color="inherit">
             <HomeIcon />
           </IconButton>
           <p>Home</p>
@@ -102,7 +102,7 @@ export default function PrimarySearchAppBar() {
       </Link>
       <Link to="leaderboard">
         <MenuItem>
-          <IconButton aria-label="show 11 new notifications" color="inherit">
+          <IconButton color="inherit">
             <AssessmentIcon />
           </IconButton>
           <p>Leaderboard</p>
@@ -110,12 +110,7 @@ export default function PrimarySearchAppBar() {
       </Link>
       <Link to="projects">
         <MenuItem onClick={handleProfileMenuOpen}>
-          <IconButton
-            aria-label="account of current user"
-            aria-controls="primary-search-account-menu"
-            aria-haspopup="true"
-            color="inherit"
-          >
+          <IconButton color="inherit">
             <GitHubIcon />
           </IconButton>
           <p>Projects</p>
@@ -126,12 +121,17 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" color="inherit">
         <Toolbar>
           <Link to="/">
             <div className={classes.logo}>
-              <TimelineIcon />
-              <Typography className={classes.title} variant="h6" noWrap>
+              <TimelineIcon color="primary" />
+              <Typography
+                className={classes.title}
+                variant="h6"
+                noWrap
+                color="textPrimary"
+              >
                 Semester Long Projects
               </Typography>
             </div>
@@ -141,17 +141,17 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             <Link to="/">
               <IconButton color="inherit">
-                <Typography>Home</Typography>
+                <Typography color="textPrimary">Home</Typography>
               </IconButton>
             </Link>
             <Link to="/leaderboard">
               <IconButton color="inherit">
-                <Typography>Leaderboard</Typography>
+                <Typography color="textPrimary">Leaderboard</Typography>
               </IconButton>
             </Link>
             <Link to="/projects">
               <IconButton edge="end" color="inherit">
-                <Typography>Projects</Typography>
+                <Typography color="textPrimary">Projects</Typography>
               </IconButton>
             </Link>
           </div>
@@ -163,7 +163,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon />
+              <MoreIcon color="primary" />
             </IconButton>
           </div>
         </Toolbar>
