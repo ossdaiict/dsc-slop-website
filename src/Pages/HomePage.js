@@ -62,7 +62,7 @@ export default function HomePage() {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={2} justify="center">
+    <Grid container justify="center" direction="column">
       <Grid item xs={12}>
         <CardMedia
           component="img"
