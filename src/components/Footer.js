@@ -28,22 +28,22 @@ export default function Footer() {
         </Grid>
         <Grid item container direction="row" justify="center" spacing={2}>
           <Grid item>
-            <Fab size="medium" aria-label="mail" color="secondary">
+            <Fab size="medium" aria-label="mail" color="secondary" href="mailto:dsc@daiict.ac.in">
               <Mail />
             </Fab>
           </Grid>
           <Grid item>
-            <Fab size="medium" aria-label="github" color="primary">
+            <Fab size="medium" aria-label="github" color="primary" href="https://github.com/ossdaiict">
               <GitHub />
             </Fab>
           </Grid>
           <Grid item>
-            <Fab size="medium" aria-label="insta" color="secondary">
+            <Fab size="medium" aria-label="insta" color="secondary" href="https://www.instagram.com/dscdaiict/">
               <Instagram />
             </Fab>
           </Grid>
           <Grid item>
-            <Fab size="medium" aria-label="twitter" color="primary">
+            <Fab size="medium" aria-label="twitter" color="primary" href="https://twitter.com/dscdaiict">
               <Twitter />
             </Fab>
           </Grid>
