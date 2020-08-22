@@ -10,16 +10,18 @@ import {
   CardMedia,
   Divider,
 } from '@material-ui/core';
-import { LaptopMac, School, LabelImportant } from '@material-ui/icons';
+import { LaptopMac, School } from '@material-ui/icons';
 import bg from '../images/bg.png';
 import Countdown from '../components/Countdown';
-import Cover from '../SVGs/Cover';
 import CustomizedTimeline from '../components/TimeLine';
 
 const useStyles = makeStyles((theme) => ({
+  
   paper: {
     backgroundColor: '#424242',
     padding: theme.spacing(4),
+    marginTop:theme.spacing(2),
+    marginBottom:theme.spacing(2),
     textAlign: 'center',
     minHeight: '25%',
   },
@@ -62,7 +64,7 @@ export default function HomePage() {
   const classes = useStyles();
 
   return (
-    <Grid container justify="center" direction="column">
+    <Grid container justify="center">
       <Grid item xs={12}>
         <CardMedia
           component="img"
@@ -75,9 +77,9 @@ export default function HomePage() {
         <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
       </Grid>
       <Grid item xs={12}>
-        <Container maxWidth="md" style={{ overflow: 'hidden' }}>
+        <Container maxWidth="md">
           <Paper variant="outlined" className={classes.paper}>
-            <Grid container direction="column" spacing={2}>
+            <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" align="left">
                   <b>What is SLoP ?</b>
