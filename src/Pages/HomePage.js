@@ -10,8 +10,8 @@ import {
   CardMedia,
   Divider,
 } from '@material-ui/core';
-import { LaptopMac, School } from '@material-ui/icons';
-import bg from '../images/bg.jpg';
+import { LaptopMac, School, LabelImportant } from '@material-ui/icons';
+import bg from '../images/bg.png';
 import Countdown from '../components/Countdown';
 import Cover from '../SVGs/Cover';
 import CustomizedTimeline from '../components/TimeLine';
@@ -42,11 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   image: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    top: 0,
-    left: 0,
+    height: '660px !important',
   },
 
   textover: {
@@ -66,11 +62,14 @@ export default function HomePage() {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={2} justify="center">
+    <Grid container spacing={2} justify="center" direction="column">
       <Grid item xs={12}>
-        <div className="w-full h-full xs:h-40">
-          <img src={bg} />
-        </div>
+      <CardMedia
+              component="img"
+              alt="Contemplative Reptile"
+              className="min-h-screen"
+              image={bg}
+              title="Contemplative Reptile" />
       </Grid>
       <Grid item xs={12}>
         <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
