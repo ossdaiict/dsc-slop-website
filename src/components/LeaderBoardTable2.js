@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import Grid from '@material-ui/core/Grid';
 import Grow from '@material-ui/core/Grow';
+import Box from '@material-ui/core/Box';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 
@@ -29,28 +30,30 @@ function LeaderBoardTable2() {
         );
     } else {
         return (
-            <Grow in={true}>
-                <MaterialTable
-                    title="Leaderboard"
-                    columns={[
-                        { title: '       Current Rank', field: 'rank', align: "center", headerStyle: { whiteSpace: 'pre' } },
-                        { title: '       Username', field: 'username', align: "center", headerStyle: { whiteSpace: 'pre' } },
-                        { title: '       Points', field: 'points', align: "center", headerStyle: { whiteSpace: 'pre' } },
-                        { title: '       Pull Requests', field: 'pull_request', align: "center", headerStyle: { whiteSpace: 'pre' } },
-                    ]}
-                    data={users}
-                    isLoading={!loaded}
-                    options={{
-                        rowStyle: x => {
-                            if (x.tableData.id % 2 === 0) {
-                                return { backgroundColor: '#434543' }
-                            }
-                        },
-                        pageSize: 6,
-                        pageSizeOptions: [6, 12, 30]
-                    }}
-                />
-            </Grow>
+            <Box m={1.5}>
+                <Grow in={true}>
+                    <MaterialTable
+                        title="Leaderboard"
+                        columns={[
+                            { title: '       Current Rank', field: 'rank', align: "center", headerStyle: { whiteSpace: 'pre' } },
+                            { title: '       Username', field: 'username', align: "center", headerStyle: { whiteSpace: 'pre' } },
+                            { title: '       Points', field: 'points', align: "center", headerStyle: { whiteSpace: 'pre' } },
+                            { title: '       Pull Requests', field: 'pull_request', align: "center", headerStyle: { whiteSpace: 'pre' } },
+                        ]}
+                        data={users}
+                        isLoading={!loaded}
+                        options={{
+                            rowStyle: x => {
+                                if (x.tableData.id % 2 === 0) {
+                                    return { backgroundColor: '#434543' }
+                                }
+                            },
+                            pageSize: 6,
+                            pageSizeOptions: [6, 12, 30]
+                        }}
+                    />
+                </Grow>
+            </Box>
         )
     }
 
