@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
+import {Typography, Divider} from '@material-ui/core';
 import CountdownBlock from '../components/CountdownBlock';
 const CountdownDisplay = (props) => {
   const { days, hours, minutes, seconds } = props;
 
   return (
     <>
-      <Typography className="text-center text-white font-sans text-3xl">
+      <Typography className="text-center text-white font-sans text-2xl">
         Coding period begins in ⏳
       </Typography>
+      <Divider variant="middle" className="mt-3"/>
       <div className="flex w-full justify-center mt-4">
         <CountdownBlock>
           {String(days).padStart(2, 0)}
