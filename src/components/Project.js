@@ -6,6 +6,7 @@ import moment from 'moment';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
+        margin: theme.spacing(1),
         padding: theme.spacing(2),
         textAlign: 'center',
         minHeight:"25%",

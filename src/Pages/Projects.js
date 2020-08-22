@@ -34,10 +34,10 @@ export default function Projects() {
   }
   else{
     return (
-      <div style={{marginTop:16}}>
+      <div>
         <Container>
           <Grow in>
-            <Grid container spacing={3}>
+            <Grid container >
               {
                   data.map((obj,index)=>{
                     if(obj.project!=="")

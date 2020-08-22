@@ -4,7 +4,6 @@ import { GitHub, Mail, Twitter, Instagram } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    marginTop: theme.spacing(2),
     padding: theme.spacing(4),
     position: 'static',
     flexGrow: 1,
