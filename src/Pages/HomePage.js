@@ -69,8 +69,7 @@ export default function HomePage() {
           alt="Contemplative Reptile"
           className="min-h-screen"
           image={bg}
-          title="Contemplative Reptile"
-        />
+          title="Contemplative Reptile" />
       </Grid>
       <Grid item xs={12}>
         <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
@@ -138,6 +137,7 @@ export default function HomePage() {
                     color="primary"
                     className={classes.button}
                     startIcon={<School />}
+                    href="https://drive.google.com/file/d/1gEF-U2lV7GssAVGnJmT4STt9NHIHPu-E/view"
                   >
                     Student Manual
                   </Button>
@@ -148,6 +148,7 @@ export default function HomePage() {
                     color="primary"
                     className={classes.button}
                     startIcon={<LaptopMac />}
+                    href="https://drive.google.com/file/d/1rG00muN3dI10oKcGoOWB2r5pHnszuwCs/view?usp=sharing"
                   >
                     Mentor Manual
                   </Button>
