@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "81e4de10d789aa0e78dde572f6da64ee",
+    "revision": "9bf65efd00cfc3ae528f31745d30ece4",
     "url": "/dsc-slop-website/index.html"
   },
   {
-    "revision": "8b5e350ce64fa0e6d416",
-    "url": "/dsc-slop-website/static/css/main.f878baeb.chunk.css"
+    "revision": "b29d5a9654579a66b2c3",
+    "url": "/dsc-slop-website/static/css/main.68307363.chunk.css"
   },
   {
-    "revision": "33c5b6be826288029110",
-    "url": "/dsc-slop-website/static/js/2.3f015e87.chunk.js"
+    "revision": "a638aa7e9cb859535eb2",
+    "url": "/dsc-slop-website/static/js/2.c41f67b1.chunk.js"
   },
   {
     "revision": "556d72da1c19c1e88e2917fa6505d7f0",
-    "url": "/dsc-slop-website/static/js/2.3f015e87.chunk.js.LICENSE.txt"
+    "url": "/dsc-slop-website/static/js/2.c41f67b1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8b5e350ce64fa0e6d416",
-    "url": "/dsc-slop-website/static/js/main.2ae801ba.chunk.js"
+    "revision": "b29d5a9654579a66b2c3",
+    "url": "/dsc-slop-website/static/js/main.de17221c.chunk.js"
   },
   {
     "revision": "406431086c6f2462d7a4",
