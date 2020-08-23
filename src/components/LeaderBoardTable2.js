@@ -8,7 +8,7 @@ import axios from 'axios';
 
 function LeaderBoardTable2() {
     const [users, setUsers] = useState([]);
-    const [loaded, setLoaded] = React.useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,6 +16,7 @@ function LeaderBoardTable2() {
             let usersList = response.data.user;
             setUsers(usersList);
             setLoaded(true);
+            console.log(window.screen.height / 144);
         }
         fetchData();
     }, [])
@@ -48,8 +49,8 @@ function LeaderBoardTable2() {
                                     return { backgroundColor: '#434543' }
                                 }
                             },
-                            pageSize: 6,
-                            pageSizeOptions: [6, 12, 30]
+                            pageSize: 10,
+                            pageSizeOptions: [Math.floor(users.length / 3), Math.floor(users.length / 2), users.length]
                         }}
                     />
                 </Grow>
