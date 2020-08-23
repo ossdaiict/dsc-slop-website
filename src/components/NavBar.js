@@ -10,6 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import {Contacts} from '@material-ui/icons';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import TimelineIcon from '@material-ui/icons/Timeline';
 import MoreIcon from '@material-ui/icons/MoreVert';
@@ -116,6 +117,14 @@ export default function PrimarySearchAppBar() {
           <p>Projects</p>
         </MenuItem>
       </Link>
+      <Link to="contacts">
+        <MenuItem onClick={handleProfileMenuOpen}>
+          <IconButton color="inherit">
+            <Contacts />
+          </IconButton>
+          <p>Contacts</p>
+        </MenuItem>
+      </Link>
     </Menu>
   );
 
@@ -150,8 +159,13 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
             <Link to="/projects">
-              <IconButton edge="end" color="inherit">
+              <IconButton color="inherit">
                 <Typography color="textPrimary">Projects</Typography>
+              </IconButton>
+            </Link>
+            <Link to="/contacts">
+              <IconButton edge="end" color="inherit">
+                <Typography color="textPrimary">Contacts</Typography>
               </IconButton>
             </Link>
           </div>
