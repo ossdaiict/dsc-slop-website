@@ -68,6 +68,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '16px',
     },
   },
+
+  prizes: {
+    fontSize: '80px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '50px',
+    },
+  },
+
 }));
 
 export default function HomePage() {
@@ -103,6 +111,18 @@ export default function HomePage() {
         <Container maxWidth="md">
           <Paper className={classes.paperCounter} style={{ marginBottom: 0 }}>
             <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
+          </Paper>
+        </Container>
+      </Grid>
+      <Grid item xs={12}>
+        <Container maxWidth="md">
+          <Paper className={classes.paper} style={{marginBottom:0,backgroundColor:"#303030"}}>
+            <Typography className={classes.textcap} color="textSecondary">
+              Prizes Worth
+            </Typography>
+            <Typography className={classes.prizes} color="textPrimary">
+              ₹ 15,000/-
+            </Typography>
           </Paper>
         </Container>
       </Grid>
