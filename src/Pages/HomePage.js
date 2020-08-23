@@ -16,12 +16,20 @@ import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
 
 const useStyles = makeStyles((theme) => ({
-  
   paper: {
     backgroundColor: '#424242',
     padding: theme.spacing(3),
-    marginTop:theme.spacing(2),
-    marginBottom:theme.spacing(2),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    textAlign: 'center',
+    minHeight: '25%',
+  },
+  paperCounter: {
+    backgroundColor: '#424242',
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     textAlign: 'center',
     minHeight: '25%',
   },
@@ -43,24 +51,23 @@ const useStyles = makeStyles((theme) => ({
     color: 'grey',
   },
 
-  textdiv:{
-    marginTop:"16vh",
+  textdiv: {
+    marginTop: '16vh',
   },
 
   textover: {
-    fontSize:"200px",
+    fontSize: '200px',
     [theme.breakpoints.down('sm')]: {
-      fontSize:"100px",
+      fontSize: '100px',
     },
   },
 
   textcap: {
-    fontSize:"24px",
+    fontSize: '24px',
     [theme.breakpoints.down('sm')]: {
-      fontSize:"16px",
+      fontSize: '16px',
     },
   },
-
 }));
 
 export default function HomePage() {
@@ -75,52 +82,62 @@ export default function HomePage() {
             alt="Contemplative Reptile"
             className="min-h-screen absolute"
             image={bg}
-            title="Contemplative Reptile" />
-            <div className="absolute text-center w-full h-full">
-              <div className={classes.textdiv}>
-                <Typography className={classes.textcap} color="textPrimary"><b>Developer Student Club-DAIICT's</b></Typography>
-                <Typography className={classes.textover} color="textPrimary"><b>S L o P</b></Typography>
-                <Typography className={classes.textcap} color="textPrimary"><b>S E M E S T E R - L O N G - P R O J E C T S</b></Typography>
-              </div>
-            </div> 
+            title="Contemplative Reptile"
+          />
+          <div className="absolute text-center w-full h-full">
+            <div className={classes.textdiv}>
+              <Typography className={classes.textcap} color="textPrimary">
+                <b>Developer Student Club-DAIICT's</b>
+              </Typography>
+              <Typography className={classes.textover} color="textPrimary">
+                <b>S L o P</b>
+              </Typography>
+              <Typography className={classes.textcap} color="textPrimary">
+                <b>S E M E S T E R - L O N G - P R O J E C T S</b>
+              </Typography>
+            </div>
+          </div>
         </div>
       </Grid>
       <Grid item xs={12}>
         <Container maxWidth="md">
-          <Paper className={classes.paper} style={{marginBottom:0}}>
+          <Paper className={classes.paperCounter} style={{ marginBottom: 0 }}>
             <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
           </Paper>
         </Container>
       </Grid>
       <Grid item xs={12}>
         <Container maxWidth="md">
-          <Paper className={classes.paper} style={{marginBottom:0,backgroundColor:"none"}}>
+          <Paper
+            className={classes.paper}
+            style={{ marginBottom: 0, backgroundColor: 'none' }}
+          >
             <Grid container direction="column">
-                <Grid item>
-                  <Typography variant="h4" align="left">
-                    <b>What is SLoP ?</b>
-                  </Typography>
-                  <Divider className="my-3" variant="fullWidth"/>
-                </Grid>
-                <Grid item>
-                  <Typography variant="body1" align="left">
-                    Semester Long Projects or SLoP is an initiative by Developer
-                    Student Club, DA-IICT exclusively for students of DA-IICT who
-                    are new to open source software development to get started
-                    with open source contributions.
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography variant="body1" align="left">
-                    It’s modeled to be similar but smaller Google Summer of Code
-                    (GSoC), which is global that matches students up with open
-                    source, free software and technology-related organizations to
-                    write code and get paid for the same. Similarly, SLoP is aimed
-                    at introducing new students in the area and helps them gain
-                    confidence
-                  </Typography>
-                </Grid>
+              <Grid item>
+                <Typography variant="h4" align="left">
+                  <b>What is SLoP ?</b>
+                </Typography>
+                <Divider className="my-3" variant="fullWidth" />
               </Grid>
+              <Grid item>
+                <Typography variant="body1" align="left">
+                  Semester Long Projects or SLoP is an initiative by Developer
+                  Student Club, DA-IICT exclusively for students of DA-IICT who
+                  are new to open source software development to get started
+                  with open source contributions.
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body1" align="left">
+                  It’s modeled to be similar but smaller Google Summer of Code
+                  (GSoC), which is global that matches students up with open
+                  source, free software and technology-related organizations to
+                  write code and get paid for the same. Similarly, SLoP is aimed
+                  at introducing new students in the area and helps them gain
+                  confidence
+                </Typography>
+              </Grid>
+            </Grid>
           </Paper>
         </Container>
       </Grid>
@@ -132,7 +149,7 @@ export default function HomePage() {
                 <Typography variant="h4" align="left">
                   <b>How it Works ?</b>
                 </Typography>
-                <Divider className="my-3" variant="fullWidth"/>
+                <Divider className="my-3" variant="fullWidth" />
               </Grid>
               <Grid item>
                 <Typography variant="body1" align="left">
