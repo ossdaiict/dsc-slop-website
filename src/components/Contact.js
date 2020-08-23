@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles,Paper,Grid,Typography,Fab} from '@material-ui/core';
-import {GitHub,Instagram} from '@material-ui/icons';
+import {GitHub,LinkedIn} from '@material-ui/icons';
+import { Link } from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -29,13 +30,13 @@ export default function Contact({details}) {
                         </Grid>
                         <Grid item container direction="row" justify="center" spacing={2}>
                         <Grid item>
-                            <Fab size="small" aria-label="github" color="secondary" href={details.github}>
+                            <Fab size="small"  aria-label="github" href={details.github}>
                                 <GitHub />
                             </Fab>
                         </Grid>
                         <Grid item>
-                            <Fab size="small" aria-label="insta" color="primary" href={details.instagram}>
-                                <Instagram />
+                            <Fab size="small" aria-label="linkedin" href={details.linkedin}>
+                                <LinkedIn />
                             </Fab>
                         </Grid>
                         </Grid>
