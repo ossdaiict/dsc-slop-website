@@ -16,12 +16,20 @@ import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
 
 const useStyles = makeStyles((theme) => ({
-  
   paper: {
     backgroundColor: '#424242',
-    padding: theme.spacing(4),
-    marginTop:theme.spacing(2),
-    marginBottom:theme.spacing(2),
+    padding: theme.spacing(3),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    textAlign: 'center',
+    minHeight: '25%',
+  },
+  paperCounter: {
+    backgroundColor: '#424242',
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     textAlign: 'center',
     minHeight: '25%',
   },
@@ -34,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   formlink: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    minHeight: theme.spacing(32),
+    minHeight: theme.spacing(40),
   },
 
   typo: {
@@ -43,21 +51,23 @@ const useStyles = makeStyles((theme) => ({
     color: 'grey',
   },
 
-  image: {
-    height: '660px !important',
+  textdiv: {
+    marginTop: '16vh',
   },
 
   textover: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    textAlign: 'center',
-    top: '40%',
-    left: 0,
-    zIndex: 10,
-    color: 'white',
+    fontSize: '200px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '100px',
+    },
   },
-  graphic: {},
+
+  textcap: {
+    fontSize: '24px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
+    },
+  },
 }));
 
 export default function HomePage() {
@@ -66,24 +76,48 @@ export default function HomePage() {
   return (
     <Grid container justify="center">
       <Grid item xs={12}>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          className="min-h-screen"
-          image={bg}
-          title="Contemplative Reptile" />
-      </Grid>
-      <Grid item xs={12}>
-        <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
+        <div className="min-h-screen relative">
+          <CardMedia
+            component="img"
+            alt="Contemplative Reptile"
+            className="min-h-screen absolute"
+            image={bg}
+            title="Contemplative Reptile"
+          />
+          <div className="absolute text-center w-full h-full">
+            <div className={classes.textdiv}>
+              <Typography className={classes.textcap} color="textPrimary">
+                <b>Developer Student Club-DAIICT's</b>
+              </Typography>
+              <Typography className={classes.textover} color="textPrimary">
+                <b>S L o P</b>
+              </Typography>
+              <Typography className={classes.textcap} color="textPrimary">
+                <b>S E M E S T E R - L O N G - P R O J E C T S</b>
+              </Typography>
+            </div>
+          </div>
+        </div>
       </Grid>
       <Grid item xs={12}>
         <Container maxWidth="md">
-          <Paper variant="outlined" className={classes.paper}>
+          <Paper className={classes.paperCounter} style={{ marginBottom: 0 }}>
+            <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
+          </Paper>
+        </Container>
+      </Grid>
+      <Grid item xs={12}>
+        <Container maxWidth="md">
+          <Paper
+            className={classes.paper}
+            style={{ marginBottom: 0, backgroundColor: 'none' }}
+          >
             <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" align="left">
                   <b>What is SLoP ?</b>
                 </Typography>
+                <Divider className="my-3" variant="fullWidth" />
               </Grid>
               <Grid item>
                 <Typography variant="body1" align="left">
@@ -103,16 +137,19 @@ export default function HomePage() {
                   confidence
                 </Typography>
               </Grid>
-              <Grid item>
-                <Typography> </Typography>
-              </Grid>
-              <Grid item>
-                <Typography> </Typography>
-              </Grid>
+            </Grid>
+          </Paper>
+        </Container>
+      </Grid>
+      <Grid item xs={12}>
+        <Container maxWidth="md">
+          <Paper variant="outlined" className={classes.paper}>
+            <Grid container direction="column">
               <Grid item>
                 <Typography variant="h4" align="left">
                   <b>How it Works ?</b>
                 </Typography>
+                <Divider className="my-3" variant="fullWidth" />
               </Grid>
               <Grid item>
                 <Typography variant="body1" align="left">
@@ -166,7 +203,7 @@ export default function HomePage() {
             container
             direction="row"
             justify="space-evenly"
-            spacing={3}
+            spacing={2}
             alignContent="center"
           >
             <Grid item xs={12} sm={6} md={6}>
