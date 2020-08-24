@@ -1,7 +1,13 @@
-import React from "react";
-import { makeStyles, Paper, Grid, Typography, Fab } from "@material-ui/core";
+import React, { useState, useCallback, useRef } from "react";
+import {
+  makeStyles,
+  Paper,
+  Grid,
+  Typography,
+  Fab,
+  Box,
+} from "@material-ui/core";
 import { GitHub, LinkedIn } from "@material-ui/icons";
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     margin: theme.spacing(1),
@@ -13,7 +19,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Contact({ details }) {
   const classes = useStyles();
-
+  const [value, setValue] = useState(true);
+  const transitionOptions = {
+    transitionName: "fade",
+    transitionEnterTimeout: 500,
+    transitionLeaveTimeout: 500,
+  };
   return (
     <Paper className={classes.paper} elevation="5">
       <Grid
