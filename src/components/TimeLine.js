@@ -7,10 +7,10 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
-import HotelIcon from '@material-ui/icons/Hotel';
-import RepeatIcon from '@material-ui/icons/Repeat';
+import GroupIcon from '@material-ui/icons/Group';
+import CardGiftcard from '@material-ui/icons/CardGiftcard';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import CodeIcon from '@material-ui/icons/Code';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
   secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
   },
+  oppositeTime: {
+    paddingTop: '8px',
+  },
 }));
 
 export default function CustomizedTimeline() {
@@ -30,149 +33,109 @@ export default function CustomizedTimeline() {
     <Timeline align="alternate">
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            9:30 am
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            className={classes.oppositeTime}
+          >
+            1 september - 10 september
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot>
-            <FastfoodIcon />
+            <SupervisorAccountIcon />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Eat
+              Call for mentors
             </Typography>
-            <Typography>Because you need strength</Typography>
+            <Typography>
+              Mentors will start preparing open-source projects for
+              contributions unless already done.
+            </Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            10:00 am
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            className={classes.oppositeTime}
+          >
+            11 september - 20 september
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color="primary">
-            <LaptopMacIcon />
+            <GroupIcon />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Code
+              Student Registration
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Click{' '}
+              <a href="#" class="underline">
+                here
+              </a>{' '}
+              to register and off you go!
+            </Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
+        <TimelineOppositeContent>
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            className={classes.oppositeTime}
+          >
+            21 september - last week of november
+          </Typography>
+        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot color="primary" variant="outlined">
-            <HotelIcon />
+          <TimelineDot>
+            <CodeIcon />
           </TimelineDot>
           <TimelineConnector className={classes.secondaryTail} />
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Sleep
+              Coding period
             </Typography>
-            <Typography>Because you need rest</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color="secondary">
-            <RepeatIcon />
-          </TimelineDot>
-        <TimelineConnector className={classes.secondaryTail} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Repeat
-            </Typography>
-            <Typography>Because this is the life you love!</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            9:30 am
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot>
-            <FastfoodIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Eat
-            </Typography>
-            <Typography>Because you need strength</Typography>
+            <Typography>The fun part! </Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            10:00 am
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            className={classes.oppositeTime}
+          >
+            First week of december
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot color="primary">
-            <LaptopMacIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Code
-            </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color="primary" variant="outlined">
-            <HotelIcon />
-          </TimelineDot>
-          <TimelineConnector className={classes.secondaryTail} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="h6" component="h1">
-              Sleep
-            </Typography>
-            <Typography>Because you need rest</Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
           <TimelineDot color="secondary">
-            <RepeatIcon />
+            <CardGiftcard />
           </TimelineDot>
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
             <Typography variant="h6" component="h1">
-              Repeat
+              Rusults announced
             </Typography>
-            <Typography>Because this is the life you love!</Typography>
+            <Typography>Exciting prizes and goodies are awaiting!</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
