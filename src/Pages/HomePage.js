@@ -17,10 +17,12 @@ import bg from '../images/bg.png';
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
+import TimelineHorizontal from '../components/TimelineHorizontal';
+import './TextGradient.css';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#424242',
+    backgroundColor: '#000000',
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -28,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '25%',
   },
   paperCounter: {
-    backgroundColor: '#424242',
+    backgroundColor: '#000000',
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
@@ -51,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   typo: {
     textAlign: 'center',
     margin: theme.spacing(4),
-    color: 'grey',
+    color: 'white',
   },
 
   textdiv: {
@@ -85,15 +87,15 @@ export default function HomePage() {
 
   return (
     <ReactFullpage
-      // autoScrolling={true}
-      // responsiveHeight={600}
+      autoScrolling={true}
+      responsiveWidth={600}
       navigation={true}
       scrollOverflow={true}
       //fullpage options
       // licenseKey={'YOUR_KEY_HERE'}
       // paddingTop="10px"
-      scrollingSpeed={1000}
-      fitToSection={false}
+      scrollingSpeed={700}
+      // fitToSection={false}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -110,19 +112,19 @@ export default function HomePage() {
                   <div className="absolute text-center w-full h-full">
                     <div className={classes.textdiv}>
                       <Typography
-                        className={classes.textcap}
+                        className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>Developer Student Club-DAIICT's</b>
                       </Typography>
                       <Typography
-                        className={classes.textover}
+                        className={classes.textover + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S L o P</b>
                       </Typography>
                       <Typography
-                        className={classes.textcap}
+                        className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
@@ -132,14 +134,14 @@ export default function HomePage() {
                 </div>
               </Grid>
 
-              <Grid className="section my-8" item xs={12}>
+              <Grid className="section " item xs={12}>
                 <Container maxWidth="md">
                   <Paper
                     className={classes.paperCounter}
                     // style={{ marginBottom: 0 }}
                   >
                     <Countdown
-                      className="py-12"
+                      // className="py-12"
                       toDate={new Date(2020, 9, 20)}
                     />
                   </Paper>
@@ -164,22 +166,18 @@ export default function HomePage() {
                 </Container>
               </Grid> */}
 
-              <Grid
-                className="section xs:py-12 py-6 fp-auto-height"
-                item
-                xs={12}
-              >
+              <Grid className="section xs:py-12" item xs={12}>
                 <Container maxWidth="md">
-                  <Paper
-                    className={classes.paper}
-                    // style={{ marginBottom: 0, backgroundColor: 'none' }}
-                  >
-                    <Grid container direction="column xs:mt-6">
+                  <Paper className={classes.paper}>
+                    <Grid container direction="column">
                       <Grid item>
-                        <Typography variant="h4" align="left">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-blue mb-6"
+                        >
                           <b>What is SLoP ?</b>
                         </Typography>
-                        <Divider className="my-3" variant="fullWidth" />
+                        {/* <Divider className="my-3" variant="fullWidth" /> */}
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
@@ -205,13 +203,16 @@ export default function HomePage() {
                   </Paper>
                 </Container>
                 <Container maxWidth="md">
-                  <Paper variant="outlined" className={classes.paper}>
+                  <Paper className={classes.paper}>
                     <Grid container direction="column">
                       <Grid item>
-                        <Typography variant="h4" align="left">
+                        <Typography
+                          variant="h4"
+                          className="text-center txt--gradient-blue mb-6"
+                        >
                           <b>How it Works ?</b>
                         </Typography>
-                        <Divider className="my-3" variant="fullWidth" />
+                        {/* <Divider className="my-3" variant="fullWidth" /> */}
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
@@ -234,7 +235,12 @@ export default function HomePage() {
                           manual
                         </Typography>
                       </Grid>
-                      <Grid item container direction="row" justify="flex-start">
+                      <Grid
+                        item
+                        container
+                        direction="row"
+                        justify="flex-center"
+                      >
                         <Grid item>
                           <Button
                             variant="contained"
@@ -263,7 +269,7 @@ export default function HomePage() {
                 </Container>
               </Grid>
 
-              <Grid className="section xs:py-2 xs:pb-24 pt-32" item xs={12}>
+              <Grid className="section xs:py-2 xs:pb-20" item xs={12}>
                 <Container maxWidth="md">
                   <Grid
                     container
@@ -274,14 +280,13 @@ export default function HomePage() {
                   >
                     <Grid item xs={12} sm={6} md={6}>
                       <Paper className={classes.formlink}>
-                        <Typography variant="h6">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-green"
+                        >
                           <b> Are You Student ? </b>
                         </Typography>
-                        <Typography
-                          variant="body2"
-                          className={classes.typo}
-                          color="textSecondary"
-                        >
+                        <Typography variant="body2" className={classes.typo}>
                           If you are new to the open source world and You want
                           to exlplore things, new techs. or you are just getting
                           started, Don't worry, headout here and fill out the
@@ -296,15 +301,14 @@ export default function HomePage() {
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
                       <Paper className={classes.formlink}>
-                        <Typography variant="h6">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-green"
+                        >
                           <b> Are You Mentor ? </b>
                         </Typography>
-                        <Typography
-                          variant="body2"
-                          className={classes.typo}
-                          color="textSecondary"
-                        >
-                          If you are confident, knolwgeble enough and You can
+                        <Typography variant="body2" className={classes.typo}>
+                          If you are confident, knowlegable enough and You can
                           teach other's as well, then fill out the Mentor's
                           Form. Even if you know the techs, still you can learn
                           to be better and can help others. Teaching always
@@ -312,7 +316,7 @@ export default function HomePage() {
                         </Typography>
                         <Fab variant="extended" color="secondary">
                           <LaptopMac style={{ margin: 8 }} />
-                          Be A Techer !
+                          Be A Teacher !
                         </Fab>
                       </Paper>
                     </Grid>
@@ -320,26 +324,26 @@ export default function HomePage() {
                 </Container>
               </Grid>
               <Grid
-                className="section fp-auto-height pt-16"
+                className="section"
                 item
                 xs={12}
-                data-percentage="80"
-                data-centered="true"
+                // data-percentage="80"
+                // data-centered="true"
               >
-                <Container maxWidth="md">
+                <Container className="w-full">
                   <Paper
-                    variant="outlined"
                     className={classes.paper}
-                    style={{ backgroundColor: '#424242' }}
+                    // style={{ backgroundColor: '#0000' }}
                   >
                     <Typography variant="h5">
-                      <b>Timeline</b>
+                      <b> Event Timeline</b>
                     </Typography>
-                    <Divider variant="middle" />
-                    <CustomizedTimeline />
+                    {/* <Divider variant="middle" /> */}
+                    <TimelineHorizontal />
+                    {/* <CustomizedTimeline /> */}
                   </Paper>
                 </Container>
-                <div className="w-full ">
+                <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-6">
                   <Footer />
                 </div>
               </Grid>

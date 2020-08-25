@@ -1,0 +1,45 @@
+.text-p {
+  max-width: 50%;
+  color: #444;
+  font-size: 50px;
+  line-height: 45px;
+  font-family: futura-pt, Arial Black, Arial Bold, Gadget, sans-serif;
+  text-transform: uppercase;
+}
+
+.txt--gradient-pink {
+  background-image: linear-gradient(to right, #ee2281, #ee4d6d);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+.txt--gradient-blue {
+  background-image: linear-gradient(to right, #00a6ff, #91f8faef);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+.txt--gradient-green {
+  background-image: linear-gradient(to right, #16d6d9, #96cc29);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+.txt--gradient-orange {
+  background-image: linear-gradient(to right, #ffbf02, #ed0082);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+
+.txt--gradient-purple {
+  background-image: linear-gradient(to right, #57006b, #bf5e8d);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}

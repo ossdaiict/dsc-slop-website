@@ -8,9 +8,9 @@ const LeaderBoard = () => {
     // <>
     //   <div dangerouslySetInnerHTML={{ __html: iframe ? iframe : '' }} />
     // </>
-    <>
+    <div className="mt-20">
       <LeaderBoardTable2 />
-    </>
+    </div>
   );
 };
 
