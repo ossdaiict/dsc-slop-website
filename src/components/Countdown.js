@@ -1,13 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Divider } from '@material-ui/core';
-import CountdownBlock from '../components/CountdownBlock';
+import React from "react";
+import PropTypes from "prop-types";
+import { Typography, Divider } from "@material-ui/core";
+import CountdownBlock from "../components/CountdownBlock";
+import "../Pages/TextGradient.css";
+
 const CountdownDisplay = (props) => {
   const { days, hours, minutes, seconds } = props;
 
   return (
     <>
-      <Typography className="text-center text-white font-sans text-4xl">
+      <Typography className="text-center txt--gradient-orange font-sans text-4xl">
         Coding period begins in ⏳
       </Typography>
       <Divider variant="middle" className="mt-3" />
@@ -84,7 +86,7 @@ Countdown.defaultProps = {
 
 export default function CountdownTimer(props) {
   return (
-    <Countdown toDate={props.toDate}>
+    <Countdown toDate={props.toDate} className="txt--gradient-orange">
       {(props) => (
         <CountdownDisplay
           days={props.days}

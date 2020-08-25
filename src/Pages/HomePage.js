@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Grid,
   makeStyles,
@@ -10,32 +10,33 @@ import {
   CardMedia,
   Divider,
   Box,
-} from '@material-ui/core';
-import { LaptopMac, School } from '@material-ui/icons';
-import ReactFullpage from '@fullpage/react-fullpage';
-import bg from '../images/bg.png';
-import Footer from '../components/Footer';
-import Countdown from '../components/Countdown';
-import CustomizedTimeline from '../components/TimeLine';
-import TimelineHorizontal from '../components/TimelineHorizontal';
+} from "@material-ui/core";
+import { LaptopMac, School } from "@material-ui/icons";
+import ReactFullpage from "@fullpage/react-fullpage";
+import bg from "../images/bg.png";
+import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
+import CustomizedTimeline from "../components/TimeLine";
+import TimelineHorizontal from "../components/TimelineHorizontal";
+import "./TextGradient.css";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
   paperCounter: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
 
   button: {
@@ -45,38 +46,38 @@ const useStyles = makeStyles((theme) => ({
 
   formlink: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: "center",
     minHeight: theme.spacing(40),
   },
 
   typo: {
-    textAlign: 'center',
+    textAlign: "center",
     margin: theme.spacing(4),
-    color: 'grey',
+    color: "white",
   },
 
   textdiv: {
-    marginTop: '16vh',
+    marginTop: "16vh",
   },
 
   textover: {
-    fontSize: '200px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '100px',
+    fontSize: "200px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "100px",
     },
   },
 
   textcap: {
-    fontSize: '24px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '16px',
+    fontSize: "24px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
     },
   },
 
   prizes: {
-    fontSize: '80px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '50px',
+    fontSize: "80px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "50px",
     },
   },
 }));
@@ -111,19 +112,19 @@ export default function HomePage() {
                   <div className="absolute text-center w-full h-full">
                     <div className={classes.textdiv}>
                       <Typography
-                        className={classes.textcap}
+                        className={classes.textcap + " txt--gradient-orange"}
                         color="textPrimary"
                       >
                         <b>Developer Student Club-DAIICT's</b>
                       </Typography>
                       <Typography
-                        className={classes.textover}
+                        className={classes.textover + " txt--gradient-orange"}
                         color="textPrimary"
                       >
                         <b>S L o P</b>
                       </Typography>
                       <Typography
-                        className={classes.textcap}
+                        className={classes.textcap + " txt--gradient-orange"}
                         color="textPrimary"
                       >
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
@@ -171,13 +172,10 @@ export default function HomePage() {
                 xs={12}
               >
                 <Container maxWidth="md">
-                  <Paper
-                    className={classes.paper}
-                    // style={{ marginBottom: 0, backgroundColor: 'none' }}
-                  >
-                    <Grid container direction="column xs:mt-6">
+                  <Paper className={classes.paper}>
+                    <Grid container direction="column">
                       <Grid item>
-                        <Typography variant="h4" align="left">
+                        <Typography variant="h4" className="txt--gradient-blue">
                           <b>What is SLoP ?</b>
                         </Typography>
                         <Divider className="my-3" variant="fullWidth" />
@@ -209,7 +207,10 @@ export default function HomePage() {
                   <Paper variant="outlined" className={classes.paper}>
                     <Grid container direction="column">
                       <Grid item>
-                        <Typography variant="h4" align="left">
+                        <Typography
+                          variant="h4"
+                          className="text-center txt--gradient-blue"
+                        >
                           <b>How it Works ?</b>
                         </Typography>
                         <Divider className="my-3" variant="fullWidth" />
@@ -275,14 +276,13 @@ export default function HomePage() {
                   >
                     <Grid item xs={12} sm={6} md={6}>
                       <Paper className={classes.formlink}>
-                        <Typography variant="h6">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-green"
+                        >
                           <b> Are You Student ? </b>
                         </Typography>
-                        <Typography
-                          variant="body2"
-                          className={classes.typo}
-                          color="textSecondary"
-                        >
+                        <Typography variant="body2" className={classes.typo}>
                           If you are new to the open source world and You want
                           to exlplore things, new techs. or you are just getting
                           started, Don't worry, headout here and fill out the
@@ -297,15 +297,14 @@ export default function HomePage() {
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
                       <Paper className={classes.formlink}>
-                        <Typography variant="h6">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-green"
+                        >
                           <b> Are You Mentor ? </b>
                         </Typography>
-                        <Typography
-                          variant="body2"
-                          className={classes.typo}
-                          color="textSecondary"
-                        >
-                          If you are confident, knolwgeble enough and You can
+                        <Typography variant="body2" className={classes.typo}>
+                          If you are confident, knowlegable enough and You can
                           teach other's as well, then fill out the Mentor's
                           Form. Even if you know the techs, still you can learn
                           to be better and can help others. Teaching always
@@ -313,7 +312,7 @@ export default function HomePage() {
                         </Typography>
                         <Fab variant="extended" color="secondary">
                           <LaptopMac style={{ margin: 8 }} />
-                          Be A Techer !
+                          Be A Teacher !
                         </Fab>
                       </Paper>
                     </Grid>
@@ -331,7 +330,7 @@ export default function HomePage() {
                   <Paper
                     variant="outlined"
                     className={classes.paper}
-                    style={{ backgroundColor: '#424242' }}
+                    style={{ backgroundColor: "#424242" }}
                   >
                     <Typography variant="h5">
                       <b>Timeline</b>
