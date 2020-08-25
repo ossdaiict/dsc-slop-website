@@ -10,7 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import {Contacts} from '@material-ui/icons';
+import { Contacts } from '@material-ui/icons';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import TimelineIcon from '@material-ui/icons/Timeline';
 import MoreIcon from '@material-ui/icons/MoreVert';
@@ -18,8 +18,11 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
   grow: {
     width: '100%',
+    zIndex: '100',
     flexGrow: 1,
-    marginBottom: '1px',
+    blur: '30%',
+    // opacity: '90%',
+    marginBottom: '28px',
     '& a': {
       color: 'inherit',
       textDecoration: 'none',
@@ -130,7 +133,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" color="inherit">
+      <AppBar position="fixed" color="inherit">
         <Toolbar>
           <Link to="/">
             <div className={classes.logo}>
