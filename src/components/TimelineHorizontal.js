@@ -3,12 +3,12 @@ import './timeline.css';
 
 export default function TimelineHorizontal() {
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container xs:hidden">
+      <div className="row text-black">
         <div className="col-md-12">
-          <div className="page-header">
+          {/* <div className="page-header">
             <h1>Horizontal timeline</h1>
-          </div>
+          </div> */}
           <div id="something">
             <ul className="timeline timeline-horizontal">
               <li className="timeline-item">
@@ -17,18 +17,23 @@ export default function TimelineHorizontal() {
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h4 className="timeline-title">Mussum ipsum cacilds 1</h4>
-                    <p>
+                    <h4 className="timeline-title">
+                      Mentor Application begins!
+                    </h4>
+                    {/* <p>
                       <small className="text-muted">
                         <i className="glyphicon glyphicon-time"></i> 11 hours
                         ago via Twitter
                       </small>
-                    </p>
+                    </p> */}
                   </div>
                   <div className="timeline-body">
                     <p>
-                      Mussum ipsum cacilds, vidis litro abertis. Consetis faiz
-                      elementum girarzis, nisi eros gostis.
+                      Interested mentors submit their projects/ideas to be a
+                      part of SLoP!
+                    </p>
+                    <p>
+                      <b>5 Sept 2020</b>
                     </p>
                   </div>
                 </div>
@@ -39,18 +44,17 @@ export default function TimelineHorizontal() {
                 </div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h4 className="timeline-title">Mussum ipsum cacilds 2</h4>
-                    <p>
-                      <small className="text-muted">
-                        <i className="glyphicon glyphicon-time"></i> 11 hours
-                        ago via Twitter
-                      </small>
-                    </p>
+                    <h4 className="timeline-title">
+                      Student Application Begins!
+                    </h4>
                   </div>
                   <div className="timeline-body">
                     <p>
-                      Mussum ipsum cacilds, vidis faiz elementum girarzis, nisi
-                      eros gostis.
+                      Students submits the applications for the projects of
+                      their interest.
+                    </p>
+                    <p>
+                      <b>15 Sept 2020</b>
                     </p>
                   </div>
                 </div>
@@ -77,7 +81,7 @@ export default function TimelineHorizontal() {
                   </div>
                 </div>
               </li>
-              <li className="timeline-item">
+              {/* <li className="timeline-item">
                 <div className="timeline-badge danger">
                   <i className="glyphicon glyphicon-check"></i>
                 </div>
@@ -99,8 +103,8 @@ export default function TimelineHorizontal() {
                     </p>
                   </div>
                 </div>
-              </li>
-              <li className="timeline-item">
+              </li> */}
+              {/* <li className="timeline-item">
                 <div className="timeline-badge warning">
                   <i className="glyphicon glyphicon-check"></i>
                 </div>
@@ -145,12 +149,12 @@ export default function TimelineHorizontal() {
                     </p>
                   </div>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
       </div>
-      <div className="row">
+      {/* <div className="row">
         <div className="col-md-12">
           <div className="page-header">
             <h1>Timeline</h1>
@@ -276,7 +280,7 @@ export default function TimelineHorizontal() {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

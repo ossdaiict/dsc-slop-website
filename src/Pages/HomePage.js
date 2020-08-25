@@ -327,18 +327,18 @@ export default function HomePage() {
                 data-percentage="80"
                 data-centered="true"
               >
-                <Container maxWidth="md">
+                <Container className="w-full">
                   <Paper
                     variant="outlined"
                     className={classes.paper}
-                    style={{ backgroundColor: '#424242' }}
+                    // style={{ backgroundColor: '#0000' }}
                   >
                     <Typography variant="h5">
-                      <b>Timeline</b>
+                      <b> Event Timeline</b>
                     </Typography>
-                    <Divider variant="middle" />
-                    {/* <TimelineHorizontal /> */}
-                    <CustomizedTimeline />
+                    {/* <Divider variant="middle" /> */}
+                    <TimelineHorizontal />
+                    {/* <CustomizedTimeline /> */}
                   </Paper>
                 </Container>
                 <div className="w-full ">
