@@ -132,8 +132,8 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <div className={classes.grow}>
-      <AppBar position="fixed" color="inherit">
+    <div className={classes.grow} >
+      <AppBar id="navbar" position="fixed" color="inherit">
         <Toolbar>
           <Link to="/">
             <div className={classes.logo}>

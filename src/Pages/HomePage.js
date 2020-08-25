@@ -17,10 +17,11 @@ import bg from '../images/bg.png';
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
+import TimelineHorizontal from '../components/TimelineHorizontal';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#424242',
+    backgroundColor: '#000000',
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '25%',
   },
   paperCounter: {
-    backgroundColor: '#424242',
+    backgroundColor: '#000000',
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
@@ -92,7 +93,7 @@ export default function HomePage() {
       //fullpage options
       // licenseKey={'YOUR_KEY_HERE'}
       // paddingTop="10px"
-      scrollingSpeed={1000}
+      scrollingSpeed={700}
       fitToSection={false}
       render={({ state, fullpageApi }) => {
         return (
@@ -263,7 +264,7 @@ export default function HomePage() {
                 </Container>
               </Grid>
 
-              <Grid className="section xs:py-2 xs:pb-24 pt-32" item xs={12}>
+              <Grid className="section xs:py-2 xs:pb-20 pt-32" item xs={12}>
                 <Container maxWidth="md">
                   <Grid
                     container
@@ -336,6 +337,7 @@ export default function HomePage() {
                       <b>Timeline</b>
                     </Typography>
                     <Divider variant="middle" />
+                    {/* <TimelineHorizontal /> */}
                     <CustomizedTimeline />
                   </Paper>
                 </Container>

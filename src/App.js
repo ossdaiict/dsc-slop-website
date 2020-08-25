@@ -25,7 +25,7 @@ const App = () => {
       },
 
       background: {
-        paper: '#333533',
+        paper: '#000000',
         default: '#333533',
       },
 
