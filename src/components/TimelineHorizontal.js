@@ -3,7 +3,7 @@ import './timeline.css';
 
 export default function TimelineHorizontal() {
   return (
-    <div className="container xs:hidden">
+    <div className="container">
       <div className="row text-black">
         <div className="col-md-12">
           {/* <div className="page-header">

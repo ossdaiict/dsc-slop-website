@@ -12,16 +12,16 @@ import './tailwind.css';
 const App = () => {
   const theme = createMuiTheme({
     palette: {
-      type: 'light',
+      type: 'dark',
       primary: {
-        main: '#F5CB5C',
+        main: '#ffffff',
         light: '#F5CB5C',
-        dark: '#F5CB5C',
+        dark: '#ffffff',
       },
       secondary: {
-        main: '#f48fb1',
+        main: '#c1eb6f',
         light: '#f48fb1',
-        dark: '#f48fb1',
+        dark: '#96cc29',
       },
 
       background: {
