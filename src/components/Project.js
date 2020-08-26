@@ -15,14 +15,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getColor(id){
-    if(id%3 === 0) return 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
-    else if(id%3 === 1) return "linear-gradient(135deg, #f6d365 0%, #fda085 100%)";
-    else return "linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)";
+    if(id%3 === 0) return 'linear-gradient(135deg, #FBAB7E 0%, #F7CE68 100%)';
+    else if(id%3 === 1) return "linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)";
+    else return "linear-gradient( 135deg, #FFD3A5 10%, #FD6585 100%)";
 }
 
 export default function Project({id,mentors,url}) {
-
-console.log(id);
   const classes = useStyles();
   const [loading,setLoading] = useState(true);
   const [info,setInfo] = useState({
@@ -70,7 +68,7 @@ console.log(id);
   }
   else{
     return (
-        <Paper className={classes.paper} style={{ background: getColor(id) }}>
+        <Paper className={classes.paper} style={{ background: "#FFDEE9" }}>
            <Grid container direction="column" spacing={1}>
                <Grid item container direction="row">
                     <IconButton className="text-gray-900" href={url} aria-label="Github" size="small" style={{marginRight:8}}>

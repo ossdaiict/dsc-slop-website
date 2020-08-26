@@ -35,6 +35,30 @@
     text-transform: uppercase;
     will-change: transform, opacity;
     overflow: hidden;
+    background: linear-gradient(90deg, #ac00ac 0%, #FF1E52 50%, #f8b420 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .descreption {
+    font-size: 1.8em;
+    padding-left: 0.2em;
+    background: linear-gradient(135deg, #0093E9 0%, #D08081 50%, #FF4450 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   }
+
+  .button {
+    width: 100%;
+    height: 1.9em;
+    border-radius: 1em 1em 1em 1em;
+    font-size: 2.2em;
+    margin-top: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+    segoe ui, arial, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #ff9966 0%, #ff5e62 50%, #396afc 100%);
+
   }
 
   @media only screen and (max-width: 600px) {
@@ -42,6 +66,16 @@
         height: 32px;
         line-height: 32px;
         font-size: 2em;
+    }
+
+    .descreption {
+      font-size: 0.9em;
+     }
+
+     .button {
+      height: 3em;
+      border-radius: 0.5em 0.5em 0.5em 0.5em;
+      font-size: 1em;
     }
   }
   

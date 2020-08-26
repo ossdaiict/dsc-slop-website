@@ -14,6 +14,7 @@ import {
 import { LaptopMac, School } from '@material-ui/icons';
 import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
+import slopbg from '../images/slopbg.png';
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
@@ -101,15 +102,14 @@ export default function HomePage() {
           <ReactFullpage.Wrapper>
             <Grid container justify="center">
               <Grid className="section" item xs={12}>
-                <div className="min-h-screen relative">
+                <div>
                   <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
-                    className="min-h-screen absolute"
                     image={bg}
                     title="Contemplative Reptile"
                   />
-                  <div className="absolute text-center w-full h-full">
+                  {/* <div className="absolute text-center w-full h-full">
                     <div className={classes.textdiv}>
                       <Typography
                         className={classes.textcap + ' txt--gradient-orange'}
@@ -130,7 +130,7 @@ export default function HomePage() {
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
                       </Typography>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </Grid>
 

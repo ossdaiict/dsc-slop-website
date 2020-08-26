@@ -1,13 +1,13 @@
 import React, {useState, useRef,useEffect} from 'react'
 import { useTransition, useChain,  useTrail, animated } from 'react-spring'
 import {Item } from './styles'
-import {Container,Grid,Button,CircularProgress} from '@material-ui/core'
+import {Container,Grid,Button,CircularProgress,Typography} from '@material-ui/core'
 import Project from '../../components/Project';
 import axios from 'axios';
 import './styles.css'
 
-const items = ['WE DO PROJECTS', 'BECAUSE', 'WE', 'LIKE IT'];
-const items1 = ['We', 'Make', 'IT', 'HAPPEN'];
+const items = ['WE', 'DO AMAZING', 'Projects', '...and'];
+const items1 = ['We', 'Make', 'Things', 'HAPPEN'];
 const config = { mass: 5, tension: 800, friction: 80 }
 
 const Projects = () => {
@@ -15,7 +15,6 @@ const Projects = () => {
   const [open, set] = useState(false)
   const [data,setData] = useState([]);
   const [loading,setLoading] = useState(true);
-
   const [toggle, setToogle] = useState(true)
 
   const trail = useTrail(items.length, {
@@ -61,7 +60,7 @@ const Projects = () => {
 
       return (
         <Container className="min-h-screen my-3">
-          <Grid container justify="center">
+          <Grid container justify="center" className="pt-24">
             <Grid container justify="flex-start" item md={12}>
               {
                   toggle ? 
@@ -95,8 +94,13 @@ const Projects = () => {
                     </div>
               }
             </Grid>
-            {!loading ? !open ? <Button onClick={() => set(open => !open)}>Projects</Button> : null : <CircularProgress variant="indeterminate"/> }
-            <Grid container justify="center" onClick={() => set(open => !open)}>
+            <Grid container justify="flex-start" item md={12} className="mt-16 my-8">
+              <Typography color="textPrimary" class="descreption">
+                Here will go some Amazing Projects. Go and Participate as Mentor or Student !!!
+              </Typography>
+            </Grid>
+            {!loading ? !open ? <Button class="button" onClick={() => set(open => !open)}>Show Projects</Button> : null : <CircularProgress class="button" variant="indeterminate"/> }
+            <Grid container justify="center" className="mt-12" onClick={() => set(open => !open)}>
               {transitions.map(({ item, key, props}) => {
                 return (
                   <Grid  key={key} item xs={12} sm={12} md={6}>
