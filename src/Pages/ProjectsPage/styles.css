@@ -1,0 +1,51 @@
+.trails-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+      segoe ui, arial, sans-serif;
+    background: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    background-color: #f0f0f0;
+  }
+  
+  .trails-text {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding-left: 0.2em;
+    line-height: 60px;
+    color: white;
+    font-size: 4em;
+    font-weight: 800;
+    text-transform: uppercase;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .trails-text {
+        height: 32px;
+        line-height: 32px;
+        font-size: 2em;
+    }
+  }
+  
+  .trails-text > div {
+    overflow: hidden;
+  }
+  

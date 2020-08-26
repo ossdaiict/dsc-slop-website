@@ -84,11 +84,11 @@ export default function HomePage() {
   return (
     <Grid container justify="center">
       <Grid item xs={12}>
-        <div className="min-h-screen relative">
+        <div className="h-screen relative">
           <CardMedia
             component="img"
             alt="Contemplative Reptile"
-            className="min-h-screen absolute"
+            className="h-screen absolute"
             image={bg}
             title="Contemplative Reptile"
           />
