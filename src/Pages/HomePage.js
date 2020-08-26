@@ -84,15 +84,14 @@ export default function HomePage() {
   return (
     <Grid container justify="center">
       <Grid item xs={12}>
-        <div className="h-screen relative">
+        <div className="h-screen">
           <CardMedia
             component="img"
             alt="Contemplative Reptile"
-            className="h-screen absolute"
             image={bg}
             title="Contemplative Reptile"
           />
-          <div className="absolute text-center w-full h-full">
+          {/* <div className="absolute text-center w-full h-full">
             <div className={classes.textdiv}>
               <Typography className={classes.textcap} color="textPrimary">
                 <b>Developer Student Club-DAIICT's</b>
@@ -104,7 +103,7 @@ export default function HomePage() {
                 <b>S E M E S T E R - L O N G - P R O J E C T S</b>
               </Typography>
             </div>
-          </div>
+          </div> */}
         </div>
       </Grid>
       <Grid item xs={12}>
