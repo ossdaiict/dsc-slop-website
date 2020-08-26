@@ -21,6 +21,19 @@
   --off-white:#f7f7f7
 }
 
+#navbar{
+  background: rgba(255, 255, 255, 0) !important;
+  backdrop-filter: blur(4px);
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: white !important;
+}
+@media (max-width:767px){
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+  display: none !important;
+}
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 html{
