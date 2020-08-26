@@ -86,71 +86,6 @@ export default function HomePage() {
   const classes = useStyles();
 
   return (
-<<<<<<< HEAD
-    <Grid container justify="center">
-      <Grid item xs={12}>
-        <div className="h-screen">
-          <CardMedia
-            component="img"
-            alt="Contemplative Reptile"
-            image={bg}
-            title="Contemplative Reptile"
-          />
-          {/* <div className="absolute text-center w-full h-full">
-            <div className={classes.textdiv}>
-              <Typography className={classes.textcap} color="textPrimary">
-                <b>Developer Student Club-DAIICT's</b>
-              </Typography>
-              <Typography className={classes.textover} color="textPrimary">
-                <b>S L o P</b>
-              </Typography>
-              <Typography className={classes.textcap} color="textPrimary">
-                <b>S E M E S T E R - L O N G - P R O J E C T S</b>
-              </Typography>
-            </div>
-          </div> */}
-        </div>
-      </Grid>
-      <Grid item xs={12}>
-        <Container maxWidth="md">
-          <Paper className={classes.paperCounter} style={{ marginBottom: 0 }}>
-            <Countdown className="py-12" toDate={new Date(2020, 9, 20)} />
-          </Paper>
-        </Container>
-      </Grid>
-      <Grid item xs={12}>
-        <Container maxWidth="md">
-          <Paper className={classes.paper} style={{marginBottom:0,backgroundColor:"#303030"}}>
-            <Typography className={classes.textcap} color="textSecondary">
-              Prizes Worth
-            </Typography>
-            <Typography className={classes.prizes} color="textPrimary">
-              ₹ 15,000/-
-            </Typography>
-          </Paper>
-        </Container>
-      </Grid>
-      <Grid item xs={12}>
-        <Container maxWidth="md">
-          <Paper
-            className={classes.paper}
-            style={{ marginBottom: 0, backgroundColor: 'none' }}
-          >
-            <Grid container direction="column">
-              <Grid item>
-                <Typography variant="h4" align="left">
-                  <b>What is SLoP ?</b>
-                </Typography>
-                <Divider className="my-3" variant="fullWidth" />
-              </Grid>
-              <Grid item>
-                <Typography variant="body1" align="left">
-                  Semester Long Projects or SLoP is an initiative by Developer
-                  Student Club, DA-IICT exclusively for students of DA-IICT who
-                  are new to open source software development to get started
-                  with open source contributions.
-                </Typography>
-=======
     <ReactFullpage
       autoScrolling={true}
       responsiveWidth={600}
@@ -197,7 +132,6 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
->>>>>>> a165a039cca2d5247d17d1b085ded79fe93bb7e8
               </Grid>
 
               <Grid className="section " item xs={12}>
