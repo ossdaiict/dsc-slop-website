@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
+    backgroundColor: "#91f8faef",
   },
 
   formlink: {
@@ -239,8 +240,8 @@ export default function HomePage() {
                         <Grid item>
                           <Button
                             variant="contained"
-                            color="primary"
                             className={classes.button}
+                            color="secondary"
                             startIcon={<School />}
                             href="https://drive.google.com/file/d/1gEF-U2lV7GssAVGnJmT4STt9NHIHPu-E/view"
                           >
@@ -250,8 +251,8 @@ export default function HomePage() {
                         <Grid item>
                           <Button
                             variant="contained"
-                            color="primary"
                             className={classes.button}
+                            color="secondary"
                             startIcon={<LaptopMac />}
                             href="https://drive.google.com/file/d/1rG00muN3dI10oKcGoOWB2r5pHnszuwCs/view?usp=sharing"
                           >
