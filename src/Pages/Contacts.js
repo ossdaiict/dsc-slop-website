@@ -2,7 +2,6 @@ import React, { useState, useCallback, useRef } from "react";
 import Contact from "../components/Contact";
 import { Container, Grid, Grow, Typography, Divider } from "@material-ui/core";
 import organizers from "../components/organizers";
-import "./Contacts.css";
 
 const Contacts = () => {
   return (
@@ -20,8 +19,10 @@ const Contacts = () => {
       <Grow in>
         <Grid container>
           {organizers.map((member, id) => {
+            //onhover: state[id] = true / false
+
             return (
-              <Grid key={id} item xs={12} sm={6} md={4}>
+              <Grid key={id} item xs={12} sm={8} md={6}>
                 <Contact details={member} />
               </Grid>
             );
