@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Grid,
   makeStyles,
@@ -10,75 +10,81 @@ import {
   CardMedia,
   Divider,
   Box,
-} from "@material-ui/core";
-import { LaptopMac, School } from "@material-ui/icons";
-import ReactFullpage from "@fullpage/react-fullpage";
-import bg from "../images/bg.png";
-import Footer from "../components/Footer";
-import Countdown from "../components/Countdown";
-import CustomizedTimeline from "../components/TimeLine";
-import TimelineHorizontal from "../components/TimelineHorizontal";
-import "./TextGradient.css";
+} from '@material-ui/core';
+import { LaptopMac, School } from '@material-ui/icons';
+import ReactFullpage from '@fullpage/react-fullpage';
+import bg from '../images/bg.png';
+import logo from '../images/logo.png';
+import LogoBear from '../components/LogoBear';
+import Footer from '../components/Footer';
+import Countdown from '../components/Countdown';
+import CustomizedTimeline from '../components/TimeLine';
+import TimelineHorizontal from '../components/TimelineHorizontal';
+import './TextGradient.css';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: "#000000",
+    backgroundColor: '#000000',
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: "center",
-    minHeight: "25%",
+    textAlign: 'center',
+    minHeight: '25%',
   },
   paperCounter: {
-    backgroundColor: "#000000",
+    backgroundColor: '#000000',
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: "center",
-    minHeight: "25%",
+    textAlign: 'center',
+    minHeight: '25%',
   },
 
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
-    backgroundColor: "#91f8faef",
+    backgroundColor: '#91f8faef',
   },
 
   formlink: {
     padding: theme.spacing(2),
-    textAlign: "center",
+    textAlign: 'center',
     minHeight: theme.spacing(40),
   },
 
   typo: {
-    textAlign: "center",
+    textAlign: 'center',
     margin: theme.spacing(4),
-    color: "white",
+    color: 'white',
+  },
+  logo: {
+    top: '10vh',
+    // left: '5vw',
   },
 
   textdiv: {
-    marginTop: "16vh",
+    marginTop: '16vh',
   },
 
   textover: {
-    fontSize: "200px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "100px",
+    fontSize: '200px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '100px',
     },
   },
 
   textcap: {
-    fontSize: "24px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "16px",
+    fontSize: '24px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
     },
   },
 
   prizes: {
-    fontSize: "80px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "50px",
+    fontSize: '80px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '50px',
     },
   },
 }));
@@ -110,29 +116,35 @@ export default function HomePage() {
                     image={bg}
                     title="Contemplative Reptile"
                   />
-                  <div className="absolute text-center w-full h-full">
-                    <div className={classes.textdiv}>
-                      <Typography
-                        className={classes.textcap + " txt--gradient-orange"}
+                  <div className={'fixed text-center w-full ' + classes.logo}>
+                    <LogoBear className={'max-w-sm mx-auto '} />
+                    <img
+                      src={logo}
+                      className="max-w-2xl xs:max-w-sm mx-auto mt-20"
+                    />
+
+                    {/* <div className={classes.textdiv}> */}
+                    {/* <Typography
+                        className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>Developer Student Club-DAIICT's</b>
-                      </Typography>
-                      <Typography
-                        className={classes.textover + " txt--gradient-orange"}
+                      </Typography> */}
+                    {/* <Typography
+                        className={classes.textover + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S L o P</b>
-                      </Typography>
-                      <Typography
-                        className={classes.textcap + " txt--gradient-orange"}
+                      </Typography> */}
+                    {/* <Typography
+                        className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
-                      </Typography>
-                    </div>
+                      </Typography> */}
                   </div>
                 </div>
+                {/* </div> */}
               </Grid>
 
               <Grid className="section " item xs={12}>
@@ -236,7 +248,13 @@ export default function HomePage() {
                           manual
                         </Typography>
                       </Grid>
-                      <Grid item container direction="row" justify="center">
+                      <Grid
+                        item
+                        container
+                        direction="row"
+                        className="mt-10"
+                        justify="center"
+                      >
                         <Grid item>
                           <Button
                             variant="contained"
@@ -326,12 +344,15 @@ export default function HomePage() {
                 // data-percentage="80"
                 // data-centered="true"
               >
-                <Container className="w-full">
+                <Container className="w-full mb-24">
                   <Paper
                     className={classes.paper}
                     // style={{ backgroundColor: '#0000' }}
                   >
-                    <Typography variant="h5">
+                    <Typography
+                      className="txt--gradient-orange mb-12"
+                      variant="h4"
+                    >
                       <b> Event Timeline</b>
                     </Typography>
                     {/* <Divider variant="middle" /> */}
@@ -339,7 +360,7 @@ export default function HomePage() {
                     {/* <CustomizedTimeline /> */}
                   </Paper>
                 </Container>
-                <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-6">
+                <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
                   <Footer />
                 </div>
               </Grid>
