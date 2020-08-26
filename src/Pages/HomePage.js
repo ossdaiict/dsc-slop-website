@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Grid,
   makeStyles,
@@ -10,33 +10,33 @@ import {
   CardMedia,
   Divider,
   Box,
-} from '@material-ui/core';
-import { LaptopMac, School } from '@material-ui/icons';
-import ReactFullpage from '@fullpage/react-fullpage';
-import bg from '../images/bg.png';
-import Footer from '../components/Footer';
-import Countdown from '../components/Countdown';
-import CustomizedTimeline from '../components/TimeLine';
-import TimelineHorizontal from '../components/TimelineHorizontal';
-import './TextGradient.css';
+} from "@material-ui/core";
+import { LaptopMac, School } from "@material-ui/icons";
+import ReactFullpage from "@fullpage/react-fullpage";
+import bg from "../images/bg.png";
+import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
+import CustomizedTimeline from "../components/TimeLine";
+import TimelineHorizontal from "../components/TimelineHorizontal";
+import "./TextGradient.css";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
   paperCounter: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
 
   button: {
@@ -46,38 +46,38 @@ const useStyles = makeStyles((theme) => ({
 
   formlink: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: "center",
     minHeight: theme.spacing(40),
   },
 
   typo: {
-    textAlign: 'center',
+    textAlign: "center",
     margin: theme.spacing(4),
-    color: 'white',
+    color: "white",
   },
 
   textdiv: {
-    marginTop: '16vh',
+    marginTop: "16vh",
   },
 
   textover: {
-    fontSize: '200px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '100px',
+    fontSize: "200px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "100px",
     },
   },
 
   textcap: {
-    fontSize: '24px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '16px',
+    fontSize: "24px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
     },
   },
 
   prizes: {
-    fontSize: '80px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '50px',
+    fontSize: "80px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "50px",
     },
   },
 }));
@@ -112,19 +112,19 @@ export default function HomePage() {
                   <div className="absolute text-center w-full h-full">
                     <div className={classes.textdiv}>
                       <Typography
-                        className={classes.textcap + ' txt--gradient-orange'}
+                        className={classes.textcap + " txt--gradient-orange"}
                         color="textPrimary"
                       >
                         <b>Developer Student Club-DAIICT's</b>
                       </Typography>
                       <Typography
-                        className={classes.textover + ' txt--gradient-orange'}
+                        className={classes.textover + " txt--gradient-orange"}
                         color="textPrimary"
                       >
                         <b>S L o P</b>
                       </Typography>
                       <Typography
-                        className={classes.textcap + ' txt--gradient-orange'}
+                        className={classes.textcap + " txt--gradient-orange"}
                         color="textPrimary"
                       >
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
@@ -235,12 +235,7 @@ export default function HomePage() {
                           manual
                         </Typography>
                       </Grid>
-                      <Grid
-                        item
-                        container
-                        direction="row"
-                        justify="flex-center"
-                      >
+                      <Grid item container direction="row" justify="center">
                         <Grid item>
                           <Button
                             variant="contained"
