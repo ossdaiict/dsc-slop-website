@@ -152,7 +152,7 @@ export default function TimelineHorizontal() {
             </li>
           </ul>
         </div>
-        <hr className="bg-white -mx-24" />
+        <hr className="bg-white -mx-10" />
       </div>
     </div>
   );
