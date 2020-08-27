@@ -14,7 +14,12 @@ import {
 import { LaptopMac, School } from '@material-ui/icons';
 import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
+<<<<<<< HEAD
 import slopbg from '../images/slopbg.png';
+=======
+import logo from '../images/logo.png';
+import LogoBear from '../components/LogoBear';
+>>>>>>> 31514b7fbb9863619649696c4405b99eef7de560
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
@@ -43,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
+    backgroundColor: '#91f8faef',
   },
 
   formlink: {
@@ -55,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     margin: theme.spacing(4),
     color: 'white',
+  },
+  logo: {
+    top: '10vh',
+    // left: '5vw',
   },
 
   textdiv: {
@@ -109,29 +119,47 @@ export default function HomePage() {
                     image={bg}
                     title="Contemplative Reptile"
                   />
+<<<<<<< HEAD
                   {/* <div className="absolute text-center w-full h-full">
                     <div className={classes.textdiv}>
                       <Typography
+=======
+                  <div className={'fixed text-center w-full ' + classes.logo}>
+                    <LogoBear className={'max-w-sm mx-auto '} />
+                    <img
+                      src={logo}
+                      className="max-w-2xl xs:max-w-xs mx-auto mt-20"
+                    />
+
+                    {/* <div className={classes.textdiv}> */}
+                    {/* <Typography
+>>>>>>> 31514b7fbb9863619649696c4405b99eef7de560
                         className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>Developer Student Club-DAIICT's</b>
-                      </Typography>
-                      <Typography
+                      </Typography> */}
+                    {/* <Typography
                         className={classes.textover + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S L o P</b>
-                      </Typography>
-                      <Typography
+                      </Typography> */}
+                    {/* <Typography
                         className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
+<<<<<<< HEAD
                       </Typography>
                     </div>
                   </div> */}
+=======
+                      </Typography> */}
+                  </div>
+>>>>>>> 31514b7fbb9863619649696c4405b99eef7de560
                 </div>
+                {/* </div> */}
               </Grid>
 
               <Grid className="section " item xs={12}>
@@ -239,13 +267,14 @@ export default function HomePage() {
                         item
                         container
                         direction="row"
-                        justify="flex-center"
+                        className="mt-10"
+                        justify="center"
                       >
                         <Grid item>
                           <Button
                             variant="contained"
-                            color="primary"
                             className={classes.button}
+                            color="secondary"
                             startIcon={<School />}
                             href="https://drive.google.com/file/d/1gEF-U2lV7GssAVGnJmT4STt9NHIHPu-E/view"
                           >
@@ -255,8 +284,8 @@ export default function HomePage() {
                         <Grid item>
                           <Button
                             variant="contained"
-                            color="primary"
                             className={classes.button}
+                            color="secondary"
                             startIcon={<LaptopMac />}
                             href="https://drive.google.com/file/d/1rG00muN3dI10oKcGoOWB2r5pHnszuwCs/view?usp=sharing"
                           >
@@ -330,20 +359,25 @@ export default function HomePage() {
                 // data-percentage="80"
                 // data-centered="true"
               >
-                <Container className="w-full">
+                <Container className="w-full mb-24">
                   <Paper
                     className={classes.paper}
                     // style={{ backgroundColor: '#0000' }}
                   >
-                    <Typography variant="h5">
+                    <Typography
+                      className="txt--gradient-orange mb-12"
+                      variant="h4"
+                    >
                       <b> Event Timeline</b>
                     </Typography>
                     {/* <Divider variant="middle" /> */}
                     <TimelineHorizontal />
+
                     {/* <CustomizedTimeline /> */}
                   </Paper>
                 </Container>
-                <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-6">
+                {/* <hr className="bg-white xs:block w-full hidden" /> */}
+                <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
                   <Footer />
                 </div>
               </Grid>
