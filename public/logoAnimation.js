@@ -1,7 +1,13 @@
 const {
   gsap: { set, timeline },
 } = window;
-
+document.addEventListener('keydown', (objEvent) => {
+  if (objEvent.keyCode == 9) {
+    //tab pressed
+    console.log('tab pressed');
+    objEvent.preventDefault(); // stops its action
+  }
+});
 const shared = {
   duration: 0.075,
 };
