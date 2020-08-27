@@ -1,0 +1,85 @@
+.trails-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+      segoe ui, arial, sans-serif;
+    background: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    background-color: #f0f0f0;
+  }
+  
+  .trails-text {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding-left: 0.2em;
+    line-height: 60px;
+    color: white;
+    font-size: 4em;
+    font-weight: 800;
+    text-transform: uppercase;
+    will-change: transform, opacity;
+    overflow: hidden;
+    background: linear-gradient(90deg, #ac00ac 0%, #FF1E52 50%, #f8b420 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .descreption {
+    font-size: 1.8em;
+    padding-left: 0.2em;
+    background: linear-gradient(135deg, #0093E9 0%, #D08081 50%, #FF4450 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   }
+
+  .button {
+    width: 100%;
+    height: 1.9em;
+    border-radius: 1em 1em 1em 1em;
+    font-size: 2.2em;
+    margin-top: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+    segoe ui, arial, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #ff9966 0%, #ff5e62 50%, #396afc 100%);
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .trails-text {
+        height: 32px;
+        line-height: 32px;
+        font-size: 2em;
+    }
+
+    .descreption {
+      font-size: 0.9em;
+     }
+
+     .button {
+      height: 3em;
+      border-radius: 0.5em 0.5em 0.5em 0.5em;
+      font-size: 1em;
+    }
+  }
+  
+  .trails-text > div {
+    overflow: hidden;
+  }
+  

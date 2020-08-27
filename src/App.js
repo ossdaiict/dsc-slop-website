@@ -2,7 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import Homepage from './Pages/HomePage';
 import LeaderBoard from './Pages/LeaderBoard';
-import Projects from './Pages/Projects';
+import Projects from './Pages/ProjectsPage/Projects';
 import Contacts from './Pages/Contacts';
 import Navbar from './components/NavBar';
 import Footer from './components/Footer';

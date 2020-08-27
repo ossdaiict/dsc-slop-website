@@ -4,6 +4,7 @@ import {GitHub, Group} from '@material-ui/icons';
 import axios from 'axios';
 import moment from 'moment';
 
+
 const useStyles = makeStyles((theme) => ({
     paper: {
         margin: theme.spacing(1),
@@ -14,15 +15,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getColor(id){
-    if(id%5 === 0) return "#FFEBCD";
-    else if(id%5 === 1) return "#54FF9F";
-    else if(id%5 === 2) return "#B0E2FF";
-    else if(id%5 === 3) return "#FEAB82";
-    else return "#FFF68F"; 
+    if(id%3 === 0) return 'linear-gradient(135deg, #FBAB7E 0%, #F7CE68 100%)';
+    else if(id%3 === 1) return "linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)";
+    else return "linear-gradient( 135deg, #FFD3A5 10%, #FD6585 100%)";
 }
 
 export default function Project({id,mentors,url}) {
-
   const classes = useStyles();
   const [loading,setLoading] = useState(true);
   const [info,setInfo] = useState({
@@ -57,6 +55,7 @@ export default function Project({id,mentors,url}) {
 
   if(loading)
   {
+    console.log(getColor(id))
       return(
         <Paper variant="elevation" className={classes.paper}>
             <Grid container spacing={2} justify="center" alignItems="center" style={{ height: '25vh', textAlign: "center" }}>
@@ -69,25 +68,25 @@ export default function Project({id,mentors,url}) {
   }
   else{
     return (
-        <Paper elevation="5" className={classes.paper}>
+        <Paper className={classes.paper} style={{ background: "#FFDEE9" }}>
            <Grid container direction="column" spacing={1}>
                <Grid item container direction="row">
-                    <IconButton href={url} aria-label="Github" size="small" style={{marginRight:8}}>
+                    <IconButton className="text-gray-900" href={url} aria-label="Github" size="small" style={{marginRight:8}}>
                         <GitHub size="small" />
                     </IconButton>
-                    <Typography variant="h6" color="textPrimary" align="left">{info.projecttitle}</Typography>
+                    <Typography variant="h6" className="text-black" align="left">{info.projecttitle}</Typography>
                </Grid>
                <Grid item>
-                    <Typography variant="body2" color="textSecondary" align="left" style={{height:"40px", overflow:"hidden",textOverflow:"ellipsis"}}>{info.description}</Typography>
+                    <Typography variant="body2" className="text-gray-800" align="left" style={{height:"40px", overflow:"hidden",textOverflow:"ellipsis"}}>{info.description}</Typography>
                </Grid>
                <Grid item>
-                    <Typography variant="subtitle2" color="textPrimary" align="left">{`Mentors: ${mentors}`}</Typography>
+                    <Typography variant="subtitle2" className="text-gray-900" align="left">{`Mentors: ${mentors}`}</Typography>
                </Grid>
                <Grid item>
-                    <Typography variant="subtitle2" color="textSecondary" align="left">{`Last Updated: ${moment(info.lastUpdated).fromNow()}`}</Typography>
+                    <Typography variant="subtitle2" className="text-gray-900" align="left">{`Last Updated: ${moment(info.lastUpdated).fromNow()}`}</Typography>
                </Grid>
                <Grid item container direction="row-reverse">
-                    <IconButton href={info.contributors.replace("api.github.com/repos","github.com")} aria-label="Contributors" size="small">
+                    <IconButton className="text-gray-900" href={info.contributors.replace("api.github.com/repos","github.com")} aria-label="Contributors" size="small">
                         <Group/>
                     </IconButton>
                </Grid>

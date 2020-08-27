@@ -108,18 +108,14 @@ export default function HomePage() {
           <ReactFullpage.Wrapper>
             <Grid container justify="center">
               <Grid className="section" item xs={12}>
-                <div>
+                <div className="min-h-screen relative">
                   <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
+                    className="min-h-screen absolute"
                     image={bg}
                     title="Contemplative Reptile"
                   />
-<<<<<<< HEAD
-                  {/* <div className="absolute text-center w-full h-full">
-                    <div className={classes.textdiv}>
-                      <Typography
-=======
                   <div className={'fixed text-center w-full ' + classes.logo}>
                     <LogoBear className={'max-w-sm mx-auto '} />
                     <img
@@ -129,7 +125,6 @@ export default function HomePage() {
 
                     {/* <div className={classes.textdiv}> */}
                     {/* <Typography
->>>>>>> 31514b7fbb9863619649696c4405b99eef7de560
                         className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
@@ -146,14 +141,8 @@ export default function HomePage() {
                         color="textPrimary"
                       >
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
-<<<<<<< HEAD
-                      </Typography>
-                    </div>
-                  </div> */}
-=======
                       </Typography> */}
                   </div>
->>>>>>> 31514b7fbb9863619649696c4405b99eef7de560
                 </div>
                 {/* </div> */}
               </Grid>

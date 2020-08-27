@@ -5,6 +5,8 @@ import Grow from '@material-ui/core/Grow';
 import Box from '@material-ui/core/Box';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
+import { Typography } from '@material-ui/core';
+import './style.css'
 
 function LeaderBoardTable2() {
     const [users, setUsers] = useState([]);
@@ -33,10 +35,12 @@ function LeaderBoardTable2() {
         return (
             <Box m={1.5}>
                 <Grow in={true}>
+                    <div>
+                    <Typography style={{ fontWeight:"bolder" , fontSize:"48px", width:"16rem" , marginLeft:"0.5rem"}} className="title">Leaderoard</Typography>
                     <MaterialTable
-                        title="Leaderboard"
+                        title=""
                         columns={[
-                            { title: '       Current Rank', field: 'rank', align: "center", headerStyle: { whiteSpace: 'pre' } },
+                            { title: '       Current Rank', field: 'rank', align: "center", headerStyle: { whiteSpace: 'pre' },},
                             { title: '       Username', field: 'username', align: "center", headerStyle: { whiteSpace: 'pre' } },
                             { title: '       Points', field: 'points', align: "center", headerStyle: { whiteSpace: 'pre' } },
                             { title: '       Pull Requests', field: 'pull_request', align: "center", headerStyle: { whiteSpace: 'pre' } },
@@ -46,13 +50,22 @@ function LeaderBoardTable2() {
                         options={{
                             rowStyle: x => {
                                 if (x.tableData.id % 2 === 0) {
-                                    return { backgroundColor: '#434543' }
+                                    return { background: "#1e1f1e",  //'linear-gradient(90deg, #85FFBD 0%, #FFFB7D 100%)',
+                                             fontWeight:"bold",
+                                             fontSize:"24px"}
+                                }
+                                else
+                                {
+                                    return { background: "#171717",//'linear-gradient(270deg, #FBAB7E 0%, #F7CE68 100%)',
+                                             fontWeight:"bold",
+                                             fontSize:"24px" }
                                 }
                             },
                             pageSize: 10,
                             pageSizeOptions: [Math.floor(users.length / 3), Math.floor(users.length / 2), users.length]
                         }}
                     />
+                    </div>
                 </Grow>
             </Box>
         )
