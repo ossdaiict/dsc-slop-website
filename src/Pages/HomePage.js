@@ -120,7 +120,7 @@ export default function HomePage() {
                     <LogoBear className={'max-w-sm mx-auto '} />
                     <img
                       src={logo}
-                      className="max-w-2xl xs:max-w-sm mx-auto mt-20"
+                      className="max-w-2xl xs:max-w-xs mx-auto mt-20"
                     />
 
                     {/* <div className={classes.textdiv}> */}
@@ -357,9 +357,11 @@ export default function HomePage() {
                     </Typography>
                     {/* <Divider variant="middle" /> */}
                     <TimelineHorizontal />
+
                     {/* <CustomizedTimeline /> */}
                   </Paper>
                 </Container>
+                {/* <hr className="bg-white xs:block w-full hidden" /> */}
                 <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
                   <Footer />
                 </div>
