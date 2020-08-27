@@ -14,12 +14,8 @@ import {
 import { LaptopMac, School } from '@material-ui/icons';
 import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
-<<<<<<< HEAD
-import slopbg from '../images/slopbg.png';
-=======
 import logo from '../images/logo.png';
 import LogoBear from '../components/LogoBear';
->>>>>>> 31514b7fbb9863619649696c4405b99eef7de560
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
