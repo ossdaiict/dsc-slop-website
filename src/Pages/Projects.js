@@ -5,6 +5,7 @@ import {
   Container,
   CircularProgress,
   makeStyles,
+  Typography,
 } from '@material-ui/core';
 import Project from '../components/Project';
 import axios from 'axios';
@@ -20,21 +21,33 @@ export default function Projects() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const classes = useStyles();
+  const haveProjectsAnnounced = false;
 
-  useEffect(() => {
-    const fetch = () => {
-      axios
-        .get(
-          'https://script.google.com/macros/s/AKfycbw33V3utIboH-9H-S-dZj_zL25_CaHH4-1cyBz1IognJmONis9r/exec'
-        )
-        .then(({ data }) => {
-          setData(data.projects);
-          setLoading(false);
-        });
-    };
+  if (!haveProjectsAnnounced) {
+    return (
+      <div className="mt-20 min-h-screen w-full">
+        <Grow in>
+          <Typography className="text-2xl mt-64 xs:mx-1 xs:text-base text-white text-center">
+            Projects will be announced soon!
+          </Typography>
+        </Grow>
+      </div>
+    );
+  }
+  // useEffect(() => {
+  //   const fetch = () => {
+  //     axios
+  //       .get(
+  //         'https://script.google.com/macros/s/AKfycbw33V3utIboH-9H-S-dZj_zL25_CaHH4-1cyBz1IognJmONis9r/exec'
+  //       )
+  //       .then(({ data }) => {
+  //         setData(data.projects);
+  //         setLoading(false);
+  //       });
+  //   };
 
-    fetch();
-  }, []);
+  //   fetch();
+  // }, []);
 
   if (loading) {
     return (

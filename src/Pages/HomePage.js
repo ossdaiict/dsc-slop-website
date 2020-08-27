@@ -101,7 +101,6 @@ export default function HomePage() {
       responsiveWidth={600}
       navigation={true}
       scrollOverflow={true}
-      keyboardScrolling={false}
       //fullpage options
       // licenseKey={'YOUR_KEY_HERE'}
       // paddingTop="10px"
@@ -156,14 +155,8 @@ export default function HomePage() {
 
               <Grid className="section " item xs={12}>
                 <Container maxWidth="md">
-                  <Paper
-                    className={classes.paperCounter}
-                    // style={{ marginBottom: 0 }}
-                  >
-                    <Countdown
-                      // className="py-12"
-                      toDate={new Date(2020, 9, 20)}
-                    />
+                  <Paper className={classes.paperCounter}>
+                    <Countdown toDate={new Date(2020, 9, 20)} />
                   </Paper>
                 </Container>
               </Grid>
