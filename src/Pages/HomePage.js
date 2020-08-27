@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Grid,
   makeStyles,
@@ -10,81 +10,81 @@ import {
   CardMedia,
   Divider,
   Box,
-} from '@material-ui/core';
-import { LaptopMac, School } from '@material-ui/icons';
-import ReactFullpage from '@fullpage/react-fullpage';
-import bg from '../images/bg.png';
-import logo from '../images/logo.png';
-import LogoBear from '../components/LogoBear';
-import Footer from '../components/Footer';
-import Countdown from '../components/Countdown';
-import CustomizedTimeline from '../components/TimeLine';
-import TimelineHorizontal from '../components/TimelineHorizontal';
-import './TextGradient.css';
+} from "@material-ui/core";
+import { LaptopMac, School } from "@material-ui/icons";
+import ReactFullpage from "@fullpage/react-fullpage";
+import bg from "../images/bg.png";
+import logo from "../images/logo.png";
+import LogoBear from "../components/LogoBear";
+import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
+import CustomizedTimeline from "../components/TimeLine";
+import TimelineHorizontal from "../components/TimelineHorizontal";
+import "./TextGradient.css";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
   paperCounter: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
 
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
-    backgroundColor: '#91f8faef',
+    backgroundColor: "#91f8faef",
   },
 
   formlink: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: "center",
     minHeight: theme.spacing(40),
   },
 
   typo: {
-    textAlign: 'center',
+    textAlign: "center",
     margin: theme.spacing(4),
-    color: 'white',
+    color: "white",
   },
   logo: {
-    top: '10vh',
+    top: "10vh",
     // left: '5vw',
   },
 
   textdiv: {
-    marginTop: '16vh',
+    marginTop: "16vh",
   },
 
   textover: {
-    fontSize: '200px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '100px',
+    fontSize: "200px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "100px",
     },
   },
 
   textcap: {
-    fontSize: '24px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '16px',
+    fontSize: "24px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
     },
   },
 
   prizes: {
-    fontSize: '80px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '50px',
+    fontSize: "80px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "50px",
     },
   },
 }));
@@ -119,10 +119,10 @@ export default function HomePage() {
                     className="min-h-screen absolute"
                     title="Contemplative Reptile"
                   /> */}
-                  <div className={'fixed text-center w-full ' + classes.logo}>
+                  <div className={"fixed text-center w-full " + classes.logo}>
                     <LogoBear
                       className={
-                        'max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
+                        "max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 "
                       }
                     />
                     <img
@@ -201,22 +201,20 @@ export default function HomePage() {
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
-                          Semester Long Projects or SLoP is an initiative by
-                          Developer Student Club, DA-IICT exclusively for
-                          students of DA-IICT who are new to open source
-                          software development to get started with open source
+                          Semester Long Projects or SLoP is an initiative by the
+                          Developer Student Club (DA-IICT), exclusively for
+                          students who are new to open source software
+                          development to get started with open source
                           contributions.
                         </Typography>
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
-                          It’s modeled to be similar but smaller Google Summer
-                          of Code (GSoC), which is global that matches students
-                          up with open source, free software and
-                          technology-related organizations to write code and get
-                          paid for the same. Similarly, SLoP is aimed at
-                          introducing new students in the area and helps them
-                          gain confidence
+                          We want to increase the development culture and
+                          involvement of students with open-source technologies
+                          which will present the benefits of open source as well
+                          as introduce them to the cutting edge tech and coding
+                          practices.
                         </Typography>
                       </Grid>
                     </Grid>
@@ -238,15 +236,17 @@ export default function HomePage() {
                         <Typography variant="body1" align="left">
                           Participants can apply for the program either as a
                           student or as a mentor. Mentors are selected through a
-                          selection process. The selected mentors propose
-                          projects, the best of which are chosen to be included
-                          in the program. Students work on these projects in
-                          their winter vacations. The mentors review the pull
-                          requests and the overall work on their project by
-                          various contributors throughout the coding period of
-                          the program. At the end of the coding period, the
-                          students are compared on the basis of most
-                          contributions.
+                          process at the discretion of the organizers. The
+                          selected mentors propose projects, the best of which
+                          are chosen to be included in the program. Students
+                          work on these projects during the semester and try to
+                          contribute as much as they can. The mentors review the
+                          PRs and the overall work on their project of various
+                          contributors throughout the coding period of the
+                          program by assigning them some points. At the end of
+                          the coding period, the students are compared on the
+                          basis of the value of their contributions and their
+                          points.
                         </Typography>
                       </Grid>
                       <Grid item>
