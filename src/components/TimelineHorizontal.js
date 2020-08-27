@@ -66,6 +66,22 @@ export default function TimelineHorizontal() {
                 </div>
                 {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
               </li>
+              <li className="timeline-item">
+                <div className="timeline-badge info">
+                  <i className="glyphicon glyphicon-check"></i>
+                </div>
+                <div className="timeline-panel bg-black border border-white rounded-lg">
+                  <div className="timeline-heading">
+                    <h3 className="timeline-title">
+                      <b>Bye Bye coding. Hello Results.</b>
+                    </h3>
+                  </div>
+                  <div className="timeline-body">
+                    <p>23 Nov 2020</p>
+                  </div>
+                </div>
+                {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
+              </li>
             </ul>
           </div>
         </div>
