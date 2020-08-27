@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Grid,
   makeStyles,
@@ -10,81 +10,81 @@ import {
   CardMedia,
   Divider,
   Box,
-} from "@material-ui/core";
-import { LaptopMac, School } from "@material-ui/icons";
-import ReactFullpage from "@fullpage/react-fullpage";
-import bg from "../images/bg.png";
-import logo from "../images/logo.png";
-import LogoBear from "../components/LogoBear";
-import Footer from "../components/Footer";
-import Countdown from "../components/Countdown";
-import CustomizedTimeline from "../components/TimeLine";
-import TimelineHorizontal from "../components/TimelineHorizontal";
-import "./TextGradient.css";
+} from '@material-ui/core';
+import { LaptopMac, School } from '@material-ui/icons';
+import ReactFullpage from '@fullpage/react-fullpage';
+import bg from '../images/bg.png';
+import logo from '../images/logo.png';
+import LogoBear from '../components/LogoBear';
+import Footer from '../components/Footer';
+import Countdown from '../components/Countdown';
+import CustomizedTimeline from '../components/TimeLine';
+import TimelineHorizontal from '../components/TimelineHorizontal';
+import './TextGradient.css';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: "#000000",
+    backgroundColor: '#000000',
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: "center",
-    minHeight: "25%",
+    textAlign: 'center',
+    minHeight: '25%',
   },
   paperCounter: {
-    backgroundColor: "#000000",
+    backgroundColor: '#000000',
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: "center",
-    minHeight: "25%",
+    textAlign: 'center',
+    minHeight: '25%',
   },
 
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
-    backgroundColor: "#91f8faef",
+    backgroundColor: '#91f8faef',
   },
 
   formlink: {
     padding: theme.spacing(2),
-    textAlign: "center",
+    textAlign: 'center',
     minHeight: theme.spacing(40),
   },
 
   typo: {
-    textAlign: "center",
+    textAlign: 'center',
     margin: theme.spacing(4),
-    color: "white",
+    color: 'white',
   },
   logo: {
-    top: "10vh",
+    top: '10vh',
     // left: '5vw',
   },
 
   textdiv: {
-    marginTop: "16vh",
+    marginTop: '16vh',
   },
 
   textover: {
-    fontSize: "200px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "100px",
+    fontSize: '200px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '100px',
     },
   },
 
   textcap: {
-    fontSize: "24px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "16px",
+    fontSize: '24px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
     },
   },
 
   prizes: {
-    fontSize: "80px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "50px",
+    fontSize: '80px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '50px',
     },
   },
 }));
@@ -118,10 +118,10 @@ export default function HomePage() {
                     className="min-h-screen absolute"
                     title="Contemplative Reptile"
                   /> */}
-                  <div className={"fixed text-center w-full " + classes.logo}>
+                  <div className={'fixed text-center w-full ' + classes.logo}>
                     <LogoBear
                       className={
-                        "max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 "
+                        'max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
                       }
                     />
                     <img
@@ -155,14 +155,8 @@ export default function HomePage() {
 
               <Grid className="section " item xs={12}>
                 <Container maxWidth="md">
-                  <Paper
-                    className={classes.paperCounter}
-                    // style={{ marginBottom: 0 }}
-                  >
-                    <Countdown
-                      // className="py-12"
-                      toDate={new Date(2020, 9, 23)}
-                    />
+                  <Paper className={classes.paperCounter}>
+                    <Countdown toDate={new Date(2020, 9, 23)} />
                   </Paper>
                 </Container>
               </Grid>

@@ -40,7 +40,7 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <Navbar />
-        <Router>
+        <Router primary={false}>
           <Homepage path="/" />
           <LeaderBoard path="/leaderboard" />
           <Projects path="/projects" />
