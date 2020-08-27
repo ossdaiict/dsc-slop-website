@@ -101,7 +101,6 @@ export default function HomePage() {
       responsiveWidth={600}
       navigation={true}
       scrollOverflow={true}
-      keyboardScrolling={false}
       //fullpage options
       // licenseKey={'YOUR_KEY_HERE'}
       // paddingTop="10px"
@@ -162,7 +161,7 @@ export default function HomePage() {
                   >
                     <Countdown
                       // className="py-12"
-                      toDate={new Date(2020, 9, 20)}
+                      toDate={new Date(2020, 9, 23)}
                     />
                   </Paper>
                 </Container>
@@ -308,11 +307,14 @@ export default function HomePage() {
                           <b> Are You Student ? </b>
                         </Typography>
                         <Typography variant="body2" className={classes.typo}>
-                          If you are new to the open source world and You want
-                          to exlplore things, new techs. or you are just getting
-                          started, Don't worry, headout here and fill out the
-                          student form. We'll guide you throughout whole
-                          project, and you can win exciting prizes.
+                          If you are new to the ginormous world of open source
+                          development or development in general, or just want to
+                          explore, then SLoP is perfect for you. You'll get to
+                          learn some super cool stuff from great mentors (most
+                          of them will be working on awesome tech!) and can
+                          compete for amazing prizes with your fellow beginners.
+                          For more details, check out the Student's Manual above
+                          and to register click below!
                         </Typography>
                         <Fab variant="extended" color="secondary">
                           <School style={{ margin: 8 }} />
@@ -329,11 +331,14 @@ export default function HomePage() {
                           <b> Are You Mentor ? </b>
                         </Typography>
                         <Typography variant="body2" className={classes.typo}>
-                          If you are confident, knowlegable enough and You can
-                          teach other's as well, then fill out the Mentor's
-                          Form. Even if you know the techs, still you can learn
-                          to be better and can help others. Teaching always
-                          makes you push to Learning.
+                          If you feel that you want to contribute back to
+                          open-source and guide your fellow peers properly, then
+                          SLoP is a great platform for you. You can interact
+                          with new developers (you might also learn some cool
+                          new things!) and guide them through your project. As a
+                          bonus, you can get a chance to win a prize! For more
+                          details, check out the Mentor's Manual above and to
+                          register click below!
                         </Typography>
                         <Fab variant="extended" color="secondary">
                           <LaptopMac style={{ margin: 8 }} />
@@ -356,10 +361,7 @@ export default function HomePage() {
                     className={classes.paper}
                     // style={{ backgroundColor: '#0000' }}
                   >
-                    <Typography
-                      className="txt--gradient-orange mb-12"
-                      variant="h4"
-                    >
+                    <Typography className="txt--gradient-orange" variant="h4">
                       <b> Event Timeline</b>
                     </Typography>
                     {/* <Divider variant="middle" /> */}
