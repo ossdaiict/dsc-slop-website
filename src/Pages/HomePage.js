@@ -91,6 +91,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HomePage() {
   const classes = useStyles();
+  // React.useEffect(() => {
+  //   window.location.reload();
+  // }, []);
 
   return (
     <ReactFullpage
@@ -98,6 +101,7 @@ export default function HomePage() {
       responsiveWidth={600}
       navigation={true}
       scrollOverflow={true}
+      keyboardScrolling={false}
       //fullpage options
       // licenseKey={'YOUR_KEY_HERE'}
       // paddingTop="10px"
@@ -109,15 +113,18 @@ export default function HomePage() {
             <Grid container justify="center">
               <Grid className="section" item xs={12}>
                 <div className="min-h-screen relative">
-                  <CardMedia
+                  {/* <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
                     className="min-h-screen absolute"
-                    image={bg}
                     title="Contemplative Reptile"
-                  />
+                  /> */}
                   <div className={'fixed text-center w-full ' + classes.logo}>
-                    <LogoBear className={'max-w-sm mx-auto '} />
+                    <LogoBear
+                      className={
+                        'max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
+                      }
+                    />
                     <img
                       src={logo}
                       className="max-w-2xl xs:max-w-xs mx-auto mt-20"
