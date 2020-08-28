@@ -9,6 +9,9 @@ import {
 } from '@material-ui/core';
 import Project from '../components/Project';
 import axios from 'axios';
+import { Cookies, useCookies } from 'react-cookie';
+
+const cookies = new Cookies();
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -18,6 +21,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Projects() {
+  const [cookie, setCookie] = useCookies(['']);
+
+  React.useEffect(() => {
+    const bearCookie = cookies.get('bearCookie');
+    console.log(bearCookie);
+    setCookie('bearCookie', { loaded: false }, { path: '/' });
+  }, [cookies]);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const classes = useStyles();
