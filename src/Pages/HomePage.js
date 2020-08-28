@@ -7,10 +7,11 @@ import {
   Container,
   Button,
   Fab,
-  CardMedia,
-  Divider,
-  Box,
+  Collapse,
+  IconButton,
 } from "@material-ui/core";
+import CloseIcon from '@material-ui/icons/Close'
+import Alert from '@material-ui/lab/Alert';
 import { LaptopMac, School } from "@material-ui/icons";
 import ReactFullpage from "@fullpage/react-fullpage";
 import bg from "../images/bg.png";
@@ -21,6 +22,7 @@ import Countdown from "../components/Countdown";
 import CustomizedTimeline from "../components/TimeLine";
 import TimelineHorizontal from "../components/TimelineHorizontal";
 import "./TextGradient.css";
+import "../components/blink.css";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -91,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HomePage() {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
   // React.useEffect(() => {
   //   window.location.reload();
   // }, []);
@@ -139,6 +142,12 @@ export default function HomePage() {
                       src={logo}
                       className="max-w-2xl xs:max-w-xs mx-auto mt-4"
                     />
+
+                    <Typography color="textPrimary" className="mt-20 xs:text-xl text-3xl blink blink-two">
+                      <div className="txt--gradient-orange">
+                        <b>Mentors Registrations are now Open !!!</b>
+                      </div>
+                    </Typography>
 
                     {/* <div className={classes.textdiv}> */}
 
@@ -268,6 +277,7 @@ export default function HomePage() {
                             color="secondary"
                             startIcon={<School />}
                             href="https://drive.google.com/file/d/1gEF-U2lV7GssAVGnJmT4STt9NHIHPu-E/view"
+                            target="_blank"
                           >
                             Student Manual
                           </Button>
@@ -278,7 +288,8 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<LaptopMac />}
-                            href="https://drive.google.com/file/d/1rG00muN3dI10oKcGoOWB2r5pHnszuwCs/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1KBdZmmtWVCXPsshHgth0JOEGY2vHs0t0/view?usp=sharing"
+                            target="_blank"
                           >
                             Mentor Manual
                           </Button>
@@ -291,6 +302,26 @@ export default function HomePage() {
 
               <Grid className="section xs:py-2 xs:pb-20" item xs={12}>
                 <Container maxWidth="md">
+                  <Grid container md={12}>
+                    <Collapse in={open} style={{width:"100%"}}>
+                        <Alert severity="info"
+                          action={
+                            <IconButton
+                              aria-label="close"
+                              color="inherit"
+                              size="small"
+                              onClick={() => {
+                                setOpen(false);
+                              }}
+                            >
+                              <CloseIcon fontSize="inherit" />
+                            </IconButton>
+                          }
+                        >
+                          Students Registrations will Open Soon !
+                        </Alert>
+                      </Collapse>
+                  </Grid>
                   <Grid
                     container
                     direction="row"
@@ -316,7 +347,7 @@ export default function HomePage() {
                           For more details, check out the Student's Manual above
                           and to register click below!
                         </Typography>
-                        <Fab variant="extended" color="secondary">
+                        <Fab variant="extended" color="secondary" onClick={()=>setOpen(true)}>
                           <School style={{ margin: 8 }} />
                           Be A Winner !
                         </Fab>
@@ -340,7 +371,7 @@ export default function HomePage() {
                           details, check out the Mentor's Manual above and to
                           register click below!
                         </Typography>
-                        <Fab variant="extended" color="secondary">
+                        <Fab variant="extended" color="secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
                           <LaptopMac style={{ margin: 8 }} />
                           Be A Teacher !
                         </Fab>
