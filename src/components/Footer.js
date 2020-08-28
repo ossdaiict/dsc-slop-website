@@ -33,6 +33,7 @@ export default function Footer() {
               aria-label="mail"
               color="secondary"
               href="mailto:dsc@daiict.ac.in"
+              target="_blank"
             >
               <Mail />
             </Fab>
@@ -43,6 +44,7 @@ export default function Footer() {
               aria-label="github"
               color="primary"
               href="https://github.com/ossdaiict"
+              target="_blank"
             >
               <GitHub />
             </Fab>
@@ -53,6 +55,7 @@ export default function Footer() {
               aria-label="insta"
               color="secondary"
               href="https://www.instagram.com/dscdaiict/"
+              target="_blank"
             >
               <Instagram />
             </Fab>
@@ -63,6 +66,7 @@ export default function Footer() {
               aria-label="twitter"
               color="primary"
               href="https://twitter.com/dscdaiict"
+              target="_blank"
             >
               <Twitter />
             </Fab>

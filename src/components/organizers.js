@@ -1,3 +1,5 @@
+import man from '../images/man.png';
+
 const organizers = [
     {
         name: "Abhinav Raj",
@@ -16,21 +18,21 @@ const organizers = [
     {
         name: "Smit Shah",
         phone: "+91 81407 12927",
-        image: "https://www.socialsamosa.com/wp-content/uploads/2020/08/2020-08-10.jpg",
+        image: man,
         github: "https://github.com/smit2k14",
         linkedin: "https://www.linkedin.com/in/smitshah2k/",
     },
     {
         name: "Rhythm Patel",
         phone: "+91 70466 69471",
-        image: "https://www.socialsamosa.com/wp-content/uploads/2020/08/2020-08-10.jpg",
+        image: man,
         github: "https://github.com/rhythm-3099",
         linkedin: "https://www.linkedin.com/in/rhythm-patel-300499/",
     },
     {
         name: "Kartikeya Gokhle",
         phone: "+91 83204 05119",
-        image: "https://www.socialsamosa.com/wp-content/uploads/2020/08/2020-08-10.jpg",
+        image: man,
         github: "https://github.com/Kartikeya99",
         linkedin: "https://www.linkedin.com/in/k-gokhale/",
     },
@@ -65,21 +67,21 @@ const organizers = [
     {
         name: "Rahil Shah",
         phone: "+91 96627 32140",
-        image: "https://www.socialsamosa.com/wp-content/uploads/2020/08/2020-08-10.jpg",
+        image: man,
         github: "#",
         linkedin: "https://www.linkedin.com/in/rahil-shah-961442177/",
     },
     {
         name: "Roneel Valambhia",
         phone: "+91 94097 59776",
-        image: "https://www.socialsamosa.com/wp-content/uploads/2020/08/2020-08-10.jpg",
+        image: man,
         github: "https://github.com/RoneelV",
         linkedin: "#",
     },
     {
         name: "Prakhar Agarwal",
         phone: "+91 94622 00865",
-        image: "https://www.socialsamosa.com/wp-content/uploads/2020/08/2020-08-10.jpg",
+        image: man,
         github: "https://github.com/prakhartech",
         linkedin: "#",
     },
