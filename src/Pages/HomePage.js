@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Grid,
   makeStyles,
@@ -10,81 +10,81 @@ import {
   CardMedia,
   Divider,
   Box,
-} from '@material-ui/core';
-import { LaptopMac, School } from '@material-ui/icons';
-import ReactFullpage from '@fullpage/react-fullpage';
-import bg from '../images/bg.png';
-import logo from '../images/logo.png';
-import LogoBear from '../components/LogoBear';
-import Footer from '../components/Footer';
-import Countdown from '../components/Countdown';
-import CustomizedTimeline from '../components/TimeLine';
-import TimelineHorizontal from '../components/TimelineHorizontal';
-import './TextGradient.css';
+} from "@material-ui/core";
+import { LaptopMac, School } from "@material-ui/icons";
+import ReactFullpage from "@fullpage/react-fullpage";
+import bg from "../images/bg.png";
+import logo from "../images/logo.png";
+import LogoBear from "../components/LogoBear";
+import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
+import CustomizedTimeline from "../components/TimeLine";
+import TimelineHorizontal from "../components/TimelineHorizontal";
+import "./TextGradient.css";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
   paperCounter: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
 
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
-    backgroundColor: '#91f8faef',
+    backgroundColor: "#91f8faef",
   },
 
   formlink: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: "center",
     minHeight: theme.spacing(40),
   },
 
   typo: {
-    textAlign: 'center',
+    textAlign: "center",
     margin: theme.spacing(4),
-    color: 'white',
+    color: "white",
   },
   logo: {
-    top: '10vh',
+    top: "10vh",
     // left: '5vw',
   },
 
   textdiv: {
-    marginTop: '16vh',
+    marginTop: "16vh",
   },
 
   textover: {
-    fontSize: '200px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '100px',
+    fontSize: "200px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "100px",
     },
   },
 
   textcap: {
-    fontSize: '24px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '16px',
+    fontSize: "32px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
     },
   },
 
   prizes: {
-    fontSize: '80px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '50px',
+    fontSize: "80px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "50px",
     },
   },
 }));
@@ -111,6 +111,9 @@ export default function HomePage() {
           <ReactFullpage.Wrapper>
             <Grid container justify="center">
               <Grid className="section" item xs={12}>
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
                 <div className="min-h-screen relative">
                   {/* <CardMedia
                     component="img"
@@ -118,24 +121,27 @@ export default function HomePage() {
                     className="min-h-screen absolute"
                     title="Contemplative Reptile"
                   /> */}
-                  <div className={'fixed text-center w-full ' + classes.logo}>
+                  <div className={"fixed text-center w-full " + classes.logo}>
                     <LogoBear
                       className={
-                        'max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
+                        "max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 "
                       }
                     />
+                    <Typography
+                      className={
+                        classes.textcap + " txt--gradient-orange mt-12"
+                      }
+                      color="textPrimary"
+                    >
+                      <b>Developer Student Club DAIICT Presents</b>
+                    </Typography>
                     <img
                       src={logo}
-                      className="max-w-2xl xs:max-w-xs mx-auto mt-20"
+                      className="max-w-2xl xs:max-w-xs mx-auto mt-4"
                     />
 
                     {/* <div className={classes.textdiv}> */}
-                    {/* <Typography
-                        className={classes.textcap + ' txt--gradient-orange'}
-                        color="textPrimary"
-                      >
-                        <b>Developer Student Club-DAIICT's</b>
-                      </Typography> */}
+
                     {/* <Typography
                         className={classes.textover + ' txt--gradient-orange'}
                         color="textPrimary"
@@ -300,7 +306,7 @@ export default function HomePage() {
                         >
                           <b> Are You Student ? </b>
                         </Typography>
-                        <Typography variant="body2" className={classes.typo}>
+                        <Typography variant="body1" className={classes.typo}>
                           If you are new to the ginormous world of open source
                           development or development in general, or just want to
                           explore, then SLoP is perfect for you. You'll get to
@@ -324,7 +330,7 @@ export default function HomePage() {
                         >
                           <b> Are You Mentor ? </b>
                         </Typography>
-                        <Typography variant="body2" className={classes.typo}>
+                        <Typography variant="body1" className={classes.typo}>
                           If you feel that you want to contribute back to
                           open-source and guide your fellow peers properly, then
                           SLoP is a great platform for you. You can interact
