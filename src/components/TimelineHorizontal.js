@@ -29,7 +29,7 @@ export default function TimelineHorizontal() {
                     </p> */}
                   {/* </div> */}
                   <div className="timeline-body">
-                    <p>5 Sept 2020</p>
+                    <p>28 Aug 2020</p>
                   </div>
                 </div>
                 {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
