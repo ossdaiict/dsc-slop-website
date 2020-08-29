@@ -61,7 +61,7 @@ export default function TimelineHorizontal() {
                     </h3>
                   </div>
                   <div className="timeline-body">
-                    <p>23 Sept 2020</p>
+                    <p>25 Sept 2020</p>
                   </div>
                 </div>
                 {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
@@ -130,7 +130,7 @@ export default function TimelineHorizontal() {
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>23 Sept 2020</p>
+                  <p>25 Sept 2020</p>
                 </div>
               </div>
             </li>
