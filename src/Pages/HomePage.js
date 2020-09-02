@@ -144,9 +144,11 @@ export default function HomePage() {
                       color="textPrimary"
                       className="mt-20 xs:text-xl text-3xl blink blink-two"
                     >
-                      <div className="txt--gradient-orange">
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
+                        <div className="txt--gradient-orange">
                         <b>Mentors Registrations are now Open !!!</b>
                       </div>
+                      </a>
                     </Typography>
 
                     {/* <div className={classes.textdiv}> */}
