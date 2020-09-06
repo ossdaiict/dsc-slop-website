@@ -14,6 +14,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Alert from '@material-ui/lab/Alert';
 import { LaptopMac, School } from '@material-ui/icons';
 import DescriptionIcon from '@material-ui/icons/Description';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
 import logo from '../images/logo.png';
@@ -300,7 +301,28 @@ export default function HomePage() {
                             Mentor Manual
                           </Button>
                         </Grid>
-                        <br />
+                      </Grid>
+                    <br />
+                      <Grid
+                        item
+                        container
+                        direction="row"
+                        className="mt-4"
+                        justify="center"
+                        alignItems="center"
+                      >
+                        <Grid item>
+                          <Button
+                            variant="contained"
+                            className={classes.button}
+                            color="secondary"
+                            startIcon={<ContactSupportIcon />}
+                            href="https://drive.google.com/file/d/1nTYLJwaNzChRetQrEge80izJDbOtNbo-/view?usp=sharing"
+                            target="_blank"
+                          >
+                            FAQs & Code of Conduct
+                          </Button>
+                        </Grid>
                         <Grid item>
                           <Button
                             variant="contained"
