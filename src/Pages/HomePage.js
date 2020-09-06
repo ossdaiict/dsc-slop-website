@@ -13,6 +13,7 @@ import {
 import CloseIcon from '@material-ui/icons/Close';
 import Alert from '@material-ui/lab/Alert';
 import { LaptopMac, School } from '@material-ui/icons';
+import DescriptionIcon from '@material-ui/icons/Description';
 import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
 import logo from '../images/logo.png';
@@ -144,10 +145,13 @@ export default function HomePage() {
                       color="textPrimary"
                       className="mt-20 xs:text-xl text-3xl blink blink-two"
                     >
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
+                        target="_blank"
+                      >
                         <div className="txt--gradient-orange">
-                        <b>Mentors Registrations are now Open !!!</b>
-                      </div>
+                          <b>Mentors Registrations are now Open !!!</b>
+                        </div>
                       </a>
                     </Typography>
 
@@ -269,7 +273,7 @@ export default function HomePage() {
                         item
                         container
                         direction="row"
-                        className="mt-10"
+                        className="mt-6"
                         justify="center"
                       >
                         <Grid item>
@@ -294,6 +298,19 @@ export default function HomePage() {
                             target="_blank"
                           >
                             Mentor Manual
+                          </Button>
+                        </Grid>
+                        <br />
+                        <Grid item>
+                          <Button
+                            variant="contained"
+                            className={classes.button}
+                            color="secondary"
+                            startIcon={<DescriptionIcon />}
+                            href="https://drive.google.com/file/d/1-Ie6jH5a_ZB7BjDepLsJYsWzcFz6ukPh/view?usp=sharing"
+                            target="_blank"
+                          >
+                            How it Works ?
                           </Button>
                         </Grid>
                       </Grid>
