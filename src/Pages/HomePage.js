@@ -151,7 +151,7 @@ export default function HomePage() {
                         target="_blank"
                       >
                         <div className="txt--gradient-orange">
-                          <b>Mentors Registrations are now Open !!!</b>
+                          <b>Mentor applications extended till 12th September.</b>
                         </div>
                       </a>
                     </Typography>
@@ -447,7 +447,7 @@ export default function HomePage() {
                       <b> Event Timeline</b>
                     </Typography>
                     {/* <Divider variant="middle" /> */}
-                    <TimelineHorizontal />
+                    <TimelineHorizontal/>
 
                     {/* <CustomizedTimeline /> */}
                   </Paper>
