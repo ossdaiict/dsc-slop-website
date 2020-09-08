@@ -12,7 +12,7 @@ export default function TimelineHorizontal() {
           </div> */}
           <div id="something">
             <ul className="timeline timeline-horizontal">
-              <li className="timeline-item ">
+              <li className="timeline-item">
                 <div className="timeline-badge primary">
                   <i className="glyphicon glyphicon-check"></i>
                 </div>

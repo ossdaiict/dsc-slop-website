@@ -38,7 +38,7 @@ export default function CustomizedTimeline() {
             color="textSecondary"
             className={classes.oppositeTime}
           >
-            1 september - 10 september
+            1 september - 12 september
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
