@@ -96,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
 export default function HomePage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [alertmsg,setAlertMsg] = React.useState("");
 
   return (
     <ReactFullpage
@@ -146,14 +147,10 @@ export default function HomePage() {
                       color="textPrimary"
                       className="mt-20 xs:text-xl text-3xl blink blink-two"
                     >
-                      <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
-                        target="_blank"
-                      >
                         <div className="txt--gradient-orange">
-                          <b>Mentor applications extended till 12th September.</b>
+                          <b>Student Applications will begin from 15th September.</b>
                         </div>
-                      </a>
+
                     </Typography>
 
                     {/* <div className={classes.textdiv}> */}
@@ -360,7 +357,7 @@ export default function HomePage() {
                           </IconButton>
                         }
                       >
-                        Students Registrations will Open Soon !
+                        {alertmsg}
                       </Alert>
                     </Collapse>
                   </Grid>
@@ -392,7 +389,10 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          onClick={() => setOpen(true)}
+                          onClick={() =>{
+                              setAlertMsg('Students Registrations will Open From 15th Sept. !')
+                              setOpen(true)
+                            }}
                         >
                           <School style={{ margin: 8 }} />
                           Be A Winner !
@@ -420,8 +420,10 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
-                          target="_blank"
+                          onClick={() =>{
+                            setAlertMsg('Oops ! Mentor Applications Are Closed.')
+                            setOpen(true)
+                          }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
                           Be A Teacher !
