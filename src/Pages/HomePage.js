@@ -19,6 +19,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
 import logo from '../images/logo.png';
 import LogoBear from '../components/LogoBear';
+import ApplyWithDevfolio from '../components/ApplyWithDevfolio';
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
@@ -96,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
 export default function HomePage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [alertmsg,setAlertMsg] = React.useState("");
+  const [alertmsg, setAlertMsg] = React.useState('');
 
   return (
     <ReactFullpage
@@ -142,8 +143,10 @@ export default function HomePage() {
                       src={logo}
                       className="max-w-2xl xs:max-w-xs mx-auto mt-4"
                     />
-
-                    <Typography
+                    <div className="w-full flex justify-center mt-16">
+                      <ApplyWithDevfolio className="h-6 w-6 mr-2 logo mx-auto" />
+                    </div>
+                    {/* <Typography
                       color="textPrimary"
                       className="mt-20 xs:text-xl text-3xl blink blink-two"
                     >
@@ -151,7 +154,7 @@ export default function HomePage() {
                           <b>Student Applications will begin from 15th September.</b>
                         </div>
 
-                    </Typography>
+                    </Typography> */}
 
                     {/* <div className={classes.textdiv}> */}
 
@@ -299,7 +302,7 @@ export default function HomePage() {
                           </Button>
                         </Grid>
                       </Grid>
-                    <br />
+                      <br />
                       <Grid
                         item
                         container
@@ -389,10 +392,12 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          onClick={() =>{
-                              setAlertMsg('Students Registrations will Open From 15th Sept. !')
-                              setOpen(true)
-                            }}
+                          onClick={() => {
+                            setAlertMsg(
+                              'Students Registrations will Open From 15th Sept. !'
+                            );
+                            setOpen(true);
+                          }}
                         >
                           <School style={{ margin: 8 }} />
                           Be A Winner !
@@ -420,9 +425,11 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          onClick={() =>{
-                            setAlertMsg('Oops ! Mentor Applications Are Closed.')
-                            setOpen(true)
+                          onClick={() => {
+                            setAlertMsg(
+                              'Oops ! Mentor Applications Are Closed.'
+                            );
+                            setOpen(true);
                           }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
@@ -449,7 +456,7 @@ export default function HomePage() {
                       <b> Event Timeline</b>
                     </Typography>
                     {/* <Divider variant="middle" /> */}
-                    <TimelineHorizontal/>
+                    <TimelineHorizontal />
 
                     {/* <CustomizedTimeline /> */}
                   </Paper>
