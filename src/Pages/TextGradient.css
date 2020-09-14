@@ -43,3 +43,11 @@
   background-clip: text;
   position: relative;
 }
+
+.txt--gradient-orange-lite {
+  background-image: linear-gradient(to right, #ffbc85 33%, #ffa885 66%, #ff8585 100%);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
