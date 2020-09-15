@@ -13,6 +13,7 @@ const LeaderBoard = () => {
     console.log(bearCookie);
     setCookie('bearCookie', { loaded: false }, { path: '/' });
   }, [cookies]);
+
   //const iframe =
   // '<iframe class="airtable-embed" src = "https://airtable.com/embed/shroD5TJj8KuroIXS?backgroundColor=blue&viewControls=on" frameborder = "0" onmousewheel = "" width = "100%" height = "533" style = "background: transparent; border: 1px solid #ccc;" ></iframe >';
   return (

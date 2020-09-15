@@ -26,7 +26,7 @@ export default function Contact({ details }) {
     transitionLeaveTimeout: 500,
   };
   return (
-    <Paper className={classes.paper} elevation="5">
+    <Paper className={classes.paper} varient='outlined'>
       <Grid
         container
         direction="column"

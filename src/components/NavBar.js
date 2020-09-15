@@ -4,7 +4,7 @@ import { Link } from '@reach/router';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import {IconButton,Button} from '@material-ui/core';
+import { IconButton, Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'none',
     },
   },
-
 
   title: {
     marginLeft: 8,
@@ -134,7 +133,7 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <div className={classes.grow} >
+    <div className={classes.grow}>
       <AppBar id="navbar" position="fixed" color="inherit">
         <Toolbar>
           <Link to="/">
@@ -158,11 +157,11 @@ export default function PrimarySearchAppBar() {
                 <Typography color="textPrimary">Home</Typography>
               </IconButton>
             </Link>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
+            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
                 <IconButton color="inherit">
                   <Typography color="textPrimary">Register</Typography>
                 </IconButton>
-            </a>
+            </a> */}
             <Link to="/leaderboard">
               <IconButton color="inherit">
                 <Typography color="textPrimary">Leaderboard</Typography>
@@ -180,11 +179,14 @@ export default function PrimarySearchAppBar() {
             </Link>
           </div>
           <div className={classes.sectionMobile}>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
-                <IconButton color="inherit">
-                  <Typography color="textPrimary">Register</Typography>
-                </IconButton>
-            </a>
+            {/* <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
+              target="_blank"
+            >
+              <IconButton color="inherit">
+                <Typography color="textPrimary">Register</Typography>
+              </IconButton>
+            </a>  */}
             <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}

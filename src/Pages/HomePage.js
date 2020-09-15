@@ -19,6 +19,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
 import logo from '../images/logo.png';
 import LogoBear from '../components/LogoBear';
+import ApplyWithDevfolio from '../components/ApplyWithDevfolio';
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
@@ -96,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
 export default function HomePage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [alertmsg,setAlertMsg] = React.useState("");
+  const [alertmsg, setAlertMsg] = React.useState('');
 
   return (
     <ReactFullpage
@@ -127,7 +128,7 @@ export default function HomePage() {
                   <div className={'fixed text-center w-full ' + classes.logo}>
                     <LogoBear
                       className={
-                        'max-w-sm xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
+                        'max-w-xs xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
                       }
                     />
                     <Typography
@@ -142,8 +143,19 @@ export default function HomePage() {
                       src={logo}
                       className="max-w-2xl xs:max-w-xs mx-auto mt-4"
                     />
-
                     <Typography
+                      color="textPrimary"
+                      className="mt-8 xs:text-xl text-3xl blink blink-two"
+                    >
+                      <div className="txt--gradient-orange">
+                        <b>Student Registrations are now open!</b>
+                      </div>
+                    </Typography>
+                    <div className="w-full flex justify-center mt-8">
+                      <ApplyWithDevfolio className="h-6 w-6 mr-2 logo mx-auto" />
+                    </div>
+
+                    {/* <Typography
                       color="textPrimary"
                       className="mt-20 xs:text-xl text-3xl blink blink-two"
                     >
@@ -151,7 +163,7 @@ export default function HomePage() {
                           <b>Student Applications will begin from 15th September.</b>
                         </div>
 
-                    </Typography>
+                    </Typography> */}
 
                     {/* <div className={classes.textdiv}> */}
 
@@ -175,7 +187,7 @@ export default function HomePage() {
               <Grid className="section " item xs={12}>
                 <Container maxWidth="md">
                   <Paper className={classes.paperCounter}>
-                    <Countdown toDate={new Date(2020, 9, 23)} />
+                    <Countdown toDate={new Date(2020, 9, 26)} />
                   </Paper>
                 </Container>
               </Grid>
@@ -299,7 +311,7 @@ export default function HomePage() {
                           </Button>
                         </Grid>
                       </Grid>
-                    <br />
+                      <br />
                       <Grid
                         item
                         container
@@ -386,17 +398,15 @@ export default function HomePage() {
                           For more details, check out the Student's Manual above
                           and to register click below!
                         </Typography>
-                        <Fab
-                          variant="extended"
-                          color="secondary"
-                          onClick={() =>{
-                              setAlertMsg('Students Registrations will Open From 15th Sept. !')
-                              setOpen(true)
-                            }}
+                        <a
+                          target="_blank"
+                          href="https://devfolio.co/external-apply/dsc-slop"
                         >
-                          <School style={{ margin: 8 }} />
-                          Be A Winner !
-                        </Fab>
+                          <Fab variant="extended" color="secondary">
+                            <School style={{ margin: 8 }} />
+                            Be A Winner !
+                          </Fab>
+                        </a>
                       </Paper>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
@@ -420,9 +430,11 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          onClick={() =>{
-                            setAlertMsg('Oops ! Mentor Applications Are Closed.')
-                            setOpen(true)
+                          onClick={() => {
+                            setAlertMsg(
+                              'Oops ! Mentor Applications Are Closed.'
+                            );
+                            setOpen(true);
                           }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
@@ -449,7 +461,7 @@ export default function HomePage() {
                       <b> Event Timeline</b>
                     </Typography>
                     {/* <Divider variant="middle" /> */}
-                    <TimelineHorizontal/>
+                    <TimelineHorizontal />
 
                     {/* <CustomizedTimeline /> */}
                   </Paper>
