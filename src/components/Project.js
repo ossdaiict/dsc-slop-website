@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Project({ id, mentors, url, projectName }) {
+export default function Project({ id, mentors, url, projectName,stars,forks,langs,description,updated_at }) {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState({
@@ -97,6 +97,7 @@ export default function Project({ id, mentors, url, projectName }) {
           <Typography
             variant="body2"
             color="textSecondary"
+            className="my-4"
             align="left"
             style={{
               height: '40px',
@@ -104,7 +105,7 @@ export default function Project({ id, mentors, url, projectName }) {
               textOverflow: 'ellipsis',
             }}
           >
-            {/* {info.description} */}
+            {description}
           </Typography>
         </Grid>
         <Grid item>
@@ -115,31 +116,42 @@ export default function Project({ id, mentors, url, projectName }) {
           >{`Mentors: ${mentors}`}</Typography>
         </Grid>
         <Grid item>
-          {/* <Typography
+          <Typography
+            variant="subtitle2"
+            color="textPrimary"
+            align="left"
+          >{`Lang.: ${langs}`}</Typography>
+        </Grid>
+        <Grid item>
+          <Typography
               variant="subtitle2"
               color="textSecondary"
               align="left"
             >{`Last Updated: ${moment(
-              info.lastUpdated
-            ).fromNow()}`}</Typography> */}
+              updated_at
+            ).fromNow()}`}</Typography>
         </Grid>
         <Grid item container direction="row-reverse" className="mt-1">
           <IconButton
             className="mx-2"
             href={url.concat('/contributors')}
+            target="_blank"
             aria-label="Contributors"
             size="small"
           >
             <Group />
           </IconButton>
-          {/* <IconButton className="mx-2" aria-label="Contributors" size="small">
+
+          <IconButton className="mx-2" aria-label="Contributors" size="small">
             <Star />
-            <Typography>{info.stars}</Typography>
+            <Typography>{stars}</Typography>
           </IconButton>
+
           <IconButton className="mx-2" aria-label="Contributors" size="small">
             <Usb />
-            <Typography>{info.forks}</Typography>
-          </IconButton> */}
+            <Typography>{forks}</Typography>
+          </IconButton>
+
         </Grid>
       </Grid>
     </Paper>

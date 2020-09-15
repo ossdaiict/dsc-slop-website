@@ -111,6 +111,11 @@ export default function Projects() {
                     <Grid key={index} item xs={12} sm={12} md={6}>
                       <Project
                         projectName={obj.project}
+                        description = {obj.description}
+                        updated_at= {obj.updated_at}
+                        langs = {obj.langs}
+                        forks = {obj.forks}
+                        stars = {obj.stars}
                         id={index}
                         mentors={obj.mentors}
                         url={obj.url}
