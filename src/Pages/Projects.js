@@ -109,7 +109,12 @@ export default function Projects() {
                 if (obj.project !== '') {
                   return (
                     <Grid key={index} item xs={12} sm={12} md={6}>
-                      <Project id={index} mentors={obj.mentors} url={obj.url} />
+                      <Project
+                        projectName={obj.project}
+                        id={index}
+                        mentors={obj.mentors}
+                        url={obj.url}
+                      />
                     </Grid>
                   );
                 } else {
