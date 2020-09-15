@@ -15,14 +15,6 @@ const useStyles = makeStyles((theme) => ({
       },
 }));
 
-function getColor(id){
-    if(id%5 === 0) return "#FFEBCD";
-    else if(id%5 === 1) return "#54FF9F";
-    else if(id%5 === 2) return "#B0E2FF";
-    else if(id%5 === 3) return "#FEAB82";
-    else return "#FFF68F"; 
-}
-
 export default function Project({id,mentors,url}) {
 
   const classes = useStyles();
@@ -59,7 +51,7 @@ export default function Project({id,mentors,url}) {
 
     fetch();
 
-  },[modifiedurl]);
+  },[]);
 
   if(loading)
   {

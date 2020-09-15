@@ -6,13 +6,15 @@ import { Cookies, useCookies } from 'react-cookie';
 import './TextGradient.css';
 const cookies = new Cookies();
 const Contacts = () => {
-  const [cookie, setCookie] = useCookies(['']);
 
-  React.useEffect(() => {
-    const bearCookie = cookies.get('bearCookie');
-    console.log(bearCookie);
-    setCookie('bearCookie', { loaded: false }, { path: '/' });
-  }, [cookies]);
+  // const [cookie, setCookie] = useCookies(['']);
+  // React.useEffect(() => {
+  //   const bearCookie = cookies.get('bearCookie');
+  //   console.log(bearCookie);
+  //   setCookie('bearCookie', { loaded: false }, { path: '/' });
+  // }, []);
+
+
   return (
     <Container className="my-6 mt-20">
       <Typography className="text-center" variant="h4" color="textPrimary">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import {
   Grid,
   Grow,
@@ -7,11 +7,11 @@ import {
   makeStyles,
   Typography,
   Divider,
-} from "@material-ui/core";
-import Project from "../components/Project";
-import axios from "axios";
-import { Cookies, useCookies } from "react-cookie";
-import "./TextGradient.css";
+} from '@material-ui/core';
+import Project from '../components/Project';
+import axios from 'axios';
+import { Cookies, useCookies } from 'react-cookie';
+import './TextGradient.css';
 
 const cookies = new Cookies();
 
@@ -23,12 +23,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Projects() {
-  const [cookie, setCookie] = useCookies([""]);
+  const [cookie, setCookie] = useCookies(['']);
 
   React.useEffect(() => {
-    const bearCookie = cookies.get("bearCookie");
+    const bearCookie = cookies.get('bearCookie');
     console.log(bearCookie);
-    setCookie("bearCookie", { loaded: false }, { path: "/" });
+    setCookie('bearCookie', { loaded: false }, { path: '/' });
   }, [cookies]);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -46,11 +46,12 @@ export default function Projects() {
   //     </div>
   //   );
   // }
+
   useEffect(() => {
     const fetch = () => {
       axios
         .get(
-          "https://script.google.com/macros/s/AKfycbw33V3utIboH-9H-S-dZj_zL25_CaHH4-1cyBz1IognJmONis9r/exec"
+          'https://script.google.com/macros/s/AKfycbw33V3utIboH-9H-S-dZj_zL25_CaHH4-1cyBz1IognJmONis9r/exec'
         )
         .then(({ data }) => {
           setData(data.projects);
@@ -68,7 +69,7 @@ export default function Projects() {
         spacing={3}
         justify="center"
         alignItems="center"
-        style={{ height: "100vh", textAlign: "center" }}
+        style={{ height: '100vh', textAlign: 'center' }}
       >
         <Grid item>
           <CircularProgress size={100} />
@@ -105,7 +106,7 @@ export default function Projects() {
                 />
               </Grid>
               {data.map((obj, index) => {
-                if (obj.project !== "") {
+                if (obj.project !== '') {
                   return (
                     <Grid key={index} item xs={12} sm={12} md={6}>
                       <Project id={index} mentors={obj.mentors} url={obj.url} />
