@@ -4,7 +4,7 @@ import { Typography } from '@material-ui/core';
 export default function ApplyWithDevfolio(props) {
   const handleLoad = () => {
     new window.Devfolio({
-      key: 'slop',
+      key: 'dsc-slop',
       buttonSelector: '#devfolio-apply-now',
     });
   };
@@ -19,7 +19,7 @@ export default function ApplyWithDevfolio(props) {
   };
   React.useEffect(() => {
     window.onload = loadApplyNowScript();
-  });
+  }, []);
 
   return (
     <button id="devfolio-apply-now">

@@ -5,18 +5,28 @@ import { Cookies, useCookies } from 'react-cookie';
 const cookies = new Cookies();
 
 function LogoBear(props) {
-
   const [cookie, setCookie] = useCookies(['']);
 
+  const bearScript = () => {
+    const script = document.createElement('script');
+    script.src = './logoAnimation.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    console.log('loaded');
+  };
+
   React.useEffect(() => {
+    bearScript();
     const bearCookie = cookies.get('bearCookie');
     console.log(bearCookie);
     if (bearCookie && !bearCookie.loaded) {
       setCookie('bearCookie', { loaded: true }, { path: '/' });
+      window.location.reload();
     } else {
       setCookie('bearCookie', { loaded: false }, { path: '/' });
     }
-  }, []);
+  }, [cookies]);
 
   return (
     <svg viewBox="0 0 194.05 120.82" className="z-50" {...props}>
