@@ -23,13 +23,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Projects() {
-  const [cookie, setCookie] = useCookies(['']);
 
-  React.useEffect(() => {
-    const bearCookie = cookies.get('bearCookie');
-    console.log(bearCookie);
-    setCookie('bearCookie', { loaded: false }, { path: '/' });
-  }, [cookies]);
+  // const [cookie, setCookie] = useCookies(['']);
+
+  // React.useEffect(() => {
+  //   const bearCookie = cookies.get('bearCookie');
+  //   console.log(bearCookie);
+  //   setCookie('bearCookie', { loaded: false }, { path: '/' });
+  // }, []);
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const classes = useStyles();
@@ -46,6 +48,7 @@ export default function Projects() {
   //     </div>
   //   );
   // }
+
   useEffect(() => {
     const fetch = () => {
       axios

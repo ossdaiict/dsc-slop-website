@@ -3,7 +3,9 @@ import './Logo.css';
 import { Cookies, useCookies } from 'react-cookie';
 
 const cookies = new Cookies();
+
 function LogoBear(props) {
+
   const [cookie, setCookie] = useCookies(['']);
 
   React.useEffect(() => {
@@ -11,11 +13,11 @@ function LogoBear(props) {
     console.log(bearCookie);
     if (bearCookie && !bearCookie.loaded) {
       setCookie('bearCookie', { loaded: true }, { path: '/' });
-      window.location.reload();
     } else {
       setCookie('bearCookie', { loaded: false }, { path: '/' });
     }
-  }, [cookies]);
+  }, []);
+
   return (
     <svg viewBox="0 0 194.05 120.82" className="z-50" {...props}>
       <g transform="translate(58.03 -57.75)">
