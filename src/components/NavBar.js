@@ -1,40 +1,39 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
 
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import {IconButton,Button} from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import HomeIcon from '@material-ui/icons/Home';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import { Contacts } from '@material-ui/icons';
-import AssessmentIcon from '@material-ui/icons/Assessment';
-import TimelineIcon from '@material-ui/icons/Timeline';
-import MoreIcon from '@material-ui/icons/MoreVert';
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import { IconButton, Button } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+import HomeIcon from "@material-ui/icons/Home";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import { Contacts } from "@material-ui/icons";
+import AssessmentIcon from "@material-ui/icons/Assessment";
+import TimelineIcon from "@material-ui/icons/Timeline";
+import MoreIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
-    width: '100%',
-    zIndex: '100',
+    width: "100%",
+    zIndex: "100",
     flexGrow: 1,
-    blur: '30%',
+    blur: "30%",
     // opacity: '90%',
-    marginBottom: '28px',
-    '& a': {
-      color: 'inherit',
-      textDecoration: 'none',
+    marginBottom: "28px",
+    "& a": {
+      color: "inherit",
+      textDecoration: "none",
     },
   },
   menu: {
-    '& a': {
-      color: 'inherit',
-      textDecoration: 'none',
+    "& a": {
+      color: "inherit",
+      textDecoration: "none",
     },
   },
-
 
   title: {
     marginLeft: 8,
@@ -44,20 +43,20 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(2),
   },
   logo: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
   },
 
   sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
     },
   },
   sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
     },
   },
 }));
@@ -86,15 +85,15 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
     <Menu
       className={classes.menu}
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={mobileMenuId}
       keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
@@ -134,7 +133,7 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <div className={classes.grow} >
+    <div className={classes.grow}>
       <AppBar id="navbar" position="fixed" color="inherit">
         <Toolbar>
           <Link to="/">
@@ -158,11 +157,11 @@ export default function PrimarySearchAppBar() {
                 <Typography color="textPrimary">Home</Typography>
               </IconButton>
             </Link>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
+            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
                 <IconButton color="inherit">
                   <Typography color="textPrimary">Register</Typography>
                 </IconButton>
-            </a>
+            </a> */}
             <Link to="/leaderboard">
               <IconButton color="inherit">
                 <Typography color="textPrimary">Leaderboard</Typography>
@@ -180,10 +179,13 @@ export default function PrimarySearchAppBar() {
             </Link>
           </div>
           <div className={classes.sectionMobile}>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
-                <IconButton color="inherit">
-                  <Typography color="textPrimary">Register</Typography>
-                </IconButton>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
+              target="_blank"
+            >
+              <IconButton color="inherit">
+                <Typography color="textPrimary">Register</Typography>
+              </IconButton>
             </a>
             <IconButton
               aria-label="show more"
