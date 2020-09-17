@@ -77,7 +77,7 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
   //   }
 
   return (
-    <Paper elevation="5" variant="outlined" className={classes.paper}>
+    <Paper elevation={5} variant="outlined" className={classes.paper}>
       <Grid container direction="column" spacing={1}>
         <a href={url} target="_blank">
           <Grid item container direction="row">

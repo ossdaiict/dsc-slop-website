@@ -13,12 +13,33 @@ import axios from 'axios';
 import { Cookies, useCookies } from 'react-cookie';
 import './TextGradient.css';
 
+import Paper from '@material-ui/core/Paper';
+import InputBase from '@material-ui/core/InputBase';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+
 const cookies = new Cookies();
 
 const useStyles = makeStyles((theme) => ({
   container: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
+  },
+  root: {
+    padding: '4px 4px',
+    marginRight:'8px',
+    marginBottom:'8px',
+    display: 'flex',
+    alignItems: 'center',
+    width: "100%",
+    backgroundColor:"#1c1c1c",
+  },
+  input: {
+    marginLeft: theme.spacing(1),
+    flex: 1,
+  },
+  iconButton: {
   },
 }));
 
@@ -32,20 +53,8 @@ export default function Projects() {
   }, [cookies]);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [dummy,setDummy] = useState([]);
   const classes = useStyles();
-  const haveProjectsAnnounced = false;
-
-  // if (!haveProjectsAnnounced) {
-  //   return (
-  //     <div className="mt-20 min-h-screen w-full">
-  //       <Grow in>
-  //         <Typography className="text-2xl mt-64 xs:mx-1 xs:text-base text-white text-center">
-  //           Projects will be announced soon!
-  //         </Typography>
-  //       </Grow>
-  //     </div>
-  //   );
-  // }
 
   useEffect(() => {
     const fetch = () => {
@@ -55,12 +64,25 @@ export default function Projects() {
         )
         .then(({ data }) => {
           setData(data.projects);
+          setDummy(data.projects);
           setLoading(false);
         });
     };
 
     fetch();
   }, []);
+
+  function FilterList(keyword)
+  {
+    const dumdata = data.filter(obj =>
+      obj.langs.toLowerCase().includes(keyword.toLowerCase()) || 
+      obj.project.toLowerCase().includes(keyword.toLowerCase()) ||
+      obj.description.toLowerCase().includes(keyword.toLowerCase())
+      ) 
+      .map(filteredobj => filteredobj)
+    setDummy(dumdata); 
+  }
+
 
   if (loading) {
     return (
@@ -78,7 +100,7 @@ export default function Projects() {
     );
   } else {
     return (
-      <div className="mt-20">
+      <div className="mt-20 min-h-screen">
         <Container>
           <Grow in>
             <Grid container className={classes.container}>
@@ -89,7 +111,7 @@ export default function Projects() {
                 >
                   <b className="txt--gradient-pink">Projects</b>
                 </Typography>
-                {/* <Typography
+                <Typography
                   className="xs:text-lg sm:text-xl text-2xl text-center"
                   variant="h6"
                   color="textPrimary"
@@ -98,14 +120,29 @@ export default function Projects() {
                     Here is the list of projects, take a look at them, choose
                     your preferences and make contributions !!!
                   </b>
-                </Typography> */}
+                </Typography>
                 <Divider
                   className="my-4"
                   variant="middle"
                   color="textPrimary"
                 />
+                <Paper component="form" className={classes.root}>
+                  <IconButton className={classes.iconButton} aria-label="menu">
+                    <MenuIcon />
+                  </IconButton>
+                  <InputBase
+                    className={classes.input}
+                    placeholder="Search Projects,Tags"
+                    // inputProps={{ 'aria-label': 'search google maps' }}
+                    onChange={e => FilterList(e.target.value)}
+                  />
+                  <IconButton className={classes.iconButton} aria-label="search">
+                    <SearchIcon />
+                  </IconButton>
+                </Paper>
               </Grid>
-              {data.map((obj, index) => {
+
+              {dummy.map((obj, index) => {
                 if (obj.project !== '') {
                   return (
                     <Grid key={index} item xs={12} sm={12} md={6}>
