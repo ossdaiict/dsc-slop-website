@@ -120,7 +120,7 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
             variant="subtitle2"
             color="textPrimary"
             align="left"
-          >{`Lang.: ${langs}`}</Typography>
+          >{`Tags: ${langs}`}</Typography>
         </Grid>
         <Grid item>
           <Typography
