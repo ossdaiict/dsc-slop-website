@@ -21,6 +21,11 @@
   --off-white:#f7f7f7
 }
 
+#navbar{
+  background: rgba(255, 255, 255, 0) !important;
+  backdrop-filter: blur(4px);
+}
+
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background: white !important;
 }

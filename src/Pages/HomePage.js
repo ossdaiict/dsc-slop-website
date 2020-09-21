@@ -7,20 +7,29 @@ import {
   Container,
   Button,
   Fab,
-  CardMedia,
-  Divider,
-  Box,
+  Collapse,
+  IconButton,
 } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import Alert from '@material-ui/lab/Alert';
 import { LaptopMac, School } from '@material-ui/icons';
+import DescriptionIcon from '@material-ui/icons/Description';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ReactFullpage from '@fullpage/react-fullpage';
 import bg from '../images/bg.png';
+import logo from '../images/logo.png';
+import LogoBear from '../components/LogoBear';
+import ApplyWithDevfolio from '../components/ApplyWithDevfolio';
 import Footer from '../components/Footer';
 import Countdown from '../components/Countdown';
 import CustomizedTimeline from '../components/TimeLine';
+import TimelineHorizontal from '../components/TimelineHorizontal';
+import './TextGradient.css';
+import '../components/blink.css';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#424242',
+    backgroundColor: '#000000',
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -28,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '25%',
   },
   paperCounter: {
-    backgroundColor: '#424242',
+    backgroundColor: '#000000',
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
@@ -40,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
+    backgroundColor: '#91f8faef',
   },
 
   formlink: {
@@ -51,7 +61,11 @@ const useStyles = makeStyles((theme) => ({
   typo: {
     textAlign: 'center',
     margin: theme.spacing(4),
-    color: 'grey',
+    color: 'white',
+  },
+  logo: {
+    top: '10vh',
+    // left: '5vw',
   },
 
   textdiv: {
@@ -66,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   textcap: {
-    fontSize: '24px',
+    fontSize: '32px',
     [theme.breakpoints.down('sm')]: {
       fontSize: '16px',
     },
@@ -82,66 +96,98 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HomePage() {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+  const [alertmsg, setAlertMsg] = React.useState('');
 
   return (
     <ReactFullpage
-      // autoScrolling={true}
-      // responsiveHeight={600}
+      autoScrolling={true}
+      responsiveWidth={600}
       navigation={true}
       scrollOverflow={true}
       //fullpage options
       // licenseKey={'YOUR_KEY_HERE'}
       // paddingTop="10px"
-      scrollingSpeed={1000}
-      fitToSection={false}
+      scrollingSpeed={700}
+      // fitToSection={false}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
             <Grid container justify="center">
               <Grid className="section" item xs={12}>
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
                 <div className="min-h-screen relative">
-                  <CardMedia
+                  {/* <CardMedia
                     component="img"
                     alt="Contemplative Reptile"
                     className="min-h-screen absolute"
-                    image={bg}
                     title="Contemplative Reptile"
-                  />
-                  <div className="absolute text-center w-full h-full">
-                    <div className={classes.textdiv}>
-                      <Typography
-                        className={classes.textcap}
-                        color="textPrimary"
-                      >
-                        <b>Developer Student Club-DAIICT's</b>
-                      </Typography>
-                      <Typography
-                        className={classes.textover}
+                  /> */}
+                  <div className={'fixed text-center w-full ' + classes.logo}>
+                    <LogoBear
+                      className={
+                        'max-w-xs xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
+                      }
+                    />
+                    <Typography
+                      className={
+                        classes.textcap + ' txt--gradient-orange mt-12'
+                      }
+                      color="textPrimary"
+                    >
+                      <b>Developer Student Club DAIICT Presents</b>
+                    </Typography>
+                    <img
+                      src={logo}
+                      className="max-w-2xl xs:max-w-xs mx-auto mt-4"
+                    />
+                    <Typography
+                      color="textPrimary"
+                      className="mt-8 xs:text-xl text-3xl blink blink-two"
+                    >
+                      <div className="txt--gradient-orange">
+                        <b>Student Registrations are now open!</b>
+                      </div>
+                    </Typography>
+                    <div className="w-full flex justify-center mt-8">
+                      <ApplyWithDevfolio className="h-6 w-6 mr-2 logo mx-auto" />
+                    </div>
+
+                    {/* <Typography
+                      color="textPrimary"
+                      className="mt-20 xs:text-xl text-3xl blink blink-two"
+                    >
+                        <div className="txt--gradient-orange">
+                          <b>Student Applications will begin from 15th September.</b>
+                        </div>
+
+                    </Typography> */}
+
+                    {/* <div className={classes.textdiv}> */}
+
+                    {/* <Typography
+                        className={classes.textover + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S L o P</b>
-                      </Typography>
-                      <Typography
-                        className={classes.textcap}
+                      </Typography> */}
+                    {/* <Typography
+                        className={classes.textcap + ' txt--gradient-orange'}
                         color="textPrimary"
                       >
                         <b>S E M E S T E R - L O N G - P R O J E C T S</b>
-                      </Typography>
-                    </div>
+                      </Typography> */}
                   </div>
                 </div>
+                {/* </div> */}
               </Grid>
 
-              <Grid className="section my-8" item xs={12}>
+              <Grid className="section " item xs={12}>
                 <Container maxWidth="md">
-                  <Paper
-                    className={classes.paperCounter}
-                    // style={{ marginBottom: 0 }}
-                  >
-                    <Countdown
-                      className="py-12"
-                      toDate={new Date(2020, 9, 20)}
-                    />
+                  <Paper className={classes.paperCounter}>
+                    <Countdown toDate={new Date(2020, 9, 26)} />
                   </Paper>
                 </Container>
               </Grid>
@@ -164,68 +210,67 @@ export default function HomePage() {
                 </Container>
               </Grid> */}
 
-              <Grid
-                className="section xs:py-12 py-6 fp-auto-height"
-                item
-                xs={12}
-              >
+              <Grid className="section xs:py-12" item xs={12}>
                 <Container maxWidth="md">
-                  <Paper
-                    className={classes.paper}
-                    // style={{ marginBottom: 0, backgroundColor: 'none' }}
-                  >
-                    <Grid container direction="column xs:mt-6">
+                  <Paper className={classes.paper}>
+                    <Grid container direction="column">
                       <Grid item>
-                        <Typography variant="h4" align="left">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-blue mb-6"
+                        >
                           <b>What is SLoP ?</b>
                         </Typography>
-                        <Divider className="my-3" variant="fullWidth" />
+                        {/* <Divider className="my-3" variant="fullWidth" /> */}
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
-                          Semester Long Projects or SLoP is an initiative by
-                          Developer Student Club, DA-IICT exclusively for
-                          students of DA-IICT who are new to open source
-                          software development to get started with open source
+                          Semester Long Projects or SLoP is an initiative by the
+                          Developer Student Club (DA-IICT), exclusively for
+                          students who are new to open source software
+                          development to get started with open source
                           contributions.
                         </Typography>
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
-                          It’s modeled to be similar but smaller Google Summer
-                          of Code (GSoC), which is global that matches students
-                          up with open source, free software and
-                          technology-related organizations to write code and get
-                          paid for the same. Similarly, SLoP is aimed at
-                          introducing new students in the area and helps them
-                          gain confidence
+                          We want to increase the development culture and
+                          involvement of students with open-source technologies
+                          which will present the benefits of open source as well
+                          as introduce them to the cutting edge tech and coding
+                          practices.
                         </Typography>
                       </Grid>
                     </Grid>
                   </Paper>
                 </Container>
                 <Container maxWidth="md">
-                  <Paper variant="outlined" className={classes.paper}>
+                  <Paper className={classes.paper}>
                     <Grid container direction="column">
                       <Grid item>
-                        <Typography variant="h4" align="left">
+                        <Typography
+                          variant="h4"
+                          className="text-center txt--gradient-blue mb-6"
+                        >
                           <b>How it Works ?</b>
                         </Typography>
-                        <Divider className="my-3" variant="fullWidth" />
+                        {/* <Divider className="my-3" variant="fullWidth" /> */}
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
                           Participants can apply for the program either as a
                           student or as a mentor. Mentors are selected through a
-                          selection process. The selected mentors propose
-                          projects, the best of which are chosen to be included
-                          in the program. Students work on these projects in
-                          their winter vacations. The mentors review the pull
-                          requests and the overall work on their project by
-                          various contributors throughout the coding period of
-                          the program. At the end of the coding period, the
-                          students are compared on the basis of most
-                          contributions.
+                          process at the discretion of the organizers. The
+                          selected mentors propose projects, the best of which
+                          are chosen to be included in the program. Students
+                          work on these projects during the semester and try to
+                          contribute as much as they can. The mentors review the
+                          PRs and the overall work on their project of various
+                          contributors throughout the coding period of the
+                          program by assigning them some points. At the end of
+                          the coding period, the students are compared on the
+                          basis of the value of their contributions and their
+                          points.
                         </Typography>
                       </Grid>
                       <Grid item>
@@ -234,14 +279,21 @@ export default function HomePage() {
                           manual
                         </Typography>
                       </Grid>
-                      <Grid item container direction="row" justify="flex-start">
+                      <Grid
+                        item
+                        container
+                        direction="row"
+                        className="mt-6"
+                        justify="center"
+                      >
                         <Grid item>
                           <Button
                             variant="contained"
-                            color="primary"
                             className={classes.button}
+                            color="secondary"
                             startIcon={<School />}
-                            href="https://drive.google.com/file/d/1gEF-U2lV7GssAVGnJmT4STt9NHIHPu-E/view"
+                            href="https://drive.google.com/file/d/1R7BbssDJn9ReTZ_AgwhjV5o6GOA93Bxq/view?usp=sharing"
+                            target="_blank"
                           >
                             Student Manual
                           </Button>
@@ -249,12 +301,47 @@ export default function HomePage() {
                         <Grid item>
                           <Button
                             variant="contained"
-                            color="primary"
                             className={classes.button}
+                            color="secondary"
                             startIcon={<LaptopMac />}
-                            href="https://drive.google.com/file/d/1rG00muN3dI10oKcGoOWB2r5pHnszuwCs/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1bNhVwUQrofRA3ygq9vFuWz8PVyd0YqMw/view?usp=sharing"
+                            target="_blank"
                           >
                             Mentor Manual
+                          </Button>
+                        </Grid>
+                      </Grid>
+                      <br />
+                      <Grid
+                        item
+                        container
+                        direction="row"
+                        className="mt-4"
+                        justify="center"
+                        alignItems="center"
+                      >
+                        <Grid item>
+                          <Button
+                            variant="contained"
+                            className={classes.button}
+                            color="secondary"
+                            startIcon={<ContactSupportIcon />}
+                            href="https://drive.google.com/file/d/1nTYLJwaNzChRetQrEge80izJDbOtNbo-/view?usp=sharing"
+                            target="_blank"
+                          >
+                            FAQs & Code of Conduct
+                          </Button>
+                        </Grid>
+                        <Grid item>
+                          <Button
+                            variant="contained"
+                            className={classes.button}
+                            color="secondary"
+                            startIcon={<DescriptionIcon />}
+                            href="https://drive.google.com/file/d/1-Ie6jH5a_ZB7BjDepLsJYsWzcFz6ukPh/view?usp=sharing"
+                            target="_blank"
+                          >
+                            How it Works ?
                           </Button>
                         </Grid>
                       </Grid>
@@ -263,8 +350,29 @@ export default function HomePage() {
                 </Container>
               </Grid>
 
-              <Grid className="section xs:py-2 xs:pb-24 pt-32" item xs={12}>
+              <Grid className="section xs:py-2 xs:pb-20" item xs={12}>
                 <Container maxWidth="md">
+                  <Grid container md={12}>
+                    <Collapse in={open} style={{ width: '100%' }}>
+                      <Alert
+                        severity="info"
+                        action={
+                          <IconButton
+                            aria-label="close"
+                            color="inherit"
+                            size="small"
+                            onClick={() => {
+                              setOpen(false);
+                            }}
+                          >
+                            <CloseIcon fontSize="inherit" />
+                          </IconButton>
+                        }
+                      >
+                        {alertmsg}
+                      </Alert>
+                    </Collapse>
+                  </Grid>
                   <Grid
                     container
                     direction="row"
@@ -274,45 +382,63 @@ export default function HomePage() {
                   >
                     <Grid item xs={12} sm={6} md={6}>
                       <Paper className={classes.formlink}>
-                        <Typography variant="h6">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-green"
+                        >
                           <b> Are You Student ? </b>
                         </Typography>
-                        <Typography
-                          variant="body2"
-                          className={classes.typo}
-                          color="textSecondary"
-                        >
-                          If you are new to the open source world and You want
-                          to exlplore things, new techs. or you are just getting
-                          started, Don't worry, headout here and fill out the
-                          student form. We'll guide you throughout whole
-                          project, and you can win exciting prizes.
+                        <Typography variant="body1" className={classes.typo}>
+                          If you are new to the ginormous world of open source
+                          development or development in general, or just want to
+                          explore, then SLoP is perfect for you. You'll get to
+                          learn some super cool stuff from great mentors (most
+                          of them will be working on awesome tech!) and can
+                          compete for amazing prizes with your fellow beginners.
+                          For more details, check out the Student's Manual above
+                          and to register click below!
                         </Typography>
-                        <Fab variant="extended" color="secondary">
-                          <School style={{ margin: 8 }} />
-                          Be A Winner !
-                        </Fab>
+                        <a
+                          target="_blank"
+                          href="https://devfolio.co/external-apply/dsc-slop"
+                        >
+                          <Fab variant="extended" color="secondary">
+                            <School style={{ margin: 8 }} />
+                            Be A Winner !
+                          </Fab>
+                        </a>
                       </Paper>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
                       <Paper className={classes.formlink}>
-                        <Typography variant="h6">
+                        <Typography
+                          variant="h4"
+                          className="txt--gradient-green"
+                        >
                           <b> Are You Mentor ? </b>
                         </Typography>
-                        <Typography
-                          variant="body2"
-                          className={classes.typo}
-                          color="textSecondary"
-                        >
-                          If you are confident, knolwgeble enough and You can
-                          teach other's as well, then fill out the Mentor's
-                          Form. Even if you know the techs, still you can learn
-                          to be better and can help others. Teaching always
-                          makes you push to Learning.
+                        <Typography variant="body1" className={classes.typo}>
+                          If you feel that you want to contribute back to
+                          open-source and guide your fellow peers properly, then
+                          SLoP is a great platform for you. You can interact
+                          with new developers (you might also learn some cool
+                          new things!) and guide them through your project. As a
+                          bonus, you can get a chance to win a prize! For more
+                          details, check out the Mentor's Manual above and to
+                          register click below!
                         </Typography>
-                        <Fab variant="extended" color="secondary">
+                        <Fab
+                          variant="extended"
+                          color="secondary"
+                          onClick={() => {
+                            setAlertMsg(
+                              'Oops ! Mentor Applications Are Closed.'
+                            );
+                            setOpen(true);
+                          }}
+                        >
                           <LaptopMac style={{ margin: 8 }} />
-                          Be A Techer !
+                          Be A Teacher !
                         </Fab>
                       </Paper>
                     </Grid>
@@ -320,26 +446,28 @@ export default function HomePage() {
                 </Container>
               </Grid>
               <Grid
-                className="section fp-auto-height pt-16"
+                className="section"
                 item
                 xs={12}
-                data-percentage="80"
-                data-centered="true"
+                // data-percentage="80"
+                // data-centered="true"
               >
-                <Container maxWidth="md">
+                <Container className="w-full mb-24">
                   <Paper
-                    variant="outlined"
                     className={classes.paper}
-                    style={{ backgroundColor: '#424242' }}
+                    // style={{ backgroundColor: '#0000' }}
                   >
-                    <Typography variant="h5">
-                      <b>Timeline</b>
+                    <Typography className="txt--gradient-orange" variant="h4">
+                      <b> Event Timeline</b>
                     </Typography>
-                    <Divider variant="middle" />
-                    <CustomizedTimeline />
+                    {/* <Divider variant="middle" /> */}
+                    <TimelineHorizontal />
+
+                    {/* <CustomizedTimeline /> */}
                   </Paper>
                 </Container>
-                <div className="w-full ">
+                {/* <hr className="bg-white xs:block w-full hidden" /> */}
+                <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
                   <Footer />
                 </div>
               </Grid>

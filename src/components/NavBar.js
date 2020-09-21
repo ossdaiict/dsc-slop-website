@@ -4,7 +4,7 @@ import { Link } from '@reach/router';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
+import { IconButton, Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -35,11 +35,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  menuButton: {
-    paddingRight: theme.spacing(2),
-  },
   title: {
     marginLeft: 8,
+  },
+
+  menuButton: {
+    paddingRight: theme.spacing(2),
   },
   logo: {
     display: 'flex',
@@ -133,13 +134,13 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="fixed" color="inherit">
+      <AppBar id="navbar" position="fixed" color="inherit">
         <Toolbar>
           <Link to="/">
             <div className={classes.logo}>
               <TimelineIcon color="primary" />
               <Typography
-                className={classes.title}
+                className="pl-2 md:text-xl sm:text-sm text:xl"
                 variant="h6"
                 noWrap
                 color="textPrimary"
@@ -156,6 +157,11 @@ export default function PrimarySearchAppBar() {
                 <Typography color="textPrimary">Home</Typography>
               </IconButton>
             </Link>
+            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
+                <IconButton color="inherit">
+                  <Typography color="textPrimary">Register</Typography>
+                </IconButton>
+            </a> */}
             <Link to="/leaderboard">
               <IconButton color="inherit">
                 <Typography color="textPrimary">Leaderboard</Typography>
@@ -173,6 +179,14 @@ export default function PrimarySearchAppBar() {
             </Link>
           </div>
           <div className={classes.sectionMobile}>
+            {/* <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
+              target="_blank"
+            >
+              <IconButton color="inherit">
+                <Typography color="textPrimary">Register</Typography>
+              </IconButton>
+            </a>  */}
             <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}
