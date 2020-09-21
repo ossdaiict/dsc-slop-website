@@ -151,7 +151,7 @@ export default function Projects() {
                            langs="C"
                            mentors="Mamta Shukla, Himadri Pandya"
                            description="Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net."
-                           url="https://kernel.org"
+                           url="https://docs.google.com/document/d/1_2ElqbMMm7PtEzZ3K6GKzpylOJ40tt8KIU0kTPb8XDQ/edit?usp=sharing"
                         />
                      </Grid>
                      {dummy.map((obj, index) => {
