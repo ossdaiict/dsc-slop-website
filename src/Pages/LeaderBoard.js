@@ -23,11 +23,11 @@ const LeaderBoard = () => {
 
     <div className="mt-20 min-h-screen w-full">
       <Grow in>
-        <Typography className="text-2xl mt-64 xs:mx-1 xs:text-base text-white text-center">
+        {/* <Typography className="text-2xl mt-64 xs:mx-1 xs:text-base text-white text-center">
           Leaderboard will be live after the coding round begins!
-        </Typography>
+        </Typography> */}
+        <LeaderBoardTable2 />
       </Grow>
-      {/* <LeaderBoardTable2 /> */}
     </div>
   );
 };
