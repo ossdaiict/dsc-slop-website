@@ -71,12 +71,16 @@ export default function LinuxProject({
                   align="left"
                >{`Mentors: ${mentors}`}</Typography>
             </Grid>
+            
             <Grid item>
                <Typography
                   variant="subtitle2"
                   color="textPrimary"
                   align="left"
                >{`Tags: ${langs}`}</Typography>
+               <div style={{marginTop:'72px'}}>
+
+               </div>
             </Grid>
          </Grid>
       </Paper>
