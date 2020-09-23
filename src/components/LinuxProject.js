@@ -77,6 +77,9 @@ export default function LinuxProject({
                   color="textPrimary"
                   align="left"
                >{`Tags: ${langs}`}</Typography>
+               <div style={{marginTop:'72px'}}>
+
+               </div>
             </Grid>
          </Grid>
       </Paper>
