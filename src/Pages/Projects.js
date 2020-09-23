@@ -22,6 +22,16 @@ import SearchIcon from '@material-ui/icons/Search'
 
 const cookies = new Cookies()
 
+const linuxData = {
+   projectName: 'Linux Kernel',
+   langs: 'C',
+   mentors: 'Mamta Shukla, Himadri Pandya',
+   description:
+      'Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net.',
+   url:
+      'https://docs.google.com/document/d/1_2ElqbMMm7PtEzZ3K6GKzpylOJ40tt8KIU0kTPb8XDQ/edit?usp=sharing',
+}
+
 const useStyles = makeStyles((theme) => ({
    container: {
       marginTop: theme.spacing(1),
@@ -54,6 +64,7 @@ export default function Projects() {
    const [data, setData] = useState([])
    const [loading, setLoading] = useState(true)
    const [dummy, setDummy] = useState([])
+   const [showLinux, setShowLinux] = useState(true)
    const classes = useStyles()
 
    useEffect(() => {
@@ -80,6 +91,16 @@ export default function Projects() {
          )
          .map((filteredobj) => filteredobj)
       setDummy(dumdata)
+
+      if (
+         linuxData.langs.toLowerCase().includes(keyword.toLowerCase()) ||
+         linuxData.projectName.toLowerCase().includes(keyword.toLowerCase()) ||
+         linuxData.description.toLowerCase().includes(keyword.toLowerCase())
+      ) {
+         setShowLinux(true)
+      } else {
+         setShowLinux(false)
+      }
    }
 
    if (loading) {
@@ -145,15 +166,11 @@ export default function Projects() {
                            </IconButton>
                         </Paper>
                      </Grid>
-                     <Grid item xs={12} sm={12} md={6}>
-                        <LinuxProject
-                           projectName="Linux Kernel"
-                           langs="C"
-                           mentors="Mamta Shukla, Himadri Pandya"
-                           description="Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net."
-                           url="https://docs.google.com/document/d/1_2ElqbMMm7PtEzZ3K6GKzpylOJ40tt8KIU0kTPb8XDQ/edit?usp=sharing"
-                        />
-                     </Grid>
+                     {showLinux && (
+                        <Grid item xs={12} sm={12} md={6}>
+                           <LinuxProject {...linuxData} />
+                        </Grid>
+                     )}
                      {dummy.map((obj, index) => {
                         if (obj.project !== '') {
                            return (
