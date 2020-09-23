@@ -71,6 +71,7 @@ export default function LinuxProject({
                   align="left"
                >{`Mentors: ${mentors}`}</Typography>
             </Grid>
+            
             <Grid item>
                <Typography
                   variant="subtitle2"
