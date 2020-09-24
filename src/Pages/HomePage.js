@@ -187,7 +187,7 @@ export default function HomePage() {
               <Grid className="section " item xs={12}>
                 <Container maxWidth="md">
                   <Paper className={classes.paperCounter}>
-                    <Countdown toDate={new Date(2020, 9, 26)} />
+                    <Countdown toDate={new Date(2020, 9, 28)} />
                   </Paper>
                 </Container>
               </Grid>
