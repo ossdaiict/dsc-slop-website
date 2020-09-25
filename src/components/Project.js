@@ -33,6 +33,18 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
     forks: '',
   });
 
+  var projecturl = url;
+
+  if(projectName==='Oppia')
+  {
+      projecturl = 'https://github.com/oppia/oppia/wiki/SLoP-2020'
+  }
+  else if(projectName==='Oppia-Android')
+  {
+    projecturl='https://github.com/oppia/oppia-android/wiki/SLoP-2020'
+  }
+
+
   const modifiedurl = url.replace('github.com', 'api.github.com/repos');
 
   //   useEffect(()=>{
@@ -79,7 +91,7 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
   return (
     <Paper elevation={5} variant="outlined" className={classes.paper}>
       <Grid container direction="column" spacing={1}>
-        <a href={url} target="_blank">
+        <a href={projecturl} target="_blank">
           <Grid item container direction="row">
             <IconButton
               aria-label="Github"
