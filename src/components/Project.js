@@ -39,7 +39,7 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
   {
       projecturl = 'https://github.com/oppia/oppia/wiki/SLoP-2020'
   }
-  else if(projectName==='Oppia-Android')
+  else if(projectName==='Oppia Android')
   {
     projecturl='https://github.com/oppia/oppia-android/wiki/SLoP-2020'
   }
