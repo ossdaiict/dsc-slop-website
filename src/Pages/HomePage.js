@@ -148,12 +148,12 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Student Registrations close at 11:59 PM tonight!</b>
+                        <b>Registrations Closed. Results in 24 hours!</b>
                       </div>
                     </Typography>
-                    <div className="w-full flex justify-center mt-8">
+                    {/* <div className="w-full flex justify-center mt-8">
                       <ApplyWithDevfolio className="h-6 w-6 mr-2 logo mx-auto" />
-                    </div>
+                    </div> */}
 
                     {/* <Typography
                       color="textPrimary"
