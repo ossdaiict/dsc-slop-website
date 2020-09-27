@@ -5,7 +5,11 @@ import CountdownBlock from '../components/CountdownBlock';
 import '../Pages/TextGradient.css';
 
 const CountdownDisplay = (props) => {
-  const { days, hours, minutes, seconds } = props;
+  // const { days, hours, minutes, seconds } = props;
+  let days = 0, 
+      hours = 0, 
+      minutes = 0, 
+      seconds = 0;
 
   return (
     <>
