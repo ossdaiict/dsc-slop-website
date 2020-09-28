@@ -148,7 +148,8 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Registrations Closed. Results in 24 hours!</b>
+                        <b>Selection Mail Sent to all Participants.<br/>
+                          If you are selected then follow the steps as instructed in mail.</b>
                       </div>
                     </Typography>
                     {/* <div className="w-full flex justify-center mt-8">
