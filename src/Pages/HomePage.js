@@ -149,7 +149,7 @@ export default function HomePage() {
                     >
                       <div className="txt--gradient-orange">
                         <b>Selection Mail Sent to all Participants.<br/>
-                          If you are selected then follow the steps as instructed in mail.</b>
+                          Check your Spam mails also or check on Devfolio Dashboard</b>
                       </div>
                     </Typography>
                     {/* <div className="w-full flex justify-center mt-8">
