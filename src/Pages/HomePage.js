@@ -105,11 +105,7 @@ export default function HomePage() {
       responsiveWidth={600}
       navigation={true}
       scrollOverflow={true}
-      //fullpage options
-      // licenseKey={'YOUR_KEY_HERE'}
-      // paddingTop="10px"
       scrollingSpeed={700}
-      // fitToSection={false}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -119,12 +115,6 @@ export default function HomePage() {
                 <div id="stars2"></div>
                 <div id="stars3"></div>
                 <div className="min-h-screen relative">
-                  {/* <CardMedia
-                    component="img"
-                    alt="Contemplative Reptile"
-                    className="min-h-screen absolute"
-                    title="Contemplative Reptile"
-                  /> */}
                   <div className={'fixed text-center w-full ' + classes.logo}>
                     <LogoBear
                       className={
@@ -174,7 +164,6 @@ export default function HomePage() {
                         >
                           <b>What is SLoP ?</b>
                         </Typography>
-                        {/* <Divider className="my-3" variant="fullWidth" /> */}
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
@@ -207,7 +196,6 @@ export default function HomePage() {
                         >
                           <b>How it Works ?</b>
                         </Typography>
-                        {/* <Divider className="my-3" variant="fullWidth" /> */}
                       </Grid>
                       <Grid item>
                         <Typography variant="body1" align="left">
@@ -402,24 +390,17 @@ export default function HomePage() {
                 className="section"
                 item
                 xs={12}
-                // data-percentage="80"
-                // data-centered="true"
               >
                 <Container className="w-full mb-24">
                   <Paper
                     className={classes.paper}
-                    // style={{ backgroundColor: '#0000' }}
                   >
                     <Typography className="txt--gradient-orange" variant="h4">
                       <b> Event Timeline</b>
                     </Typography>
-                    {/* <Divider variant="middle" /> */}
                     <TimelineHorizontal />
-
-                    {/* <CustomizedTimeline /> */}
                   </Paper>
                 </Container>
-                {/* <hr className="bg-white xs:block w-full hidden" /> */}
                 <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
                   <Footer />
                 </div>
