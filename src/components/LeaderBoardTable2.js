@@ -83,7 +83,7 @@ function LeaderBoardTable2() {
                   return { backgroundColor: '#848a84', fontSize: '18px' };
                 }
                 else{
-                  return {fontSize: '20px'}
+                  return {fontSize: '18px'}
                 }
               },
               headerStyle: {
