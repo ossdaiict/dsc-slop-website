@@ -14,10 +14,10 @@ const CountdownDisplay = (props) => {
   return (
     <>
       <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
-        Coding period begins in ⏳
+        Coding period running... 🚩
       </Typography>
 
-      <div className="flex w-full justify-center mt-4">
+      {/* <div className="flex w-full justify-center mt-4">
         <CountdownBlock>
           {String(days).padStart(2, 0)}
           <br /> Days
@@ -34,7 +34,8 @@ const CountdownDisplay = (props) => {
           {String(seconds).padStart(2, 0)}
           <br /> Seconds
         </CountdownBlock>
-      </div>
+      </div> */}
+
     </>
   );
 };
