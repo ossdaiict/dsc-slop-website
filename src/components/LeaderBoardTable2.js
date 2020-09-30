@@ -19,6 +19,7 @@ function LeaderBoardTable2() {
       const usersList = response.data;
       let rank = 1;
       usersList.forEach((obj) => (obj['rank'] = rank++));
+      usersList.forEach((obj) => (obj['github_url'] = `https://github.com/${obj.username}`));
       setUsers(usersList);
       setLoaded(true);
       console.log(window.screen.height / 144);
@@ -57,6 +58,7 @@ function LeaderBoardTable2() {
                 title: '       Username',
                 field: 'username',
                 align: 'center',
+                render: rowData => {return <a href={rowData.github_url}>{rowData.username}</a>},
                 headerStyle: { whiteSpace: 'pre' },
               },
               {
