@@ -229,6 +229,7 @@ export default function HomePage() {
                       >
                         <Grid item>
                           <Button
+                            style={{width:"200px"}}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -241,6 +242,7 @@ export default function HomePage() {
                         </Grid>
                         <Grid item>
                           <Button
+                            style={{width:"200px"}}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -252,7 +254,6 @@ export default function HomePage() {
                           </Button>
                         </Grid>
                       </Grid>
-                      <br />
                       <Grid
                         item
                         container
@@ -263,6 +264,7 @@ export default function HomePage() {
                       >
                         <Grid item>
                           <Button
+                            style={{width:"200px"}}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -270,11 +272,12 @@ export default function HomePage() {
                             href="https://drive.google.com/file/d/1nTYLJwaNzChRetQrEge80izJDbOtNbo-/view?usp=sharing"
                             target="_blank"
                           >
-                            FAQs & Code of Conduct
+                            FAQs & Inquiries
                           </Button>
                         </Grid>
                         <Grid item>
                           <Button
+                            style={{width:"200px"}}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -341,9 +344,14 @@ export default function HomePage() {
                         </Typography>
                         <a
                           target="_blank"
-                          href="https://devfolio.co/external-apply/dsc-slop"
                         >
-                          <Fab variant="extended" color="secondary">
+                          <Fab variant="extended" color="secondary"
+                          onClick={() => {
+                            setAlertMsg(
+                              'Student Registrations are closed Now !'
+                            );
+                            setOpen(true);
+                          }}>
                             <School style={{ margin: 8 }} />
                             Be A Winner !
                           </Fab>

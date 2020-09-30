@@ -18,7 +18,6 @@ import Paper from '@material-ui/core/Paper'
 import InputBase from '@material-ui/core/InputBase'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import SearchIcon from '@material-ui/icons/Search'
 
 const cookies = new Cookies()
 
@@ -155,15 +154,8 @@ export default function Projects() {
                            <InputBase
                               className={classes.input}
                               placeholder="Search Projects,Tags"
-                              // inputProps={{ 'aria-label': 'search google maps' }}
                               onChange={(e) => FilterList(e.target.value)}
                            />
-                           <IconButton
-                              className={classes.iconButton}
-                              aria-label="search"
-                           >
-                              <SearchIcon />
-                           </IconButton>
                         </Paper>
                      </Grid>
                      {showLinux && (
