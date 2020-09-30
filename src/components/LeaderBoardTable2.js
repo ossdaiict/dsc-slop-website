@@ -65,12 +65,6 @@ function LeaderBoardTable2() {
                 align: 'center',
                 headerStyle: { whiteSpace: 'pre' },
               },
-              //   {
-              //     title: '       Pull Requests',
-              //     field: 'pull_request',
-              //     align: 'center',
-              //     headerStyle: { whiteSpace: 'pre' },
-              //   },
             ]}
             data={users}
             isLoading={!loaded}

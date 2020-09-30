@@ -30,10 +30,9 @@ const Contacts = () => {
       <Grow in>
         <Grid container>
           {organizers.map((member, id) => {
-            //onhover: state[id] = true / false
 
             return (
-              <Grid key={id} item xs={12} sm={8} md={6}>
+              <Grid key={id} item xs={12} sm={8} md={4}>
                 <Contact details={member} />
               </Grid>
             );
