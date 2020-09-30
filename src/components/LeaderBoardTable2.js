@@ -33,7 +33,7 @@ function LeaderBoardTable2() {
         spacing={3}
         justify="center"
         alignItems="center"
-        style={{ height: '100vh', textAlign: 'center' }}
+        style={{ height: '100vh', textAlign: 'center'}}
       >
         <Grid item>
           <CircularProgress size={100} />
@@ -70,9 +70,24 @@ function LeaderBoardTable2() {
             isLoading={!loaded}
             options={{
               rowStyle: (x) => {
-                if (x.tableData.id % 2 === 0) {
-                  return { backgroundColor: '#434543' };
+                if(x.tableData.id === 0){
+                  return { backgroundColor: '#006B38', fontSize: '18px' };
                 }
+                if(x.tableData.id === 1){
+                  return { backgroundColor: '#006B38', fontSize: '18px' };
+                }
+                if(x.tableData.id === 2){
+                  return { backgroundColor: '#006B38', fontSize: '18px' };
+                }
+                else if (x.tableData.id % 2 === 0) {
+                  return { backgroundColor: '#848a84', fontSize: '18px' };
+                }
+                else{
+                  return {fontSize: '20px'}
+                }
+              },
+              headerStyle: {
+                'fontSize': '18px'
               },
               pageSize: 10,
               pageSizeOptions: [
