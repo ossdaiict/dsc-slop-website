@@ -148,41 +148,12 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Selection Mail Sent to all Participants.<br/>
-                          Check your Spam mails also or check on Devfolio Dashboard</b>
+                        <b>SLoP is Open Now.<br/>
+                         Make Your contributions !!!</b>
                       </div>
                     </Typography>
-                    {/* <div className="w-full flex justify-center mt-8">
-                      <ApplyWithDevfolio className="h-6 w-6 mr-2 logo mx-auto" />
-                    </div> */}
-
-                    {/* <Typography
-                      color="textPrimary"
-                      className="mt-20 xs:text-xl text-3xl blink blink-two"
-                    >
-                        <div className="txt--gradient-orange">
-                          <b>Student Applications will begin from 15th September.</b>
-                        </div>
-
-                    </Typography> */}
-
-                    {/* <div className={classes.textdiv}> */}
-
-                    {/* <Typography
-                        className={classes.textover + ' txt--gradient-orange'}
-                        color="textPrimary"
-                      >
-                        <b>S L o P</b>
-                      </Typography> */}
-                    {/* <Typography
-                        className={classes.textcap + ' txt--gradient-orange'}
-                        color="textPrimary"
-                      >
-                        <b>S E M E S T E R - L O N G - P R O J E C T S</b>
-                      </Typography> */}
                   </div>
                 </div>
-                {/* </div> */}
               </Grid>
 
               <Grid className="section " item xs={12}>
@@ -192,25 +163,6 @@ export default function HomePage() {
                   </Paper>
                 </Container>
               </Grid>
-              {/* <Grid className="section" item xs={12}>
-                <Container maxWidth="md">
-                  <Paper
-                    className={classes.paper}
-                    style={{ marginBottom: 0, backgroundColor: '#303030' }}
-                  >
-                    <Typography
-                      className={classes.textcap}
-                      color="textSecondary"
-                    >
-                      Prizes Worth
-                    </Typography>
-                    <Typography className={classes.prizes} color="textPrimary">
-                      ₹ 15,000/-
-                    </Typography>
-                  </Paper>
-                </Container>
-              </Grid> */}
-
               <Grid className="section xs:py-12" item xs={12}>
                 <Container maxWidth="md">
                   <Paper className={classes.paper}>
