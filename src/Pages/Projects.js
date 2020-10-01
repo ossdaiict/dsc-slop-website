@@ -135,8 +135,7 @@ export default function Projects() {
                            color="textPrimary"
                         >
                            <b className="txt--gradient-orange-lite">
-                              Here is the list of projects, take a look at them,
-                              choose your preferences and make contributions !!!
+                              Here are the currently active projects under SLoP !!!
                            </b>
                         </Typography>
                         <Divider
