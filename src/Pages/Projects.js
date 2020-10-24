@@ -69,7 +69,7 @@ export default function Projects() {
    useEffect(() => {
       const fetch = () => {
          axios
-            .get('https://frozen-chamber-70814.herokuapp.com/getData')
+            .get('https://apna-code-app.herokuapp.com/getData')
             .then(({ data }) => {
                setData(data.projects)
                setDummy(data.projects)
