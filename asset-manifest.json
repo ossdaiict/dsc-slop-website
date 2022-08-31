@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dsc-slop-website/static/css/main.4ec41802.chunk.css",
-    "main.js": "/dsc-slop-website/static/js/main.d9292581.chunk.js",
-    "main.js.map": "/dsc-slop-website/static/js/main.d9292581.chunk.js.map",
+    "main.js": "/dsc-slop-website/static/js/main.7fae8627.chunk.js",
+    "main.js.map": "/dsc-slop-website/static/js/main.7fae8627.chunk.js.map",
     "runtime-main.js": "/dsc-slop-website/static/js/runtime-main.d20f52ad.js",
     "runtime-main.js.map": "/dsc-slop-website/static/js/runtime-main.d20f52ad.js.map",
     "static/js/2.4d95e71b.chunk.js": "/dsc-slop-website/static/js/2.4d95e71b.chunk.js",
     "static/js/2.4d95e71b.chunk.js.map": "/dsc-slop-website/static/js/2.4d95e71b.chunk.js.map",
     "index.html": "/dsc-slop-website/index.html",
-    "precache-manifest.4bdd0927b1f614772ef0870c139b724f.js": "/dsc-slop-website/precache-manifest.4bdd0927b1f614772ef0870c139b724f.js",
+    "precache-manifest.7af97829adbf0021847b014cc92285ba.js": "/dsc-slop-website/precache-manifest.7af97829adbf0021847b014cc92285ba.js",
     "service-worker.js": "/dsc-slop-website/service-worker.js",
     "static/css/main.4ec41802.chunk.css.map": "/dsc-slop-website/static/css/main.4ec41802.chunk.css.map",
     "static/js/2.4d95e71b.chunk.js.LICENSE.txt": "/dsc-slop-website/static/js/2.4d95e71b.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.d20f52ad.js",
     "static/js/2.4d95e71b.chunk.js",
     "static/css/main.4ec41802.chunk.css",
-    "static/js/main.d9292581.chunk.js"
+    "static/js/main.7fae8627.chunk.js"
   ]
 }
