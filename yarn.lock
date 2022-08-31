@@ -4875,12 +4875,12 @@
   "version" "0.1.10"
 
 "filename-reserved-regex@^1.0.0":
-  "integrity" "sha1-5hz4BfDeHJhFZ9A4bcXfUO5a9+Q="
+  "integrity" "sha512-UZArj7+U+2reBBVCvVmRlyq9D7EYQdUtuNN+1iz7pF1jGcJ2L0TjiRCxsTZfj2xFbM4c25uGCUDpKTHA7L2TKg=="
   "resolved" "https://registry.npmjs.org/filename-reserved-regex/-/filename-reserved-regex-1.0.0.tgz"
   "version" "1.0.0"
 
 "filenamify-url@^1.0.0":
-  "integrity" "sha1-syvYExnvWGO3MHi+1Q9GpPeXX1A="
+  "integrity" "sha512-O9K9JcZeF5VdZWM1qR92NSv1WY2EofwudQayPx5dbnnFl9k0IcZha4eV/FGkjnBK+1irOQInij0yiooCHu/0Fg=="
   "resolved" "https://registry.npmjs.org/filenamify-url/-/filenamify-url-1.0.0.tgz"
   "version" "1.0.0"
   dependencies:
@@ -4888,7 +4888,7 @@
     "humanize-url" "^1.0.0"
 
 "filenamify@^1.0.0":
-  "integrity" "sha1-qfL/0RxQO+0wABUCknI3jx8TZaU="
+  "integrity" "sha512-DKVP0WQcB7WaIMSwDETqImRej2fepPqvXQjaVib7LRZn9Rxn5UbvK2tYTqGf1A1DkIprQQkG4XSQXSOZp7Q3GQ=="
   "resolved" "https://registry.npmjs.org/filenamify/-/filenamify-1.2.1.tgz"
   "version" "1.2.1"
   dependencies:
@@ -5607,7 +5607,7 @@
   "version" "1.0.0"
 
 "humanize-url@^1.0.0":
-  "integrity" "sha1-9KuZ4NKIF0yk4eUEB8VfuuRk7/8="
+  "integrity" "sha512-RtgTzXCPVb/te+e82NDhAc5paj+DuKSratIGAr+v+HZK24eAQ8LMoBGYoL7N/O+9iEc33AKHg45dOMKw3DNldQ=="
   "resolved" "https://registry.npmjs.org/humanize-url/-/humanize-url-1.0.1.tgz"
   "version" "1.0.1"
   dependencies:
@@ -10590,7 +10590,7 @@
     "escape-string-regexp" "^1.0.2"
 
 "strip-url-auth@^1.0.0":
-  "integrity" "sha1-IrD6OkE4WzO+PzMVUbu4N/oM164="
+  "integrity" "sha512-++41PnXftlL3pvI6lpvhSEO+89g1kIJC4MYB5E6yH+WHa5InIqz51yGd1YOGd7VNSNdoEOfzTMqbAM/2PbgaHQ=="
   "resolved" "https://registry.npmjs.org/strip-url-auth/-/strip-url-auth-1.0.1.tgz"
   "version" "1.0.1"
 
@@ -10867,7 +10867,7 @@
     "punycode" "^2.1.0"
 
 "trim-repeated@^1.0.0":
-  "integrity" "sha1-42RqLqTokTEr9+rObPsFOAvAHCE="
+  "integrity" "sha512-pkonvlKk8/ZuR0D5tLW8ljt5I8kmxp2XKymhepUeOdCEfKpZaktSArkLHZt76OB1ZvO9bssUsDty4SWhLvZpLg=="
   "resolved" "https://registry.npmjs.org/trim-repeated/-/trim-repeated-1.0.0.tgz"
   "version" "1.0.0"
   dependencies:
