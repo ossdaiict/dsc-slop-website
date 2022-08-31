@@ -41,10 +41,10 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Navbar />
         <Router primary={false}>
-          <Homepage path="/" />
-          <LeaderBoard path="/leaderboard" />
-          <Projects path="/projects" />
-          <Contacts path="/contacts" />
+          <Homepage exact path="/" />
+          <LeaderBoard exact path="/leaderboard" />
+          <Projects exact path="/projects" />
+          <Contacts exact path="/contacts" />
         </Router>
         <Footer />
       </ThemeProvider>

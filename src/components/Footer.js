@@ -23,7 +23,7 @@ export default function Footer() {
         <Grid item xs={12}>
           <Typography variant="body2" style={{ marginBottom: 16 }}>
             {' '}
-            © SLoP, DAIICT-Gandhinagar, 2020{' '}
+            © SLoP, DAIICT-Gandhinagar, 2022{' '}
           </Typography>
         </Grid>
         <Grid item container direction="row" justify="center" spacing={2}>
