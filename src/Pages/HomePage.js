@@ -233,7 +233,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<School />}
-                            href="https://drive.google.com/file/d/1R7BbssDJn9ReTZ_AgwhjV5o6GOA93Bxq/view?usp=sharing"
+                            href="https://drive.google.com/file/d/19cG4GJTrJjOvx3ALXWtAyBf63SkbjYfR/view?usp=sharing"
                             target="_blank"
                           >
                             Student Manual
@@ -246,7 +246,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<LaptopMac />}
-                            href="https://drive.google.com/file/d/1bNhVwUQrofRA3ygq9vFuWz8PVyd0YqMw/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1URxwFF3BS3_QwTLMjpMthyQMhNFm1q_R/view?usp=sharing"
                             target="_blank"
                           >
                             Mentor Manual
