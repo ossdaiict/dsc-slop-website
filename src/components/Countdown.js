@@ -6,15 +6,15 @@ import '../Pages/TextGradient.css';
 
 const CountdownDisplay = (props) => {
   // const { days, hours, minutes, seconds } = props;
-  let days = 0, 
-      hours = 0, 
-      minutes = 0, 
-      seconds = 0;
+  let days = 0,
+    hours = 0,
+    minutes = 0,
+    seconds = 0;
 
   return (
     <>
       <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
-        Coding Period has ended... 🚩
+        🚀Mentor registrations started... 🚀
       </Typography>
 
       {/* <div className="flex w-full justify-center mt-4">
