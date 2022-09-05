@@ -135,7 +135,7 @@ export default function Projects() {
                            color="textPrimary"
                         >
                            <b className="txt--gradient-orange-lite">
-                              Here are the currently active projects under SLoP !!!
+                              Here are the previos projects under SLoP 2020!!!
                            </b>
                         </Typography>
                         <Divider
