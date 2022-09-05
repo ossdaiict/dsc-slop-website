@@ -228,7 +228,7 @@ export default function HomePage() {
                       >
                         <Grid item>
                           <Button
-                            style={{width:"200px"}}
+                            style={{ width: "200px" }}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -241,7 +241,7 @@ export default function HomePage() {
                         </Grid>
                         <Grid item>
                           <Button
-                            style={{width:"200px"}}
+                            style={{ width: "200px" }}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -263,7 +263,7 @@ export default function HomePage() {
                       >
                         <Grid item>
                           <Button
-                            style={{width:"200px"}}
+                            style={{ width: "200px" }}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -276,7 +276,7 @@ export default function HomePage() {
                         </Grid>
                         <Grid item>
                           <Button
-                            style={{width:"200px"}}
+                            style={{ width: "200px" }}
                             variant="contained"
                             className={classes.button}
                             color="secondary"
@@ -345,12 +345,12 @@ export default function HomePage() {
                           target="_blank"
                         >
                           <Fab variant="extended" color="secondary"
-                          onClick={() => {
-                            setAlertMsg(
-                              'Student Registrations are closed Now !'
-                            );
-                            setOpen(true);
-                          }}>
+                            onClick={() => {
+                              setAlertMsg(
+                                'Student Registrations will start from 15th September !'
+                              );
+                              setOpen(true);
+                            }}>
                             <School style={{ margin: 8 }} />
                             Be A Winner !
                           </Fab>
@@ -378,12 +378,15 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          onClick={() => {
-                            setAlertMsg(
-                              'Oops ! Mentor Applications Are Closed.'
-                            );
-                            setOpen(true);
-                          }}
+                          href='https://docs.google.com/forms/d/e/1FAIpQLScsJ8a2oXF5Y1IAvngyhi9A7_nIWJSgkqc7vAug1evsjv39zg/viewform'
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        // onClick={() => {
+                        //   setAlertMsg(
+                        //     'Oops ! Mentor Applications Are Closed.'
+                        //   );
+                        //   setOpen(true);
+                        // }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
                           Be A Teacher !
