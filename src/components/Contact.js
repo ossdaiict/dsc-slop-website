@@ -36,7 +36,7 @@ export default function Contact({ details }) {
       >
         <Grid item>
           <img
-            className="rounded-full w-48 h-48"
+            className="rounded-full object-cover w-48 h-48"
             src={details.image}
             alt="Profile"
           />
