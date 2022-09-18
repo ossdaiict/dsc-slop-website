@@ -281,7 +281,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<DescriptionIcon />}
-                            href="https://drive.google.com/file/d/1-Ie6jH5a_ZB7BjDepLsJYsWzcFz6ukPh/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1ktwE1Rh7-C1zMeEOkzwreoBfZRIya7LQ/view?usp=sharing"
                             target="_blank"
                           >
                             How it Works ?
