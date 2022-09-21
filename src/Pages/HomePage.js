@@ -138,7 +138,7 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Mentor registrations started.</b>
+                        <b>Student registrations started.</b>
                       </div>
                     </Typography>
                   </div>
@@ -345,11 +345,14 @@ export default function HomePage() {
                           target="_blank"
                         >
                           <Fab variant="extended" color="secondary"
+                            href='https://devfolio.co/external-apply/slop-1'
+                            target='_blank'
+                            rel='noopener noreferrer'
                             onClick={() => {
-                              setAlertMsg(
-                                'Student Registrations will start from 15th September !'
-                              );
-                              setOpen(true);
+                              // setAlertMsg(
+                              //   'Student Registrations will start from 15th September !'
+                              // );
+                              // setOpen(true);
                             }}>
                             <School style={{ margin: 8 }} />
                             Be A Winner !
@@ -375,18 +378,16 @@ export default function HomePage() {
                           details, check out the Mentor's Manual above and to
                           register click below!
                         </Typography>
-                        <Fab
-                          variant="extended"
-                          color="secondary"
-                          href='https://docs.google.com/forms/d/e/1FAIpQLScsJ8a2oXF5Y1IAvngyhi9A7_nIWJSgkqc7vAug1evsjv39zg/viewform'
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        // onClick={() => {
-                        //   setAlertMsg(
-                        //     'Oops ! Mentor Applications Are Closed.'
-                        //   );
-                        //   setOpen(true);
-                        // }}
+                        <Fab variant="extended" color="secondary"
+                          // href='https://docs.google.com/forms/d/e/1FAIpQLScsJ8a2oXF5Y1IAvngyhi9A7_nIWJSgkqc7vAug1evsjv39zg/viewform'
+                          // target='_blank'
+                          // rel='noopener noreferrer'
+                          onClick={() => {
+                            setAlertMsg(
+                              'Oops ! Mentor Applications Are Closed.'
+                            );
+                            setOpen(true);
+                          }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
                           Be A Teacher !
