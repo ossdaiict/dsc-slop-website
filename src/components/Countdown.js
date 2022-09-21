@@ -14,7 +14,7 @@ const CountdownDisplay = (props) => {
   return (
     <>
       <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
-        🚀Mentor registrations started... 🚀
+        🚀Student registrations started... 🚀
       </Typography>
 
       {/* <div className="flex w-full justify-center mt-4">

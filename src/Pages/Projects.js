@@ -21,15 +21,15 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 const cookies = new Cookies()
 
-const linuxData = {
-   projectName: 'Linux Kernel',
-   langs: 'C',
-   mentors: 'Mamta Shukla, Himadri Pandya',
-   description:
-      'Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net.',
-   url:
-      'https://docs.google.com/document/d/1_2ElqbMMm7PtEzZ3K6GKzpylOJ40tt8KIU0kTPb8XDQ/edit?usp=sharing',
-}
+// const linuxData = {
+//    projectName: 'Linux Kernel',
+//    langs: 'C',
+//    mentors: 'Mamta Shukla, Himadri Pandya',
+//    description:
+//       'Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net.',
+//    url:
+//       'https://docs.google.com/document/d/1_2ElqbMMm7PtEzZ3K6GKzpylOJ40tt8KIU0kTPb8XDQ/edit?usp=sharing',
+// }
 
 const useStyles = makeStyles((theme) => ({
    container: {
@@ -69,7 +69,7 @@ export default function Projects() {
    useEffect(() => {
       const fetch = () => {
          axios
-            .get('https://apna-code-app.herokuapp.com/getData')
+            .get('https://git-webhooks-pe3ed9q8x-vrutik-prajapati.vercel.app/get-projects-data')
             .then(({ data }) => {
                setData(data.projects)
                setDummy(data.projects)
@@ -83,23 +83,24 @@ export default function Projects() {
    function FilterList(keyword) {
       const dumdata = data
          .filter(
-            (obj) =>
-               obj.langs.toLowerCase().includes(keyword.toLowerCase()) ||
-               obj.project.toLowerCase().includes(keyword.toLowerCase()) ||
-               obj.description.toLowerCase().includes(keyword.toLowerCase())
+            (obj) => {
+               return (
+                  (obj.langs != null && obj.langs.toLowerCase().includes(keyword.toLowerCase())) ||
+                  (obj.project != null && obj.project.toLowerCase().includes(keyword.toLowerCase())) ||
+                  (obj.description != null && obj.description.toLowerCase().includes(keyword.toLowerCase())))
+            }
          )
          .map((filteredobj) => filteredobj)
       setDummy(dumdata)
-
-      if (
-         linuxData.langs.toLowerCase().includes(keyword.toLowerCase()) ||
-         linuxData.projectName.toLowerCase().includes(keyword.toLowerCase()) ||
-         linuxData.description.toLowerCase().includes(keyword.toLowerCase())
-      ) {
-         setShowLinux(true)
-      } else {
-         setShowLinux(false)
-      }
+      // if (
+      //    linuxData.langs.toLowerCase().includes(keyword.toLowerCase()) ||
+      //    linuxData.projectName.toLowerCase().includes(keyword.toLowerCase()) ||
+      //    linuxData.description.toLowerCase().includes(keyword.toLowerCase())
+      // ) {
+      //    setShowLinux(true)
+      // } else {
+      //    setShowLinux(false)
+      // }
    }
 
    if (loading) {
@@ -134,9 +135,9 @@ export default function Projects() {
                            variant="h6"
                            color="textPrimary"
                         >
-                           <b className="txt--gradient-orange-lite">
+                           {/* <b className="txt--gradient-orange-lite">
                               Here are the previos projects under SLoP 2020!!!
-                           </b>
+                           </b> */}
                         </Typography>
                         <Divider
                            className="my-4"
@@ -157,11 +158,11 @@ export default function Projects() {
                            />
                         </Paper>
                      </Grid>
-                     {showLinux && (
+                     {/* {showLinux && (
                         <Grid item xs={12} sm={12} md={6}>
                            <LinuxProject {...linuxData} />
                         </Grid>
-                     )}
+                     )} */}
                      {dummy.map((obj, index) => {
                         if (obj.project !== '') {
                            return (
