@@ -345,7 +345,7 @@ export default function HomePage() {
                           target="_blank"
                         >
                           <Fab variant="extended" color="secondary"
-                            href='https://devfolio.co/external-apply/slop-1'
+                            href='https://dsc-slop.github.io/'
                             target='_blank'
                             rel='noopener noreferrer'
                             onClick={() => {
