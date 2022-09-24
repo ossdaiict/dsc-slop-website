@@ -69,7 +69,7 @@ export default function Projects() {
    useEffect(() => {
       const fetch = () => {
          axios
-            .get('https://git-webhooks-pe3ed9q8x-vrutik-prajapati.vercel.app/get-projects-data')
+            .get('https://slop-backend.herokuapp.com/get-projects-data')
             .then(({ data }) => {
                setData(data.projects)
                setDummy(data.projects)
