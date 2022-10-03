@@ -13,15 +13,15 @@ function LeaderBoardTable2() {
 
   useEffect(() => {
     const fetchData = async () => {
-//       const response = await axios.get(
-//         'https://dsc-slop-server.herokuapp.com/student'
-//       );
-//       console.log(response.data);
-//       const usersList = response.data;
-//       let rank = 1;
-//       usersList.forEach((obj) => (obj['rank'] = rank++));
-//       usersList.forEach((obj) => (obj['github_url'] = `https://github.com/${obj.username}`));
-//       setUsers(usersList);
+      const response = await axios.get(
+        'https://slop-backend.herokuapp.com/student'
+      );
+      console.log(response.data);
+      const usersList = response.data;
+      let rank = 1;
+      usersList.forEach((obj) => (obj['rank'] = rank++));
+      usersList.forEach((obj) => (obj['github_url'] = `https://github.com/${obj.username}`));
+      setUsers(usersList);
       setLoaded(true);
       console.log(window.screen.height / 144);
     };
