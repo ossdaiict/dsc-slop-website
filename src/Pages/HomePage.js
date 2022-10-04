@@ -138,7 +138,7 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Student registrations started.</b>
+                        <b>Contribution period started</b>
                       </div>
                     </Typography>
                   </div>
@@ -345,14 +345,14 @@ export default function HomePage() {
                           target="_blank"
                         >
                           <Fab variant="extended" color="secondary"
-                            href='https://dsc-slop.github.io/'
-                            target='_blank'
-                            rel='noopener noreferrer'
+                            // href='https://dsc-slop.github.io/'
+                            // target='_blank'
+                            // rel='noopener noreferrer'
                             onClick={() => {
-                              // setAlertMsg(
-                              //   'Student Registrations will start from 15th September !'
-                              // );
-                              // setOpen(true);
+                              setAlertMsg(
+                                'Student Registrations closed!'
+                              );
+                              setOpen(true);
                             }}>
                             <School style={{ margin: 8 }} />
                             Be A Winner !
