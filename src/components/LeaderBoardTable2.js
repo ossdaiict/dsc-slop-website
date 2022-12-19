@@ -14,7 +14,7 @@ function LeaderBoardTable2() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        'https://slop-backend.herokuapp.com/student'
+        'https://git-webhooks-sigma.vercel.app/student'
       );
       console.log(response.data);
       const usersList = response.data;
