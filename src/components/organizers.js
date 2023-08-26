@@ -46,7 +46,7 @@ const organizers = [
     {
         name: "Jay Malaviya",
         phone: "+91 87806 22867",
-        image: "https://dsc-slop.github.io/images/team/Jay.jpg",
+        image: "https://dsc-slop.github.io/images/team/Jay.JPG",
         github: "https://github.com/Jam-Burger",
         linkedin: "https://www.linkedin.com/in/jay-malaviya",
     },
