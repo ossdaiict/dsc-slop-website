@@ -125,7 +125,6 @@ function MentorForm() {
 
     setLoading(true);
 
-
     const response = await fetch(
       process.env.REACT_APP_DB_URL,
       {
