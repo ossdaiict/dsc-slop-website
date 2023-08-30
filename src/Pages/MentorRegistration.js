@@ -125,8 +125,9 @@ function MentorForm() {
 
     setLoading(true);
 
+
     const response = await fetch(
-      "https://slop3-77227-default-rtdb.firebaseio.com/mentor-registration.json",
+      process.env.REACT_APP_DB_URL,
       {
         method: "POST",
         headers: {
