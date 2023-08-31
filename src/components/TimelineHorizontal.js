@@ -19,7 +19,7 @@ export default function TimelineHorizontal() {
                 <div className="timeline-panel bg-black border border-white rounded-lg">
                   {/* <div className="timeline-heading"> */}
                   <h3 className="timeline-title">
-                    <b>Mentor Application begins</b>
+                    <b>Mentor Registrations</b>
                   </h3>
                   {/* <p>
                       <small className="text-muted">
@@ -29,7 +29,7 @@ export default function TimelineHorizontal() {
                     </p> */}
                   {/* </div> */}
                   <div className="timeline-body">
-                    <p>4 Sept 2022</p>
+                    <p>11 Sept - 22 Sept</p>
                   </div>
                 </div>
                 {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
@@ -41,11 +41,11 @@ export default function TimelineHorizontal() {
                 <div className="timeline-panel bg-black border border-white rounded-lg">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">
-                      <b>Student Application Begins</b>
+                      <b>Student Registrations</b>
                     </h3>
                   </div>
                   <div className="timeline-body">
-                    <p>21 Sept 2022</p>
+                    <p>25 Sept - 8 Oct</p>
                   </div>
                 </div>
                 {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
@@ -57,11 +57,11 @@ export default function TimelineHorizontal() {
                 <div className="timeline-panel bg-black border border-white rounded-lg">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">
-                      <b>Eat. Sleep. Code. Repeat.</b>
+                      <b>Eat. Sleep. Code. Repeat!</b>
                     </h3>
                   </div>
                   <div className="timeline-body">
-                    <p>1 Oct 2022</p>
+                    <p>9 Oct - 5 Dec</p>
                   </div>
                 </div>
                 {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
@@ -73,11 +73,11 @@ export default function TimelineHorizontal() {
                 <div className="timeline-panel bg-black border border-white rounded-lg">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">
-                      <b>Bye Bye coding. Hello Results.</b>
+                      <b>Results</b>
                     </h3>
                   </div>
                   <div className="timeline-body">
-                    <p>28 Nov 2022</p>
+                    <p>9 Oct - 5 Dec</p>
                   </div>
                 </div>
                 {/* <DetailsOutlinedIcon className="text-white -mt-40 w-20 h-20" /> */}
@@ -96,11 +96,11 @@ export default function TimelineHorizontal() {
               <div className="timeline-panel bg-black border border-white rounded-lg">
                 <div className="timeline-heading mb-10">
                   <h3 className="timeline-title">
-                    <b>Mentor Application begins</b>
+                    <b>Mentor Registrations</b>
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>4 Sept 2022</p>
+                  <p>11 Sept - 22 Sept</p>
                 </div>
               </div>
             </li>
@@ -111,11 +111,11 @@ export default function TimelineHorizontal() {
               <div className="timeline-panel bg-black border border-white rounded-lg">
                 <div className="timeline-heading mb-10">
                   <h3 className="timeline-title">
-                    <b>Student Application Begins</b>
+                    <b>Student Registrations</b>
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>21 Sept 2022</p>
+                  <p>25 Sept - 8 Oct</p>
                 </div>
               </div>
             </li>
@@ -126,11 +126,11 @@ export default function TimelineHorizontal() {
               <div className="timeline-panel bg-black border border-white rounded-lg">
                 <div className="timeline-heading mb-10">
                   <h3 className="timeline-title">
-                    <b>Eat. Sleep. Code. Repeat.</b>
+                    <b>Eat. Sleep. Code. Repeat!</b>
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>1 Oct 2022</p>
+                  <p>9 Oct - 5 Dec</p>
                 </div>
               </div>
             </li>
@@ -141,11 +141,11 @@ export default function TimelineHorizontal() {
               <div className="timeline-panel bg-black border border-white rounded-lg">
                 <div className="timeline-heading mb-10">
                   <h3 className="timeline-title">
-                    <b>Bye Bye coding. Hello Results.</b>
+                    <b>Results</b>
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>28 Nov 2022</p>
+                  <p>6 Dec</p>
                 </div>
               </div>
             </li>
