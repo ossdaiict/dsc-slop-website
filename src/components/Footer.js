@@ -1,14 +1,14 @@
-import React from 'react';
-import { Grid, Paper, Typography, Fab, makeStyles } from '@material-ui/core';
-import { GitHub, Mail, Twitter, Instagram } from '@material-ui/icons';
+import React from "react";
+import { Grid, Paper, Typography, Fab, makeStyles } from "@material-ui/core";
+import { GitHub, Mail, Twitter, Instagram, LinkedIn } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(4),
-    position: 'static',
+    position: "static",
     flexGrow: 1,
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
     bottom: 0,
     left: 0,
     right: 0,
@@ -22,8 +22,8 @@ export default function Footer() {
       <Paper className={classes.paper}>
         <Grid item xs={12}>
           <Typography variant="body2" style={{ marginBottom: 16 }}>
-            {' '}
-            © SLoP, DAIICT-Gandhinagar, 2023{' '}
+            {" "}
+            © SLoP, DAIICT-Gandhinagar, 2023{" "}
           </Typography>
         </Grid>
         <Grid item container direction="row" justify="center" spacing={2}>
@@ -52,8 +52,19 @@ export default function Footer() {
           <Grid item>
             <Fab
               size="medium"
-              aria-label="insta"
+              aria-label="linkedin"
               color="secondary"
+              href="https://www.linkedin.com/company/gdscdaiict/"
+              target="_blank"
+            >
+              <LinkedIn />
+            </Fab>
+          </Grid>
+          <Grid item>
+            <Fab
+              size="medium"
+              aria-label="insta"
+              color="primary"
               href="https://www.instagram.com/dscdaiict/"
               target="_blank"
             >
@@ -64,7 +75,7 @@ export default function Footer() {
             <Fab
               size="medium"
               aria-label="twitter"
-              color="primary"
+              color="secondary"
               href="https://twitter.com/dscdaiict"
               target="_blank"
             >
