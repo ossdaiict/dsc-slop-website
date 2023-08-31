@@ -127,7 +127,7 @@ export default function HomePage() {
                       }
                       color="textPrimary"
                     >
-                      <b>Developer Student Club DAIICT Presents</b>
+                      <b>Google Developer Student Club DAIICT Presents</b>
                     </Typography>
                     <img
                       src={logo}
@@ -138,7 +138,7 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Contribution period started</b>
+                        <b>Program will start soon</b>
                       </div>
                     </Typography>
                   </div>
@@ -167,7 +167,7 @@ export default function HomePage() {
                       <Grid item>
                         <Typography variant="body1" align="left">
                           Semester Long Projects or SLoP is an initiative by the
-                          Developer Student Club (DA-IICT), exclusively for
+                          Google Developer Student Club (DA-IICT), exclusively for
                           students who are new to open source software
                           development to get started with open source
                           contributions.
@@ -349,7 +349,7 @@ export default function HomePage() {
                             // target='_blank'
                             // rel='noopener noreferrer'
                             onClick={() => {
-                              setAlertMsg("Student Registrations closed!");
+                              setAlertMsg("Student Registrations will start soon!");
                               setOpen(true);
                             }}
                           >
@@ -380,15 +380,15 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          href="/mentor-registration"
+                          // href="/mentor-registration"
                           // target="_blank"
-                          rel="noopener noreferrer"
-                          // onClick={() => {
-                          //   setAlertMsg(
-                          //     "Oops ! Mentor Applications Are Closed."
-                          //   );
-                          //   setOpen(true);
-                          // }}
+                          // rel="noopener noreferrer"
+                          onClick={() => {
+                            setAlertMsg(
+                              "Mentor Applications will start soon."
+                            );
+                            setOpen(true);
+                          }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
                           Be A Teacher !
