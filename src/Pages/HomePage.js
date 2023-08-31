@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Grid,
   makeStyles,
@@ -9,87 +9,87 @@ import {
   Fab,
   Collapse,
   IconButton,
-} from '@material-ui/core';
-import CloseIcon from '@material-ui/icons/Close';
-import Alert from '@material-ui/lab/Alert';
-import { LaptopMac, School } from '@material-ui/icons';
-import DescriptionIcon from '@material-ui/icons/Description';
-import ContactSupportIcon from '@material-ui/icons/ContactSupport';
-import ReactFullpage from '@fullpage/react-fullpage';
-import bg from '../images/bg.png';
-import logo from '../images/logo.png';
-import LogoBear from '../components/LogoBear';
-import ApplyWithDevfolio from '../components/ApplyWithDevfolio';
-import Footer from '../components/Footer';
-import Countdown from '../components/Countdown';
-import CustomizedTimeline from '../components/TimeLine';
-import TimelineHorizontal from '../components/TimelineHorizontal';
-import './TextGradient.css';
-import '../components/blink.css';
+} from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
+import Alert from "@material-ui/lab/Alert";
+import { LaptopMac, School } from "@material-ui/icons";
+import DescriptionIcon from "@material-ui/icons/Description";
+import ContactSupportIcon from "@material-ui/icons/ContactSupport";
+import ReactFullpage from "@fullpage/react-fullpage";
+import bg from "../images/bg.png";
+import logo from "../images/logo.png";
+import LogoBear from "../components/LogoBear";
+import ApplyWithDevfolio from "../components/ApplyWithDevfolio";
+import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
+import CustomizedTimeline from "../components/TimeLine";
+import TimelineHorizontal from "../components/TimelineHorizontal";
+import "./TextGradient.css";
+import "../components/blink.css";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     padding: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
   paperCounter: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
 
   button: {
     marginRight: theme.spacing(3),
     marginTop: theme.spacing(2),
-    backgroundColor: '#91f8faef',
+    backgroundColor: "#91f8faef",
   },
 
   formlink: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: "center",
     minHeight: theme.spacing(40),
   },
 
   typo: {
-    textAlign: 'center',
+    textAlign: "center",
     margin: theme.spacing(4),
-    color: 'white',
+    color: "white",
   },
   logo: {
-    top: '10vh',
+    top: "10vh",
     // left: '5vw',
   },
 
   textdiv: {
-    marginTop: '16vh',
+    marginTop: "16vh",
   },
 
   textover: {
-    fontSize: '200px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '100px',
+    fontSize: "200px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "100px",
     },
   },
 
   textcap: {
-    fontSize: '32px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '16px',
+    fontSize: "32px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
     },
   },
 
   prizes: {
-    fontSize: '80px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '50px',
+    fontSize: "80px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "50px",
     },
   },
 }));
@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
 export default function HomePage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [alertmsg, setAlertMsg] = React.useState('');
+  const [alertmsg, setAlertMsg] = React.useState("");
 
   return (
     <ReactFullpage
@@ -115,15 +115,15 @@ export default function HomePage() {
                 <div id="stars2"></div>
                 <div id="stars3"></div>
                 <div className="min-h-screen relative">
-                  <div className={'fixed text-center w-full ' + classes.logo}>
+                  <div className={"fixed text-center w-full " + classes.logo}>
                     <LogoBear
                       className={
-                        'max-w-xs xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 '
+                        "max-w-xs xs:max-w-xs xs:-translate-x-12 mx-auto transform -translate-x-20 "
                       }
                     />
                     <Typography
                       className={
-                        classes.textcap + ' txt--gradient-orange mt-12'
+                        classes.textcap + " txt--gradient-orange mt-12"
                       }
                       color="textPrimary"
                     >
@@ -297,7 +297,7 @@ export default function HomePage() {
               <Grid className="section xs:py-2 xs:pb-20" item xs={12}>
                 <Container maxWidth="md">
                   <Grid container md={12}>
-                    <Collapse in={open} style={{ width: '100%' }}>
+                    <Collapse in={open} style={{ width: "100%" }}>
                       <Alert
                         severity="info"
                         action={
@@ -342,19 +342,18 @@ export default function HomePage() {
                           For more details, check out the Student's Manual above
                           and to register click below!
                         </Typography>
-                        <a
-                          target="_blank"
-                        >
-                          <Fab variant="extended" color="secondary"
+                        <a target="_blank">
+                          <Fab
+                            variant="extended"
+                            color="secondary"
                             // href='https://dsc-slop.github.io/'
                             // target='_blank'
                             // rel='noopener noreferrer'
                             onClick={() => {
-                              setAlertMsg(
-                                'Student Registrations closed!'
-                              );
+                              setAlertMsg("Student Registrations closed!");
                               setOpen(true);
-                            }}>
+                            }}
+                          >
                             <School style={{ margin: 8 }} />
                             Be A Winner !
                           </Fab>
@@ -379,16 +378,18 @@ export default function HomePage() {
                           details, check out the Mentor's Manual above and to
                           register click below!
                         </Typography>
-                        <Fab variant="extended" color="secondary"
-                          // href='https://docs.google.com/forms/d/e/1FAIpQLScsJ8a2oXF5Y1IAvngyhi9A7_nIWJSgkqc7vAug1evsjv39zg/viewform'
-                          // target='_blank'
-                          // rel='noopener noreferrer'
-                          onClick={() => {
-                            setAlertMsg(
-                              'Oops ! Mentor Applications Are Closed.'
-                            );
-                            setOpen(true);
-                          }}
+                        <Fab
+                          variant="extended"
+                          color="secondary"
+                          href="/mentor-registration"
+                          // target="_blank"
+                          rel="noopener noreferrer"
+                          // onClick={() => {
+                          //   setAlertMsg(
+                          //     "Oops ! Mentor Applications Are Closed."
+                          //   );
+                          //   setOpen(true);
+                          // }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
                           Be A Teacher !
@@ -398,15 +399,9 @@ export default function HomePage() {
                   </Grid>
                 </Container>
               </Grid>
-              <Grid
-                className="section"
-                item
-                xs={12}
-              >
+              <Grid className="section" item xs={12}>
                 <Container className="w-full mb-24">
-                  <Paper
-                    className={classes.paper}
-                  >
+                  <Paper className={classes.paper}>
                     <Typography className="txt--gradient-orange" variant="h4">
                       <b> Event Timeline</b>
                     </Typography>
