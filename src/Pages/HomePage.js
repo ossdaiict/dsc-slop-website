@@ -149,7 +149,7 @@ export default function HomePage() {
               <Grid className="section " item xs={12}>
                 <Container maxWidth="md">
                   <Paper className={classes.paperCounter}>
-                    <Countdown toDate={new Date(2020, 9, 28)} />
+                    <Countdown toDate={new Date(2023, 9, 11)} />
                   </Paper>
                 </Container>
               </Grid>
@@ -350,7 +350,7 @@ export default function HomePage() {
                             // target='_blank'
                             // rel='noopener noreferrer'
                             onClick={() => {
-                              setAlertMsg("Student Registrations will start soon!");
+                              setAlertMsg("Student Registrations will start on 25 September 2023!");
                               setOpen(true);
                             }}
                           >
@@ -386,7 +386,7 @@ export default function HomePage() {
                           // rel="noopener noreferrer"
                           onClick={() => {
                             setAlertMsg(
-                              "Mentor Applications will start soon."
+                              "Mentor Applications will start on 11 September 2023."
                             );
                             setOpen(true);
                           }}

@@ -5,19 +5,19 @@ import CountdownBlock from '../components/CountdownBlock';
 import '../Pages/TextGradient.css';
 
 const CountdownDisplay = (props) => {
-  // const { days, hours, minutes, seconds } = props;
-  let days = 0,
-    hours = 0,
-    minutes = 0,
-    seconds = 0;
+  const { days, hours, minutes, seconds } = props;
+  // let days = 0,
+  //   hours = 0,
+  //   minutes = 0,
+  //   seconds = 0;
 
   return (
     <>
-      <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
+      {/* <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
         🚀Contribution period started🚀
-      </Typography>
+      </Typography> */}
 
-      {/* <div className="flex w-full justify-center mt-4">
+      <div className="flex w-full justify-center mt-4">
         <CountdownBlock>
           {String(days).padStart(2, 0)}
           <br /> Days
@@ -34,7 +34,7 @@ const CountdownDisplay = (props) => {
           {String(seconds).padStart(2, 0)}
           <br /> Seconds
         </CountdownBlock>
-      </div> */}
+      </div>
 
     </>
   );

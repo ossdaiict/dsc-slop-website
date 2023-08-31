@@ -160,7 +160,7 @@ function MentorForm() {
           color="primary"
           style={{ marginBottom: 10 }}
         >
-          DSC SLoP 3.0 Mentor Registration
+          GDSC SLoP 3.0 Mentor Registration
         </Typography>
         <Typography
           variant="body1"
@@ -172,19 +172,13 @@ function MentorForm() {
           Source Organizations to get some fresh updates and commits while
           students gain an experience on Open Source Development.
         </Typography>
-        <Typography variant="subtitle1" component="p" color="secondary">
-          Event Starts: 1 October 2022
-        </Typography>
-        <Typography variant="subtitle1" component="p" color="secondary">
-          Mentor Registration closes on: 20th September
-        </Typography>
         <Typography
           variant="subtitle1"
           component="p"
           color="secondary"
           style={{ marginBottom: 16 }}
-        >
-          Student Registration starts on: 21st September
+          >
+          Last date to fill out the form: 22 September 2023
         </Typography>
         <Typography variant="subtitle2" component="p" color="primary">
           Contact us at{" "}
