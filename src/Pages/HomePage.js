@@ -131,6 +131,7 @@ export default function HomePage() {
                     </Typography>
                     <img
                       src={logo}
+                      alt= "logo"
                       className="max-w-2xl xs:max-w-xs mx-auto mt-4"
                     />
                     <Typography
@@ -216,7 +217,7 @@ export default function HomePage() {
                       <Grid item>
                         <Typography variant="body1" align="left">
                           For more info, please download the student or mentor
-                          manual
+                          manual.
                         </Typography>
                       </Grid>
                       <Grid
@@ -233,7 +234,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<School />}
-                            href="https://drive.google.com/file/d/19cG4GJTrJjOvx3ALXWtAyBf63SkbjYfR/view?usp=sharing"
+                            href="https://docs.google.com/document/d/1Xezk-yyi_VODt4xWj4_JIzdqTv1Z5wMuMLKfor4bgNQ/edit?usp=sharing"
                             target="_blank"
                           >
                             Student Manual
@@ -246,7 +247,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<LaptopMac />}
-                            href="https://drive.google.com/file/d/1URxwFF3BS3_QwTLMjpMthyQMhNFm1q_R/view?usp=sharing"
+                            href="https://docs.google.com/document/d/1fs2vCoQJbd89Bp8lvUKuDfZUbhYAf7c63B4MfRiTzis/edit?usp=sharing"
                             target="_blank"
                           >
                             Mentor Manual
@@ -268,7 +269,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<ContactSupportIcon />}
-                            href="https://drive.google.com/file/d/1nTYLJwaNzChRetQrEge80izJDbOtNbo-/view?usp=sharing"
+                            href="https://docs.google.com/document/d/1-HuAF-8HrNvMEEtkwJ0OffKuobTPhXZ-rMfgSw3Sq3U/edit?usp=sharing"
                             target="_blank"
                           >
                             FAQs & Inquiries
@@ -281,7 +282,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<DescriptionIcon />}
-                            href="https://drive.google.com/file/d/1ktwE1Rh7-C1zMeEOkzwreoBfZRIya7LQ/view?usp=sharing"
+                            href="https://docs.google.com/document/d/1MARJIi4qWMa99FRg3u8sPJy2LaFI7l89OjsOT2phMe4/edit?usp=sharing"
                             target="_blank"
                           >
                             How it Works ?
