@@ -1,15 +1,12 @@
-import React from 'react';
-import DetailsOutlinedIcon from '@material-ui/icons/DetailsOutlined';
-import './timeline.css';
+import React from "react";
+import DetailsOutlinedIcon from "@material-ui/icons/DetailsOutlined";
+import "./timeline.css";
 
 export default function TimelineHorizontal() {
   return (
     <div className="container">
       <div className="row xs:hidden">
         <div className="col-md-12">
-          {/* <div className="page-header">
-            <h1>Horizontal timeline</h1>
-          </div> */}
           <div id="something">
             <ul className="timeline timeline-horizontal">
               <li className="timeline-item">
@@ -121,7 +118,7 @@ export default function TimelineHorizontal() {
             </li>
             <li className="timeline-item">
               <div className="timeline-badge">
-                <i className="glyphicon glyphicon-check"></i>
+                <i className="glyphicon glyphicon-off"></i>
               </div>
               <div className="timeline-panel bg-black border border-white rounded-lg">
                 <div className="timeline-heading mb-10">

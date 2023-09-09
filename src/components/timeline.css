@@ -3,7 +3,7 @@
 #something {
   display: inline-block;
   width: 100%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 .timeline,
 .timeline-horizontal {
@@ -18,7 +18,7 @@
   top: 40px;
   bottom: 0;
   position: absolute;
-  content: ' ';
+  content: " ";
   width: 3px;
   background-color: #eeeeee;
   left: 50%;
@@ -30,7 +30,7 @@
 }
 .timeline .timeline-item:before,
 .timeline .timeline-item:after {
-  content: '';
+  content: "";
   display: table;
 }
 .timeline .timeline-item:after {
@@ -97,7 +97,7 @@
   border-top: 16px solid white !important;
   border-bottom: 0 solid white !important;
   border-bottom: 16px solid transparent;
-  content: ' ';
+  content: " ";
 }
 .timeline .timeline-item .timeline-panel .timeline-title {
   margin-top: 0;
@@ -110,9 +110,9 @@
 .timeline .timeline-item .timeline-panel .timeline-body > p + p {
   margin-top: 5px;
 }
-.timeline .timeline-item:last-child:nth-child(even) {
+/* .timeline .timeline-item:last-child:nth-child(even) {
   float: right;
-}
+} */
 .timeline .timeline-item:nth-child(even) .timeline-panel {
   float: right;
   left: 16px;
