@@ -129,6 +129,42 @@ function MentorForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // validate form data here
+    if (
+      formData.email.trim() === "" ||
+      formData.fullName.trim() === "" ||
+      formData.institute.trim() === "" ||
+      formData.areasOfInterest.length === 0 ||
+      formData.toolsAndTechnologies.length === 0 ||
+      formData.githubLink.trim() === "" ||
+      formData.projectLinks.length === 0
+    ) {
+      alert("Please fill all the fields!");
+      return;
+    }
+
+    for (let i = 0; i < formData.areasOfInterest.length; i++) {
+      if (formData.areasOfInterest[i].trim() === "") {
+        alert("Please fill all the fields!");
+        return;
+      }
+    }
+
+    for (let i = 0; i < formData.toolsAndTechnologies.length; i++) {
+      if (formData.toolsAndTechnologies[i].trim() === "") {
+        alert("Please fill all the fields!");
+        return;
+      }
+    }
+
+    for (let i = 0; i < formData.projectLinks.length; i++) {
+      if (formData.projectLinks[i].link.trim() === "") {
+        alert("Please fill all the fields!");
+        return;
+      }
+    }
+
     // Handle form submission here (e.g., store in Firebase)
     console.log(formData);
 
@@ -240,6 +276,7 @@ function MentorForm() {
                 onChange={(e) =>
                   handleAreasOfInterestChange(index, e.target.value)
                 }
+                required
                 fullWidth
                 margin="normal"
               />
@@ -280,6 +317,7 @@ function MentorForm() {
               <TextField
                 label={`Tools and Technologies ${index + 1}`}
                 value={link}
+                required
                 onChange={(e) => handleToolsChange(index, e.target.value)}
                 fullWidth
                 margin="normal"
@@ -311,6 +349,7 @@ function MentorForm() {
           value={formData.githubLink}
           onChange={handleChange}
           fullWidth
+          required
           margin="normal"
         />
         <div>
@@ -326,6 +365,7 @@ function MentorForm() {
           {formData.projectLinks.map((link, index) => (
             <div key={index}>
               <TextField
+                required
                 label={`Project Link ${index + 1}`}
                 value={link.link}
                 onChange={(e) =>
