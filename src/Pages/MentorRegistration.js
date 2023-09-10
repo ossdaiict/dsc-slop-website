@@ -5,6 +5,8 @@ import {
   Container,
   makeStyles,
   Typography,
+  Checkbox,
+  FormControlLabel,
 } from "@material-ui/core";
 
 import logo from "../images/slop-logo-3.png";
@@ -28,7 +30,12 @@ function MentorForm() {
     areasOfInterest: [""],
     toolsAndTechnologies: [""],
     githubLink: "",
-    projectLinks: [""],
+    projectLinks: [
+      {
+        link: "",
+        beginnerFreindly: false,
+      },
+    ],
   });
 
   const [loading, setLoading] = useState(false);
@@ -41,20 +48,22 @@ function MentorForm() {
     }));
   };
 
-  const handleProjectLinkChange = (index, value) => {
-    const updatedLinks = formData.projectLinks.map((link, i) =>
-      i === index ? value : link
-    );
-    setFormData((prevData) => ({
-      ...prevData,
+  const handleProjectLinkChange = (index, field, value) => {
+    const updatedLinks = [...formData.projectLinks];
+    updatedLinks[index][field] = value;
+    setFormData({
+      ...formData,
       projectLinks: updatedLinks,
-    }));
+    });
   };
 
   const addProjectLinkField = () => {
     setFormData((prevData) => ({
       ...prevData,
-      projectLinks: [...prevData.projectLinks, ""],
+      projectLinks: [
+        ...prevData.projectLinks,
+        { link: "", beginnerFreindly: false },
+      ],
     }));
   };
 
@@ -125,16 +134,13 @@ function MentorForm() {
 
     setLoading(true);
 
-    const response = await fetch(
-      process.env.REACT_APP_DB_URL,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    const response = await fetch(process.env.REACT_APP_DB_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
     const res = await response.json();
 
@@ -177,7 +183,7 @@ function MentorForm() {
           component="p"
           color="secondary"
           style={{ marginBottom: 16 }}
-          >
+        >
           Last date to fill out the form: 22 September 2023
         </Typography>
         <Typography variant="subtitle2" component="p" color="primary">
@@ -321,10 +327,29 @@ function MentorForm() {
             <div key={index}>
               <TextField
                 label={`Project Link ${index + 1}`}
-                value={link}
-                onChange={(e) => handleProjectLinkChange(index, e.target.value)}
+                value={link.link}
+                onChange={(e) =>
+                  handleProjectLinkChange(index, "link", e.target.value)
+                }
                 fullWidth
                 margin="normal"
+              />
+              <FormControlLabel
+                style={{ color: "#fff", marginRight: "3em" }}
+                control={
+                  <Checkbox
+                    checked={link.beginnerFreindly}
+                    onChange={() =>
+                      handleProjectLinkChange(
+                        index,
+                        "beginnerFreindly",
+                        !link.beginnerFreindly
+                      )
+                    }
+                    color="primary"
+                  />
+                }
+                label="Beginner Friendly"
               />
               {index > 0 && (
                 <Button
