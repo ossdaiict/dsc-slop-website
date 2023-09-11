@@ -139,7 +139,7 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Program will start soon</b>
+                        <b>🚀Mentor Registration started🚀</b>
                       </div>
                     </Typography>
                   </div>
@@ -381,15 +381,15 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          // href="/mentor-registration"
-                          // target="_blank"
+                          href="/mentor-registration"
+                          target="_blank"
                           // rel="noopener noreferrer"
-                          onClick={() => {
-                            setAlertMsg(
-                              "Mentor Applications will start on 11 September 2023."
-                            );
-                            setOpen(true);
-                          }}
+                          // onClick={() => {
+                          //   setAlertMsg(
+                          //     "Mentor Applications will start on 11 September 2023."
+                          //   );
+                          //   setOpen(true);
+                          // }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
                           Be A Teacher !
