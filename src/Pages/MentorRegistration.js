@@ -7,7 +7,11 @@ import {
   Typography,
   Checkbox,
   FormControlLabel,
+  Tooltip,
+  IconButton,
 } from "@material-ui/core";
+
+import InfoIcon from "@mui/icons-material/Info";
 
 import logo from "../images/slop-logo-3.png";
 
@@ -375,7 +379,7 @@ function MentorForm() {
                 margin="normal"
               />
               <FormControlLabel
-                style={{ color: "#fff", marginRight: "3em" }}
+                style={{ color: "#fff" }}
                 control={
                   <Checkbox
                     checked={link.beginnerFreindly}
@@ -391,6 +395,14 @@ function MentorForm() {
                 }
                 label="Beginner Friendly"
               />
+              <Tooltip
+                style={{ marginRight: "3em" }}
+                title="Check this if the project is beginner friendly"
+              >
+                <IconButton aria-label="info" size="small">
+                  <InfoIcon />
+                </IconButton>
+              </Tooltip>
               {index > 0 && (
                 <Button
                   variant="outlined"
