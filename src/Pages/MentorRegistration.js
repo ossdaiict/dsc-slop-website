@@ -363,7 +363,7 @@ function MentorForm() {
             component="h4"
             color="primary"
           >
-            Project Links
+            Github link of your project
           </Typography>
 
           {formData.projectLinks.map((link, index) => (
