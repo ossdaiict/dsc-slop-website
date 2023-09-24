@@ -1,51 +1,58 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   makeStyles,
   Paper,
   Grid,
   Typography,
   IconButton,
-  CircularProgress,
-} from '@material-ui/core';
-import { GitHub, Group, Usb, Star } from '@material-ui/icons';
-import axios from 'axios';
-import moment from 'moment';
-import '../Pages/TextGradient.css';
+  Chip,
+} from "@material-ui/core";
+import { GitHub, Group, Usb, Star } from "@material-ui/icons";
+import axios from "axios";
+import moment from "moment";
+import "../Pages/TextGradient.css";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     margin: theme.spacing(1),
     padding: theme.spacing(2),
-    textAlign: 'center',
-    minHeight: '25%',
+    textAlign: "center",
+    minHeight: "25%",
   },
 }));
 
-export default function Project({ id, mentors, url, projectName,stars,forks,langs,description,updated_at }) {
+export default function Project({
+  id,
+  mentors,
+  url,
+  projectName,
+  stars,
+  forks,
+  langs,
+  description,
+  updated_at,
+  isbeginnerFreindly,
+}) {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState({
-    projecttitle: '',
-    description: '',
-    lastUpdated: '',
-    contributors: '',
-    stars: '',
-    forks: '',
+    projecttitle: "",
+    description: "",
+    lastUpdated: "",
+    contributors: "",
+    stars: "",
+    forks: "",
   });
 
   var projecturl = url;
 
-  if(projectName==='Oppia')
-  {
-      projecturl = 'https://github.com/oppia/oppia/wiki/SLoP-2020'
-  }
-  else if(projectName==='Oppia Android')
-  {
-    projecturl='https://github.com/oppia/oppia-android/wiki/SLoP-2020'
+  if (projectName === "Oppia") {
+    projecturl = "https://github.com/oppia/oppia/wiki/SLoP-2020";
+  } else if (projectName === "Oppia Android") {
+    projecturl = "https://github.com/oppia/oppia-android/wiki/SLoP-2020";
   }
 
-
-  const modifiedurl = url.replace('github.com', 'api.github.com/repos');
+  const modifiedurl = url.replace("github.com", "api.github.com/repos");
 
   //   useEffect(()=>{
   //     const fetch = ()=>{
@@ -112,9 +119,9 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
             className="my-4"
             align="left"
             style={{
-              height: '40px',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
+              height: "40px",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
           >
             {description}
@@ -136,17 +143,15 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
         </Grid>
         <Grid item>
           <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              align="left"
-            >{`Last Updated: ${moment(
-              updated_at
-            ).fromNow()}`}</Typography>
+            variant="subtitle2"
+            color="textSecondary"
+            align="left"
+          >{`Last Updated: ${moment(updated_at).fromNow()}`}</Typography>
         </Grid>
         <Grid item container direction="row-reverse" className="mt-1">
           <IconButton
             className="mx-2"
-            href={url.concat('/contributors')}
+            href={url.concat("/contributors")}
             target="_blank"
             aria-label="Contributors"
             size="small"
@@ -163,7 +168,13 @@ export default function Project({ id, mentors, url, projectName,stars,forks,lang
             <Usb />
             <Typography>{forks}</Typography>
           </IconButton>
-
+          {isbeginnerFreindly && (
+            <Chip
+              color="primary"
+              label="Beginner Friendly"
+              variant="outlined"
+            />
+          )}
         </Grid>
       </Grid>
     </Paper>
