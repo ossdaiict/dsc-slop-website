@@ -13,17 +13,17 @@ function LeaderBoardTable2() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        'https://git-webhooks-sigma.vercel.app/student'
-      );
-      console.log(response.data);
-      const usersList = response.data;
-      let rank = 1;
-      usersList.forEach((obj) => (obj['rank'] = rank++));
-      usersList.forEach((obj) => (obj['github_url'] = `https://github.com/${obj.username}`));
-      setUsers(usersList);
+      // const response = await axios.get(
+      //   'https://git-webhooks-sigma.vercel.app/student'
+      // );
+      // console.log(response.data);
+      // const usersList = response.data;
+      // let rank = 1;
+      // usersList.forEach((obj) => (obj['rank'] = rank++));
+      // usersList.forEach((obj) => (obj['github_url'] = `https://github.com/${obj.username}`));
+      // setUsers(usersList);
       setLoaded(true);
-      console.log(window.screen.height / 144);
+      // console.log(window.screen.height / 144);
     };
     fetchData();
   }, []);
@@ -35,7 +35,7 @@ function LeaderBoardTable2() {
         spacing={3}
         justify="center"
         alignItems="center"
-        style={{ height: '100vh', textAlign: 'center'}}
+        style={{ height: '100vh', textAlign: 'center' }}
       >
         <Grid item>
           <CircularProgress size={100} />
@@ -59,7 +59,7 @@ function LeaderBoardTable2() {
                 title: '       Username',
                 field: 'username',
                 align: 'center',
-                render: rowData => {return <span><GitHubIcon fontSize='small'/><a href={rowData.github_url}> {rowData.username}</a></span>},
+                render: rowData => { return <span><GitHubIcon fontSize='small' /><a href={rowData.github_url}> {rowData.username}</a></span> },
                 headerStyle: { whiteSpace: 'pre' },
               },
               {
@@ -73,20 +73,20 @@ function LeaderBoardTable2() {
             isLoading={!loaded}
             options={{
               rowStyle: (x) => {
-                if(x.tableData.id === 0){
+                if (x.tableData.id === 0) {
                   return { backgroundColor: '#006B38', fontSize: '18px' };
                 }
-                if(x.tableData.id === 1){
+                if (x.tableData.id === 1) {
                   return { backgroundColor: '#006B38', fontSize: '18px' };
                 }
-                if(x.tableData.id === 2){
+                if (x.tableData.id === 2) {
                   return { backgroundColor: '#006B38', fontSize: '18px' };
                 }
                 else if (x.tableData.id % 2 === 0) {
                   return { backgroundColor: '#848a84', fontSize: '18px' };
                 }
-                else{
-                  return {fontSize: '18px'}
+                else {
+                  return { fontSize: '18px' }
                 }
               },
               headerStyle: {
