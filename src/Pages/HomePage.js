@@ -139,7 +139,7 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>🚀Mentor Registration started🚀</b>
+                        <b>🚀Student Registration started🚀</b>
                       </div>
                     </Typography>
                   </div>
@@ -346,13 +346,13 @@ export default function HomePage() {
                           <Fab
                             variant="extended"
                             color="secondary"
-                            // href='https://dsc-slop.github.io/'
-                            // target='_blank'
-                            // rel='noopener noreferrer'
-                            onClick={() => {
-                              setAlertMsg("Student Registrations will start on 25 September 2023!");
-                              setOpen(true);
-                            }}
+                            href='https://slop-3.devfolio.co/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            // onClick={() => {
+                            //   setAlertMsg("Student Registrations will start on 25 September 2023!");
+                            //   setOpen(true);
+                            // }}
                           >
                             <School style={{ margin: 8 }} />
                             Be A Winner !
@@ -383,7 +383,7 @@ export default function HomePage() {
                           color="secondary"
                           href="/mentor-registration"
                           target="_blank"
-                          // rel="noopener noreferrer"
+                          rel="noopener noreferrer"
                           // onClick={() => {
                           //   setAlertMsg(
                           //     "Mentor Applications will start on 11 September 2023."
