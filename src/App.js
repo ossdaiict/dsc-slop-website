@@ -46,7 +46,7 @@ const App = () => {
           <LeaderBoard exact path="/leaderboard" />
           <Projects exact path="/projects" />
           <Contacts exact path="/contacts" />
-          <MentorRegistration exact path="/mentor-registration" />
+          {/* <MentorRegistration exact path="/mentor-registration" /> */}
         </Router>
         <Footer />
       </ThemeProvider>
