@@ -139,7 +139,7 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>🚀Contribution Period will start soon🚀</b>
+                        <b>🚀Contribution Period Started🚀</b>
                       </div>
                     </Typography>
                   </div>
