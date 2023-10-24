@@ -69,7 +69,7 @@ export default function Projects() {
   useEffect(() => {
     const fetch = () => {
       axios
-        .get("https://git-webhooks-sigma.vercel.app/get-projects-data")
+        .get("https://slop-backend-tmgh.onrender.com/get-projects-data")
         .then(({ data }) => {
           console.log("data of projects:", data);
           setData(data.projects);
