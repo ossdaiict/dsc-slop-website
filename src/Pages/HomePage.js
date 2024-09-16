@@ -17,7 +17,7 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import ReactFullpage from "@fullpage/react-fullpage";
 import bg from "../images/bg.png";
-import logo from "../images/logo.png";
+import logo from "../images/slop-logo-4.png";
 import LogoBear from "../components/LogoBear";
 import ApplyWithDevfolio from "../components/ApplyWithDevfolio";
 import Footer from "../components/Footer";
@@ -139,7 +139,7 @@ export default function HomePage() {
                       className="mt-8 xs:text-xl text-3xl blink blink-two"
                     >
                       <div className="txt--gradient-orange">
-                        <b>Contribution Period Has Ended.</b>
+                        <b>Contribution Period Will Start Soon.</b>
                       </div>
                     </Typography>
                   </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<School />}
-                            href="https://docs.google.com/document/d/1Xezk-yyi_VODt4xWj4_JIzdqTv1Z5wMuMLKfor4bgNQ/edit?usp=sharing"
+                            href="https://docs.google.com/document/d/1YXk388DCvZ3h3D_NJRnWo-pr7OcHGekq-zEuYkWy83A/edit?usp=sharing"
                             target="_blank"
                           >
                             Student Manual
@@ -247,7 +247,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<LaptopMac />}
-                            href="https://docs.google.com/document/d/1fs2vCoQJbd89Bp8lvUKuDfZUbhYAf7c63B4MfRiTzis/edit?usp=sharing"
+                            href="https://docs.google.com/document/d/1WZPMJCs6G0QUQvATuaiaqm8rvweozOT-QC7JoQeZpsE/edit?usp=sharing"
                             target="_blank"
                           >
                             Mentor Manual
@@ -269,7 +269,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<ContactSupportIcon />}
-                            href="https://docs.google.com/document/d/1-HuAF-8HrNvMEEtkwJ0OffKuobTPhXZ-rMfgSw3Sq3U/edit?usp=sharing"
+                            href="https://docs.google.com/document/d/1wsMUM1K3ntzsjr6o8HrAoQOWAXhg4Zk2l0V-YviJ1IY/edit?usp=sharing"
                             target="_blank"
                           >
                             FAQs & Inquiries
@@ -282,7 +282,7 @@ export default function HomePage() {
                             className={classes.button}
                             color="secondary"
                             startIcon={<DescriptionIcon />}
-                            href="https://docs.google.com/document/d/1MARJIi4qWMa99FRg3u8sPJy2LaFI7l89OjsOT2phMe4/edit?usp=sharing"
+                            href="https://docs.google.com/document/d/1LVzyM2VhW-5Yl3ULOfOerQ_9KW4l-eR1anjToIc7084/edit?usp=sharing"
                             target="_blank"
                           >
                             How it Works ?
@@ -399,7 +399,7 @@ export default function HomePage() {
                   </Grid>
                 </Container>
               </Grid>
-              <Grid className="section" item xs={12}>
+              {/* <Grid className="section" item xs={12}>
                 <Container className="w-full mb-24">
                   <Paper className={classes.paper}>
                     <Typography className="txt--gradient-orange" variant="h4">
@@ -411,7 +411,10 @@ export default function HomePage() {
                 <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
                   <Footer />
                 </div>
-              </Grid>
+              </Grid> */}
+              <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-21">
+                  <Footer />
+                </div>
             </Grid>
           </ReactFullpage.Wrapper>
         );
