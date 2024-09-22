@@ -399,7 +399,7 @@ export default function HomePage() {
                   </Grid>
                 </Container>
               </Grid>
-              {/* <Grid className="section" item xs={12}>
+              <Grid className="section" item xs={12}>
                 <Container className="w-full mb-24">
                   <Paper className={classes.paper}>
                     <Typography className="txt--gradient-orange" variant="h4">
@@ -411,10 +411,7 @@ export default function HomePage() {
                 <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
                   <Footer />
                 </div>
-              </Grid> */}
-              <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-21">
-                  <Footer />
-                </div>
+              </Grid>
             </Grid>
           </ReactFullpage.Wrapper>
         );
