@@ -97,7 +97,7 @@ export default function TimelineHorizontal() {
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>11 Sept - 22 Sept</p>
+                  <p>25 Sept - 30 Sept</p>
                 </div>
               </div>
             </li>
@@ -112,7 +112,7 @@ export default function TimelineHorizontal() {
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>25 Sept - 8 Oct</p>
+                  <p>1 Oct - 8 Oct</p>
                 </div>
               </div>
             </li>
@@ -127,7 +127,7 @@ export default function TimelineHorizontal() {
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>16 Oct - 5 Dec</p>
+                  <p>8 Oct - 8 Dec</p>
                 </div>
               </div>
             </li>
@@ -142,7 +142,7 @@ export default function TimelineHorizontal() {
                   </h3>
                 </div>
                 <div className="timeline-body">
-                  <p>6 Dec</p>
+                  <p>10 Dec</p>
                 </div>
               </div>
             </li>
