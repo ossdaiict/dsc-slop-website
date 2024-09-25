@@ -203,8 +203,8 @@ button{
 }
 
 button:focus{
-  outline:1px dotted;
-  outline:5px auto -webkit-focus-ring-color
+  border-radius: 10px;
+  background-color: #333;
 }
 
 fieldset,ol,ul{

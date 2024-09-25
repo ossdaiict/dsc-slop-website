@@ -13,7 +13,7 @@ import {
 
 import InfoIcon from "@mui/icons-material/Info";
 
-import logo from "../images/slop-logo-3.png";
+import logo from "../images/slop-logo-4.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
