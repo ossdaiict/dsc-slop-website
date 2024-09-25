@@ -350,7 +350,7 @@ export default function HomePage() {
                             // target='_blank'
                             // rel='noopener noreferrer'
                             onClick={() => {
-                              setAlertMsg("Student Registrations Closed");
+                              setAlertMsg("Student Registrations will open from 1st Oct");
                               setOpen(true);
                             }}
                           >
@@ -381,14 +381,14 @@ export default function HomePage() {
                         <Fab
                           variant="extended"
                           color="secondary"
-                          // href="/mentor-registration"
-                          // target="_blank"
-                          // rel="noopener noreferrer"
+                          href="https://forms.gle/WxiNGH5rZPsvx6Jz7"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           onClick={() => {
-                            setAlertMsg(
-                              "Mentor Applications Closed."
-                            );
-                            setOpen(true);
+                            // setAlertMsg(
+                            //   "Mentor Applications Closed."
+                            // );
+                            // setOpen(true);
                           }}
                         >
                           <LaptopMac style={{ margin: 8 }} />
