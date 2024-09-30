@@ -17,7 +17,7 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import ReactFullpage from "@fullpage/react-fullpage";
 import bg from "../images/bg.png";
-import logo from "../images/slop-logo-4.png";
+import logo from "../images/hacktoberfest x slop.png";
 import LogoBear from "../components/LogoBear";
 import ApplyWithDevfolio from "../components/ApplyWithDevfolio";
 import Footer from "../components/Footer";
@@ -127,7 +127,7 @@ export default function HomePage() {
                       }
                       color="textPrimary"
                     >
-                      <b>Google Developer Student Club DAIICT Presents</b>
+                      <b>Google Developer Group on Campus DAIICT Presents</b>
                     </Typography>
                     <img
                       src={logo}
@@ -403,7 +403,7 @@ export default function HomePage() {
                 <Container className="w-full mb-24">
                   <Paper className={classes.paper}>
                     <Typography className="txt--gradient-orange" variant="h4">
-                      <b> Event Timeline</b>
+                      <b>Event Timeline</b>
                     </Typography>
                     <TimelineHorizontal />
                   </Paper>
