@@ -54,7 +54,7 @@ export default function Footer() {
               size="medium"
               aria-label="linkedin"
               color="secondary"
-              href="https://www.linkedin.com/company/gdscdaiict/"
+              href="https://www.linkedin.com/company/gdg-on-campus-daiict"
               target="_blank"
             >
               <LinkedIn />
@@ -65,7 +65,7 @@ export default function Footer() {
               size="medium"
               aria-label="insta"
               color="primary"
-              href="https://www.instagram.com/dscdaiict/"
+              href="https://www.instagram.com/gdg.daiict/"
               target="_blank"
             >
               <Instagram />
