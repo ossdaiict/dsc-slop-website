@@ -11,47 +11,45 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./tailwind.css";
 
 const App = () => {
-  const theme = createMuiTheme({
-    palette: {
-      type: "dark",
-      primary: {
-        main: "#ffffff",
-        light: "#F5CB5C",
-        dark: "#ffffff",
-      },
-      secondary: {
-        main: "#c1eb6f",
-        light: "#f48fb1",
-        dark: "#96cc29",
-      },
+    const theme = createMuiTheme({
+        palette: {
+            type: "dark",
+            primary: {
+                main: "#ffffff",
+                light: "#F5CB5C",
+                dark: "#ffffff",
+            },
+            secondary: {
+                main: "#c1eb6f",
+                light: "#f48fb1",
+                dark: "#96cc29",
+            },
+            background: {
+                paper: "#000000",
+                default: "#333533",
+            },
+            text: {
+                primary: "#ffff",
+                secondary: "#bdbdbd",
+            },
+        },
+    });
 
-      background: {
-        paper: "#000000",
-        default: "#333533",
-      },
-
-      text: {
-        primary: "#ffff",
-        secondary: "#bdbdbd",
-      },
-    },
-  });
-
-  return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Navbar />
-        <Router primary={false}>
-          <Homepage exact path="/" />
-          <LeaderBoard exact path="/leaderboard" />
-          <Projects exact path="/projects" />
-          <Contacts exact path="/contacts" />
-          {/* <MentorRegistration exact path="/mentor-registration" /> */}
-        </Router>
-        <Footer />
-      </ThemeProvider>
-    </>
-  );
+    return (
+        <>
+            <ThemeProvider theme={theme}>
+                <Navbar />
+                <Router primary={false}>
+                    <Homepage exact path="/" />
+                    <LeaderBoard exact path="/leaderboard" />
+                    <Projects exact path="/projects" />
+                    <Contacts exact path="/contacts" />
+                    {/* <MentorRegistration exact path="/mentor-registration" /> */}
+                </Router>
+                <Footer />
+            </ThemeProvider>
+        </>
+    );
 };
 
 export default App;

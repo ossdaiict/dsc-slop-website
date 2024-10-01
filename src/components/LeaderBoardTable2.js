@@ -8,102 +8,102 @@ import axios from 'axios';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 function LeaderBoardTable2() {
-  const [users, setUsers] = useState([]);
-  const [loaded, setLoaded] = useState(false);
+    const [users, setUsers] = useState([]);
+    const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        'https://slop-backend-tmgh.onrender.com/student'
-      );
-      // console.log(response.data);
-      const usersList = response.data;
-      let rank = 1;
-      usersList.forEach((obj) => (obj['rank'] = rank++));
-      usersList.forEach((obj) => (obj['github_url'] = `https://github.com/${obj.username}`));
-      setUsers(usersList);
-      setLoaded(true);
-      // console.log(window.screen.height / 144);
-    };
-    fetchData();
-  }, []);
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await axios.get(
+                'https://slop-backend-tmgh.onrender.com/student'
+            );
+            // console.log(response.data);
+            const usersList = response.data;
+            let rank = 1;
+            usersList.forEach((obj) => (obj['rank'] = rank++));
+            usersList.forEach((obj) => (obj['github_url'] = `https://github.com/${obj.username}`));
+            setUsers(usersList);
+            setLoaded(true);
+            // console.log(window.screen.height / 144);
+        };
+        fetchData();
+    }, []);
 
-  if (loaded === false) {
-    return (
-      <Grid
-        container
-        spacing={3}
-        justify="center"
-        alignItems="center"
-        style={{ height: '100vh', textAlign: 'center' }}
-      >
-        <Grid item>
-          <CircularProgress size={100} />
-        </Grid>
-      </Grid>
-    );
-  } else {
-    return (
-      <Box m={1.5}>
-        <Grow in={true}>
-          <MaterialTable
-            title="Leaderboard"
-            columns={[
-              {
-                title: '       Current Rank',
-                field: 'rank',
-                align: 'center',
-                headerStyle: { whiteSpace: 'pre' },
-              },
-              {
-                title: '       Username',
-                field: 'username',
-                align: 'center',
-                render: rowData => { return <span><GitHubIcon fontSize='small' /><a href={rowData.github_url}> {rowData.username}</a></span> },
-                headerStyle: { whiteSpace: 'pre' },
-              },
-              {
-                title: '       Points',
-                field: 'total_points',
-                align: 'center',
-                headerStyle: { whiteSpace: 'pre' },
-              },
-            ]}
-            data={users}
-            isLoading={!loaded}
-            options={{
-              rowStyle: (x) => {
-                if (x.tableData.id === 0) {
-                  return { backgroundColor: '#006B38', fontSize: '18px' };
-                }
-                if (x.tableData.id === 1) {
-                  return { backgroundColor: '#006B38', fontSize: '18px' };
-                }
-                if (x.tableData.id === 2) {
-                  return { backgroundColor: '#006B38', fontSize: '18px' };
-                }
-                else if (x.tableData.id % 2 === 0) {
-                  return { backgroundColor: '#848a84', fontSize: '18px' };
-                }
-                else {
-                  return { fontSize: '18px' }
-                }
-              },
-              headerStyle: {
-                'fontSize': '18px'
-              },
-              pageSize: 10,
-              pageSizeOptions: [
-                Math.floor(users.length / 3),
-                Math.floor(users.length / 2),
-                users.length,
-              ],
-            }}
-          />
-        </Grow>
-      </Box>
-    );
-  }
+    if (loaded === false) {
+        return (
+            <Grid
+                container
+                spacing={3}
+                justify="center"
+                alignItems="center"
+                style={{ height: '100vh', textAlign: 'center' }}
+            >
+                <Grid item>
+                    <CircularProgress size={100} />
+                </Grid>
+            </Grid>
+        );
+    } else {
+        return (
+            <Box m={1.5}>
+                <Grow in={true}>
+                    <MaterialTable
+                        title="Leaderboard"
+                        columns={[
+                            {
+                                title: '       Current Rank',
+                                field: 'rank',
+                                align: 'center',
+                                headerStyle: { whiteSpace: 'pre' },
+                            },
+                            {
+                                title: '       Username',
+                                field: 'username',
+                                align: 'center',
+                                render: rowData => { return <span><GitHubIcon fontSize='small' /><a href={rowData.github_url}> {rowData.username}</a></span> },
+                                headerStyle: { whiteSpace: 'pre' },
+                            },
+                            {
+                                title: '       Points',
+                                field: 'total_points',
+                                align: 'center',
+                                headerStyle: { whiteSpace: 'pre' },
+                            },
+                        ]}
+                        data={users}
+                        isLoading={!loaded}
+                        options={{
+                            rowStyle: (x) => {
+                                if (x.tableData.id === 0) {
+                                    return { backgroundColor: '#006B38', fontSize: '18px' };
+                                }
+                                if (x.tableData.id === 1) {
+                                    return { backgroundColor: '#006B38', fontSize: '18px' };
+                                }
+                                if (x.tableData.id === 2) {
+                                    return { backgroundColor: '#006B38', fontSize: '18px' };
+                                }
+                                else if (x.tableData.id % 2 === 0) {
+                                    return { backgroundColor: '#848a84', fontSize: '18px' };
+                                }
+                                else {
+                                    return { fontSize: '18px' }
+                                }
+                            },
+                            headerStyle: {
+                                'fontSize': '18px'
+                            },
+                            pageSize: 10,
+                            pageSizeOptions: [
+                                Math.floor(users.length / 3),
+                                Math.floor(users.length / 2),
+                                users.length,
+                            ],
+                        }}
+                    />
+                </Grow>
+            </Box>
+        );
+    }
 }
 
 export default LeaderBoardTable2;

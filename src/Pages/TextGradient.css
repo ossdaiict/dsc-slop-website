@@ -14,6 +14,7 @@
   background-clip: text;
   position: relative;
 }
+
 .txt--gradient-blue {
   background-image: linear-gradient(to right, #00a6ff, #91f8faef);
   color: rgba(0, 0, 0, 0);
@@ -21,6 +22,7 @@
   background-clip: text;
   position: relative;
 }
+
 .txt--gradient-green {
   background-image: linear-gradient(to right, #16d6d9, #96cc29);
   color: rgba(0, 0, 0, 0);
@@ -28,6 +30,7 @@
   background-clip: text;
   position: relative;
 }
+
 .txt--gradient-orange {
   background-image: linear-gradient(to right, #ffbf02, #ed0082);
   color: rgba(0, 0, 0, 0);

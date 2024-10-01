@@ -5,15 +5,18 @@
   width: 100%;
   /* overflow-y: auto; */
 }
+
 .timeline,
 .timeline-horizontal {
   list-style: none;
   padding: 20px;
   position: relative;
 }
+
 #something::-webkit-scrollbar {
   display: none;
 }
+
 .timeline:before {
   top: 40px;
   bottom: 0;
@@ -24,18 +27,22 @@
   left: 50%;
   margin-left: -1.5px;
 }
+
 .timeline .timeline-item {
   margin-bottom: 20px;
   position: relative;
 }
+
 .timeline .timeline-item:before,
 .timeline .timeline-item:after {
   content: "";
   display: table;
 }
+
 .timeline .timeline-item:after {
   clear: both;
 }
+
 .timeline .timeline-item .timeline-badge {
   color: #fff;
   width: 54px;
@@ -55,27 +62,34 @@
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
 }
+
 .timeline .timeline-item .timeline-badge i,
 .timeline .timeline-item .timeline-badge .fa,
 .timeline .timeline-item .timeline-badge .glyphicon {
   top: 2px;
   left: 0px;
 }
+
 .timeline .timeline-item .timeline-badge.primary {
   background-color: #1f9eba;
 }
+
 .timeline .timeline-item .timeline-badge.info {
   background-color: #5bc0de;
 }
+
 .timeline .timeline-item .timeline-badge.success {
   background-color: #59ba1f;
 }
+
 .timeline .timeline-item .timeline-badge.warning {
   background-color: #d1bd10;
 }
+
 .timeline .timeline-item .timeline-badge.danger {
   background-color: #ba1f1f;
 }
+
 .timeline .timeline-item .timeline-panel {
   position: relative;
   width: 46%;
@@ -88,6 +102,7 @@
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
+
 .timeline .timeline-item .timeline-panel:before {
   position: absolute;
   top: 26px;
@@ -99,17 +114,21 @@
   border-bottom: 16px solid transparent;
   content: " ";
 }
+
 .timeline .timeline-item .timeline-panel .timeline-title {
   margin-top: 0;
   color: inherit;
 }
-.timeline .timeline-item .timeline-panel .timeline-body > p,
-.timeline .timeline-item .timeline-panel .timeline-body > ul {
+
+.timeline .timeline-item .timeline-panel .timeline-body>p,
+.timeline .timeline-item .timeline-panel .timeline-body>ul {
   margin-bottom: 0;
 }
-.timeline .timeline-item .timeline-panel .timeline-body > p + p {
+
+.timeline .timeline-item .timeline-panel .timeline-body>p+p {
   margin-top: 5px;
 }
+
 /* .timeline .timeline-item:last-child:nth-child(even) {
   float: right;
 } */
@@ -117,18 +136,21 @@
   float: right;
   left: 16px;
 }
+
 .timeline .timeline-item:nth-child(even) .timeline-panel:before {
   border-left-width: 0;
   border-right-width: 14px;
   left: -14px;
   right: auto;
 }
+
 .timeline-horizontal {
   list-style: none;
   position: relative;
   padding: 20px 0px 20px 0px;
   display: inline-block;
 }
+
 .timeline-horizontal:before {
   height: 3px;
   top: auto;
@@ -138,6 +160,7 @@
   width: 100%;
   margin-bottom: 20px;
 }
+
 .timeline-horizontal .timeline-item {
   display: table-cell;
   height: 280px;
@@ -160,6 +183,7 @@
   width: 100%;
   margin-bottom: 20px;
 }
+
 .timeline-horizontal .timeline-item .timeline-panel:before {
   top: auto;
   bottom: -16px;
@@ -170,10 +194,12 @@
   border-bottom: 0 solid white !important;
   border-left: 16px solid transparent !important;
 }
+
 .timeline-horizontal .timeline-item:before,
 .timeline-horizontal .timeline-item:after {
   display: none;
 }
+
 .timeline-horizontal .timeline-item .timeline-badge {
   top: auto;
   bottom: 0px;
