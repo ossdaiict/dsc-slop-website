@@ -16,13 +16,16 @@ import { LaptopMac, School } from "@material-ui/icons";
 import DescriptionIcon from "@material-ui/icons/Description";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import ReactFullpage from "@fullpage/react-fullpage";
-import bg from "../images/bg.png";
+// import bg from "../images/bg.png";
 import logo from "../images/hacktoberfest x slop.png";
 import LogoBear from "../components/LogoBear";
-import ApplyWithDevfolio from "../components/ApplyWithDevfolio";
+import devfolio_logo from "../images/Devfolio_Logo-White.png";
+import ploygon_logo from "../images/Polygon_Logo-White.png";
+import ethindia_logo from "../images/ethindia-light.png";
+// import ApplyWithDevfolio from "../components/ApplyWithDevfolio";
 import Footer from "../components/Footer";
 import Countdown from "../components/Countdown";
-import CustomizedTimeline from "../components/TimeLine";
+// import CustomizedTimeline from "../components/TimeLine";
 import TimelineHorizontal from "../components/TimelineHorizontal";
 import "./TextGradient.css";
 import "../components/blink.css";
@@ -98,6 +101,17 @@ export default function HomePage() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [alertmsg, setAlertMsg] = React.useState("");
+
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
 
   return (
     <ReactFullpage
@@ -342,7 +356,13 @@ export default function HomePage() {
                           For more details, check out the Student's Manual above
                           and to register click below!
                         </Typography>
-                        <a target="_blank">
+                        <div 
+                            class="apply-button" 
+                            data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+                            data-button-theme="light"
+                            style={{height: "44px", width: "312px"}}
+                          ></div>
+                        {/* <a target="_blank">
                           <Fab
                             variant="extended"
                             color="secondary"
@@ -357,7 +377,7 @@ export default function HomePage() {
                             <School style={{ margin: 8 }} />
                             Be A Winner !
                           </Fab>
-                        </a>
+                        </a> */}
                       </Paper>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
@@ -406,6 +426,32 @@ export default function HomePage() {
                       <b>Event Timeline</b>
                     </Typography>
                     <TimelineHorizontal />
+                  </Paper>
+                </Container>
+              </Grid>
+              <Grid className="section" item xs={12}>
+                <Container className="w-full mb-24">
+                  <Paper className={classes.paper}>
+                    <Typography className="txt--gradient-orange" variant="h4">
+                      <b>Sponsors</b>
+                    </Typography>
+                    <div className="grid grid-cols-3 gap-4">
+                      <img
+                        src={devfolio_logo}
+                        alt= "DEVFOLIO LOGO"
+                        className="max-w-xl mt-4"
+                      />
+                      <img
+                        src={ploygon_logo}
+                        alt= "POLYGON LOGO"
+                        className="max-w-xl mt-4"
+                      />
+                      <img
+                        src={ethindia_logo}
+                        alt= "ETHINDIA LOGO"
+                        className="max-w-sm"
+                      />
+                    </div>
                   </Paper>
                 </Container>
                 <div className="w-full xs:hidden absolute bottom-0 transform -translate-y-12">
