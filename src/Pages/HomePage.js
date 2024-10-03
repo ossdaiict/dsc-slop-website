@@ -356,12 +356,14 @@ export default function HomePage() {
                           For more details, check out the Student's Manual above
                           and to register click below!
                         </Typography>
-                        <div 
-                            class="apply-button" 
-                            data-hackathon-slug="YOUR-HACKATHON-SLUG" 
-                            data-button-theme="light"
-                            style={{height: "44px", width: "312px"}}
+                        <div className="flex justify-center">
+                          <div 
+                              className="apply-button" 
+                              data-hackathon-slug="slop-4" 
+                              data-button-theme="light"
+                              style={{height: "44px", width: "312px"}}
                           ></div>
+                        </div>
                         {/* <a target="_blank">
                           <Fab
                             variant="extended"
