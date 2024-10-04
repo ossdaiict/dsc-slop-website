@@ -145,7 +145,7 @@ export default function HomePage() {
                     </Typography>
                     <img
                       src={logo}
-                      alt= "logo"
+                      alt="logo"
                       className="max-w-2xl xs:max-w-xs mx-auto mt-4"
                     />
                     <Typography
@@ -357,11 +357,11 @@ export default function HomePage() {
                           and to register click below!
                         </Typography>
                         <div className="flex justify-center">
-                          <div 
-                              className="apply-button" 
-                              data-hackathon-slug="slop-4" 
-                              data-button-theme="light"
-                              style={{height: "44px", width: "312px"}}
+                          <div
+                            className="apply-button"
+                            data-hackathon-slug="slop-4"
+                            data-button-theme="light"
+                            style={{ height: "44px", width: "312px" }}
                           ></div>
                         </div>
                         {/* <a target="_blank">
@@ -437,21 +437,21 @@ export default function HomePage() {
                     <Typography className="txt--gradient-orange" variant="h4">
                       <b>Sponsors</b>
                     </Typography>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4">
                       <img
                         src={devfolio_logo}
-                        alt= "DEVFOLIO LOGO"
-                        className="max-w-xl mt-4"
+                        alt="DEVFOLIO LOGO"
+                        className="max-w-xs sm:max-w-md md:max-w-xl mt-4"
                       />
                       <img
                         src={ploygon_logo}
-                        alt= "POLYGON LOGO"
-                        className="max-w-xl mt-4"
+                        alt="POLYGON LOGO"
+                        className="max-w-xs sm:max-w-md md:max-w-xl mt-4"
                       />
                       <img
                         src={ethindia_logo}
-                        alt= "ETHINDIA LOGO"
-                        className="max-w-sm"
+                        alt="ETHINDIA LOGO"
+                        className="max-w-xs sm:max-w-xs md:max-w-sm mt-4"
                       />
                     </div>
                   </Paper>
