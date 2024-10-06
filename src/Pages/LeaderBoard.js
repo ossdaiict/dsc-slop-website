@@ -6,21 +6,21 @@ import { Cookies, useCookies } from 'react-cookie';
 const cookies = new Cookies();
 
 const LeaderBoard = () => {
-  const [cookie, setCookie] = useCookies(['']);
+    const [cookie, setCookie] = useCookies(['']);
 
-  React.useEffect(() => {
-    const bearCookie = cookies.get('bearCookie');
-    console.log(bearCookie);
-    setCookie('bearCookie', { loaded: false }, { path: '/' });
-  }, [cookies]);
+    React.useEffect(() => {
+        const bearCookie = cookies.get('bearCookie');
+        console.log(bearCookie);
+        setCookie('bearCookie', { loaded: false }, { path: '/' });
+    }, [cookies]);
 
-  return (
-    <div className="mt-20 min-h-screen w-full">
-      <Grow in>
-        <LeaderBoardTable2 />
-      </Grow>
-    </div>
-  );
+    return (
+        <div className="mt-20 min-h-screen w-full">
+            <Grow in>
+                <LeaderBoardTable2 />
+            </Grow>
+        </div>
+    );
 };
 
 export default LeaderBoard;

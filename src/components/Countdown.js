@@ -5,19 +5,19 @@ import CountdownBlock from '../components/CountdownBlock';
 import '../Pages/TextGradient.css';
 
 const CountdownDisplay = (props) => {
-  // const { days, hours, minutes, seconds } = props;
-  let days = 0,
-    hours = 0,
-    minutes = 0,
-    seconds = 0;
+    // const { days, hours, minutes, seconds } = props;
+    let days = 0,
+        hours = 0,
+        minutes = 0,
+        seconds = 0;
 
-  return (
-    <>
-      <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
-        🚀Mentor Registrations has Started🚀
-      </Typography>
+    return (
+        <>
+            <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
+                🚀Mentor Registrations has Started🚀
+            </Typography>
 
-      {/* <div className="flex w-full justify-center mt-4">
+            {/* <div className="flex w-full justify-center mt-4">
         <CountdownBlock>
           {String(days).padStart(2, 0)}
           <br /> Days
@@ -36,71 +36,71 @@ const CountdownDisplay = (props) => {
         </CountdownBlock>
       </div> */}
 
-    </>
-  );
+        </>
+    );
 };
 
 CountdownDisplay.propTypes = {
-  days: PropTypes.number.isRequired,
-  asDays: PropTypes.number.isRequired,
-  hours: PropTypes.number.isRequired,
-  minutes: PropTypes.number.isRequired,
-  seconds: PropTypes.number.isRequired,
+    days: PropTypes.number.isRequired,
+    asDays: PropTypes.number.isRequired,
+    hours: PropTypes.number.isRequired,
+    minutes: PropTypes.number.isRequired,
+    seconds: PropTypes.number.isRequired,
 };
 
 class Countdown extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { now: new Date() };
-  }
+    constructor(props) {
+        super(props);
+        this.state = { now: new Date() };
+    }
 
-  componentDidMount() {
-    this.intervalId = setInterval(() => {
-      this.setState({ now: new Date() });
-    }, this.props.intervalDelay);
-  }
+    componentDidMount() {
+        this.intervalId = setInterval(() => {
+            this.setState({ now: new Date() });
+        }, this.props.intervalDelay);
+    }
 
-  componentWillUnmount() {
-    clearInterval(this.intervalId);
-  }
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
 
-  render() {
-    const { now } = this.state;
-    const { toDate } = this.props;
-    const delta = toDate - now;
+    render() {
+        const { now } = this.state;
+        const { toDate } = this.props;
+        const delta = toDate - now;
 
-    return this.props.children({
-      days: Math.floor((delta / 1000 / 60 / 60 / 24) % 30),
-      hours: Math.floor((delta / 1000 / 60 / 60) % 24),
-      minutes: Math.floor((delta / 1000 / 60) % 60),
-      seconds: Math.floor((delta / 1000) % 60),
-      milliseconds: delta,
-      asDays: Math.floor(delta / 1000 / 60 / 60 / 24),
-    });
-  }
+        return this.props.children({
+            days: Math.floor((delta / 1000 / 60 / 60 / 24) % 30),
+            hours: Math.floor((delta / 1000 / 60 / 60) % 24),
+            minutes: Math.floor((delta / 1000 / 60) % 60),
+            seconds: Math.floor((delta / 1000) % 60),
+            milliseconds: delta,
+            asDays: Math.floor(delta / 1000 / 60 / 60 / 24),
+        });
+    }
 }
 
 Countdown.propTypes = {
-  toDate: PropTypes.instanceOf(Date).isRequired,
-  intervalDelay: PropTypes.number,
+    toDate: PropTypes.instanceOf(Date).isRequired,
+    intervalDelay: PropTypes.number,
 };
 
 Countdown.defaultProps = {
-  intervalDelay: 1000,
+    intervalDelay: 1000,
 };
 
 export default function CountdownTimer(props) {
-  return (
-    <Countdown toDate={props.toDate} className="txt--gradient-orange">
-      {(props) => (
-        <CountdownDisplay
-          days={props.days}
-          asDays={props.asDays}
-          hours={props.hours}
-          minutes={props.minutes}
-          seconds={props.seconds}
-        />
-      )}
-    </Countdown>
-  );
+    return (
+        <Countdown toDate={props.toDate} className="txt--gradient-orange">
+            {(props) => (
+                <CountdownDisplay
+                    days={props.days}
+                    asDays={props.asDays}
+                    hours={props.hours}
+                    minutes={props.minutes}
+                    seconds={props.seconds}
+                />
+            )}
+        </Countdown>
+    );
 }

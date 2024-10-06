@@ -16,190 +16,186 @@ import TimelineIcon from '@material-ui/icons/Timeline';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    width: '100%',
-    zIndex: '100',
-    flexGrow: 1,
-    blur: '30%',
-    // opacity: '90%',
-    marginBottom: '28px',
-    '& a': {
-      color: 'inherit',
-      textDecoration: 'none',
+    grow: {
+        width: '100%',
+        zIndex: '100',
+        flexGrow: 1,
+        blur: '30%',
+        // opacity: '90%',
+        marginBottom: '28px',
+        '& a': {
+            color: 'inherit',
+            textDecoration: 'none',
+        },
     },
-  },
-  menu: {
-    '& a': {
-      color: 'inherit',
-      textDecoration: 'none',
+    menu: {
+        '& a': {
+            color: 'inherit',
+            textDecoration: 'none',
+        },
     },
-  },
-
-  title: {
-    marginLeft: 8,
-  },
-
-  menuButton: {
-    paddingRight: theme.spacing(2),
-  },
-  logo: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-
-  sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
+    title: {
+        marginLeft: 8,
     },
-  },
-  sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+    menuButton: {
+        paddingRight: theme.spacing(2),
     },
-  },
+    logo: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    sectionDesktop: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'flex',
+        },
+    },
+    sectionMobile: {
+        display: 'flex',
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        },
+    },
 }));
 
 export default function PrimarySearchAppBar() {
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const classes = useStyles();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    const handleProfileMenuOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
+    const handleMobileMenuClose = () => {
+        setMobileMoreAnchorEl(null);
+    };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+        handleMobileMenuClose();
+    };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
+    const handleMobileMenuOpen = (event) => {
+        setMobileMoreAnchorEl(event.currentTarget);
+    };
 
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      className={classes.menu}
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <Link to="/">
-        <MenuItem>
-          <IconButton color="inherit">
-            <HomeIcon />
-          </IconButton>
-          <p>Home</p>
-        </MenuItem>
-      </Link>
-      {/* <Link to="leaderboard">
-        <MenuItem>
-          <IconButton color="inherit">
-            <AssessmentIcon />
-          </IconButton>
-          <p>Leaderboard</p>
-        </MenuItem>
-      </Link>
-      <Link to="projects">
-        <MenuItem onClick={handleProfileMenuOpen}>
-          <IconButton color="inherit">
-            <GitHubIcon />
-          </IconButton>
-          <p>Projects</p>
-        </MenuItem>
-      </Link> */}
-      <Link to="contacts">
-        <MenuItem onClick={handleProfileMenuOpen}>
-          <IconButton color="inherit">
-            <Contacts />
-          </IconButton>
-          <p>Contacts</p>
-        </MenuItem>
-      </Link>
-    </Menu>
-  );
-
-  return (
-    <div className={classes.grow}>
-      <AppBar id="navbar" position="fixed" color="inherit">
-        <Toolbar>
-          <Link to="/">
-            <div className={classes.logo}>
-              <TimelineIcon color="primary" />
-              <Typography
-                className="pl-2 md:text-xl sm:text-sm text:xl"
-                variant="h6"
-                noWrap
-                color="textPrimary"
-              >
-                Semester Long Projects
-              </Typography>
-            </div>
-          </Link>
-
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
+    const mobileMenuId = 'primary-search-account-menu-mobile';
+    const renderMobileMenu = (
+        <Menu
+            className={classes.menu}
+            anchorEl={mobileMoreAnchorEl}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            id={mobileMenuId}
+            keepMounted
+            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            open={isMobileMenuOpen}
+            onClose={handleMobileMenuClose}
+        >
             <Link to="/">
-              <IconButton color="inherit">
-                <Typography color="textPrimary">Home</Typography>
-              </IconButton>
+                <MenuItem>
+                    <IconButton color="inherit">
+                        <HomeIcon />
+                    </IconButton>
+                    <p>Home</p>
+                </MenuItem>
             </Link>
-            {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
-                <IconButton color="inherit">
-                  <Typography color="textPrimary">Register</Typography>
-                </IconButton>
-            </a> */}
-            {/* <Link to="/leaderboard">
-              <IconButton color="inherit">
-                <Typography color="textPrimary">Leaderboard</Typography>
-              </IconButton>
+            {/* <Link to="leaderboard">
+                <MenuItem>
+                    <IconButton color="inherit">
+                        <AssessmentIcon />
+                    </IconButton>
+                    <p>Leaderboard</p>
+                </MenuItem>
             </Link>
-            <Link to="/projects">
-              <IconButton color="inherit">
-                <Typography color="textPrimary">Projects</Typography>
-              </IconButton>
+            <Link to="projects">
+                <MenuItem onClick={handleProfileMenuOpen}>
+                    <IconButton color="inherit">
+                        <GitHubIcon />
+                    </IconButton>
+                    <p>Projects</p>
+                </MenuItem>
             </Link> */}
-            <Link to="/contacts">
-              <IconButton edge="end" color="inherit">
-                <Typography color="textPrimary">Contacts</Typography>
-              </IconButton>
+            <Link to="contacts">
+                <MenuItem onClick={handleProfileMenuOpen}>
+                    <IconButton color="inherit">
+                        <Contacts />
+                    </IconButton>
+                    <p>Contacts</p>
+                </MenuItem>
             </Link>
-          </div>
-          <div className={classes.sectionMobile}>
-            {/* <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
-              target="_blank"
-            >
-              <IconButton color="inherit">
-                <Typography color="textPrimary">Register</Typography>
-              </IconButton>
-            </a>  */}
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon color="primary" />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-    </div>
-  );
+        </Menu>
+    );
+
+    return (
+        <div className={classes.grow}>
+            <AppBar id="navbar" position="fixed" color="inherit">
+                <Toolbar>
+                    <Link to="/">
+                        <div className={classes.logo}>
+                            <TimelineIcon color="primary" />
+                            <Typography
+                                className="pl-2 md:text-xl sm:text-sm text:xl"
+                                variant="h6"
+                                noWrap
+                                color="textPrimary"
+                            >
+                                Semester Long Projects
+                            </Typography>
+                        </div>
+                    </Link>
+                    <div className={classes.grow} />
+                    <div className={classes.sectionDesktop}>
+                        <Link to="/">
+                            <IconButton color="inherit">
+                                <Typography color="textPrimary">Home</Typography>
+                            </IconButton>
+                        </Link>
+                        {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link" target="_blank">
+                            <IconButton color="inherit">
+                                <Typography color="textPrimary">Register</Typography>
+                            </IconButton>
+                        </a> */}
+                        {/* <Link to="/leaderboard">
+                            <IconButton color="inherit">
+                                <Typography color="textPrimary">Leaderboard</Typography>
+                            </IconButton>
+                        </Link>
+                        <Link to="/projects">
+                            <IconButton color="inherit">
+                                <Typography color="textPrimary">Projects</Typography>
+                            </IconButton>
+                        </Link> */}
+                        <Link to="/contacts">
+                            <IconButton edge="end" color="inherit">
+                                <Typography color="textPrimary">Contacts</Typography>
+                            </IconButton>
+                        </Link>
+                    </div>
+                    <div className={classes.sectionMobile}>
+                        {/* <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfy14jInabOJDbx7IUk5gJDq5679QoMVRexXbKyadCtOh3iQg/viewform?usp=sf_link"
+                            target="_blank"
+                        >
+                            <IconButton color="inherit">
+                                <Typography color="textPrimary">Register</Typography>
+                            </IconButton>
+                        </a> */}
+                        <IconButton
+                            aria-label="show more"
+                            aria-controls={mobileMenuId}
+                            aria-haspopup="true"
+                            onClick={handleMobileMenuOpen}
+                            color="inherit"
+                        >
+                            <MoreIcon color="primary" />
+                        </IconButton>
+                    </div>
+                </Toolbar>
+            </AppBar>
+            {renderMobileMenu}
+        </div>
+    );
 }
