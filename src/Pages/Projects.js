@@ -69,7 +69,7 @@ export default function Projects() {
     useEffect(() => {
         const fetch = () => {
             axios
-                .get("https://slop-backend-tmgh.onrender.com/get-projects-data")
+                .get("https://git-webhooks.onrender.com/get-projects-data")
                 .then(({ data }) => {
                     console.log("data of projects:", data);
                     setData(data.projects);
@@ -177,7 +177,6 @@ export default function Projects() {
                                                 id={index}
                                                 mentors={obj.mentors}
                                                 url={obj.url}
-                                                isbeginnerFreindly={obj.isbeginnerFreindly}
                                             />
                                         </Grid>
                                     );

@@ -31,7 +31,6 @@ export default function Project({
     langs,
     description,
     updated_at,
-    isbeginnerFreindly,
 }) {
     const classes = useStyles();
     const [loading, setLoading] = useState(true);
@@ -51,8 +50,6 @@ export default function Project({
     } else if (projectName === "Oppia Android") {
         projecturl = "https://github.com/oppia/oppia-android/wiki/SLoP-2020";
     }
-
-    const modifiedurl = url.replace("github.com", "api.github.com/repos");
 
     //   useEffect(()=>{
     //     const fetch = ()=>{
@@ -149,7 +146,7 @@ export default function Project({
                     >{`Last Updated: ${moment(updated_at).fromNow()}`}</Typography>
                 </Grid>
                 <Grid item container direction="row-reverse" className="mt-1">
-                    <IconButton
+                    {/* <IconButton
                         className="mx-2"
                         href={url.concat("/contributors")}
                         target="_blank"
@@ -157,7 +154,7 @@ export default function Project({
                         size="small"
                     >
                         <Group />
-                    </IconButton>
+                    </IconButton> */}
 
                     <IconButton className="mx-2" aria-label="Contributors" size="small">
                         <Star />
@@ -168,13 +165,6 @@ export default function Project({
                         <Usb />
                         <Typography>{forks}</Typography>
                     </IconButton>
-                    {isbeginnerFreindly && (
-                        <Chip
-                            color="primary"
-                            label="Beginner Friendly"
-                            variant="outlined"
-                        />
-                    )}
                 </Grid>
             </Grid>
         </Paper>
