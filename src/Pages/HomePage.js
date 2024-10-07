@@ -1,14 +1,14 @@
 import React from "react";
 import {
-  Grid,
-  makeStyles,
-  Typography,
-  Paper,
-  Container,
-  Button,
-  Fab,
-  Collapse,
-  IconButton,
+    Grid,
+    makeStyles,
+    Typography,
+    Paper,
+    Container,
+    Button,
+    Fab,
+    Collapse,
+    IconButton,
 } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import Alert from "@material-ui/lab/Alert";
@@ -31,76 +31,69 @@ import "./TextGradient.css";
 import "../components/blink.css";
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    backgroundColor: "#000000",
-    padding: theme.spacing(3),
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    textAlign: "center",
-    minHeight: "25%",
-  },
-  paperCounter: {
-    backgroundColor: "#000000",
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    textAlign: "center",
-    minHeight: "25%",
-  },
-
-  button: {
-    marginRight: theme.spacing(3),
-    marginTop: theme.spacing(2),
-    backgroundColor: "#91f8faef",
-  },
-
-  formlink: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    minHeight: theme.spacing(40),
-  },
-
-  typo: {
-    textAlign: "center",
-    margin: theme.spacing(4),
-    color: "white",
-  },
-  logo: {
-    top: "10vh",
-    // left: '5vw',
-  },
-
-  textdiv: {
-    marginTop: "16vh",
-  },
-
-  textover: {
-    fontSize: "200px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "100px",
+    paper: {
+        backgroundColor: "#000000",
+        padding: theme.spacing(3),
+        marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2),
+        textAlign: "center",
+        minHeight: "25%",
     },
-  },
-
-  textcap: {
-    fontSize: "32px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "16px",
+    paperCounter: {
+        backgroundColor: "#000000",
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(3),
+        marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2),
+        textAlign: "center",
+        minHeight: "25%",
     },
-  },
-
-  prizes: {
-    fontSize: "80px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "50px",
+    button: {
+        marginRight: theme.spacing(3),
+        marginTop: theme.spacing(2),
+        backgroundColor: "#91f8faef",
     },
-  },
+    formlink: {
+        padding: theme.spacing(2),
+        textAlign: "center",
+        minHeight: theme.spacing(40),
+    },
+    typo: {
+        textAlign: "center",
+        margin: theme.spacing(4),
+        color: "white",
+    },
+    logo: {
+        top: "10vh",
+        // left: '5vw',
+    },
+    textdiv: {
+        marginTop: "16vh",
+    },
+    textover: {
+        fontSize: "200px",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "100px",
+        },
+    },
+    textcap: {
+        fontSize: "32px",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "16px",
+        },
+    },
+    prizes: {
+        fontSize: "80px",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "50px",
+        },
+    },
 }));
 
 export default function HomePage() {
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-  const [alertmsg, setAlertMsg] = React.useState("");
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+    const [alertmsg, setAlertMsg] = React.useState("");
 
   React.useEffect(() => {
     const script = document.createElement('script');
@@ -160,153 +153,153 @@ export default function HomePage() {
                 </div>
               </Grid>
 
-              <Grid className="section " item xs={12}>
-                <Container maxWidth="md">
-                  <Paper className={classes.paperCounter}>
-                    <Countdown toDate={new Date(2023, 9, 11)} />
-                  </Paper>
-                </Container>
-              </Grid>
-              <Grid className="section xs:py-12" item xs={12}>
-                <Container maxWidth="md">
-                  <Paper className={classes.paper}>
-                    <Grid container direction="column">
-                      <Grid item>
-                        <Typography
-                          variant="h4"
-                          className="txt--gradient-blue mb-6"
-                        >
-                          <b>What is SLoP ?</b>
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography variant="body1" align="left">
-                          Semester Long Projects or SLoP is an initiative by the
-                          Google Developer Student Club (DA-IICT), exclusively for
-                          students who are new to open source software
-                          development to get started with open source
-                          contributions.
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography variant="body1" align="left">
-                          We want to increase the development culture and
-                          involvement of students with open-source technologies
-                          which will present the benefits of open source as well
-                          as introduce them to the cutting edge tech and coding
-                          practices.
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                  </Paper>
-                </Container>
-                <Container maxWidth="md">
-                  <Paper className={classes.paper}>
-                    <Grid container direction="column">
-                      <Grid item>
-                        <Typography
-                          variant="h4"
-                          className="text-center txt--gradient-blue mb-6"
-                        >
-                          <b>How it Works ?</b>
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography variant="body1" align="left">
-                          Participants can apply for the program either as a
-                          student or as a mentor. Mentors are selected through a
-                          process at the discretion of the organizers. The
-                          selected mentors propose projects, the best of which
-                          are chosen to be included in the program. Students
-                          work on these projects during the semester and try to
-                          contribute as much as they can. The mentors review the
-                          PRs and the overall work on their project of various
-                          contributors throughout the coding period of the
-                          program by assigning them some points. At the end of
-                          the coding period, the students are compared on the
-                          basis of the value of their contributions and their
-                          points.
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography variant="body1" align="left">
-                          For more info, please download the student or mentor
-                          manual.
-                        </Typography>
-                      </Grid>
-                      <Grid
-                        item
-                        container
-                        direction="row"
-                        className="mt-6"
-                        justify="center"
-                      >
-                        <Grid item>
-                          <Button
-                            style={{ width: "200px" }}
-                            variant="contained"
-                            className={classes.button}
-                            color="secondary"
-                            startIcon={<School />}
-                            href="https://docs.google.com/document/d/1YXk388DCvZ3h3D_NJRnWo-pr7OcHGekq-zEuYkWy83A/edit?usp=sharing"
-                            target="_blank"
-                          >
-                            Student Manual
-                          </Button>
-                        </Grid>
-                        <Grid item>
-                          <Button
-                            style={{ width: "200px" }}
-                            variant="contained"
-                            className={classes.button}
-                            color="secondary"
-                            startIcon={<LaptopMac />}
-                            href="https://docs.google.com/document/d/1WZPMJCs6G0QUQvATuaiaqm8rvweozOT-QC7JoQeZpsE/edit?usp=sharing"
-                            target="_blank"
-                          >
-                            Mentor Manual
-                          </Button>
-                        </Grid>
-                      </Grid>
-                      <Grid
-                        item
-                        container
-                        direction="row"
-                        className="mt-4"
-                        justify="center"
-                        alignItems="center"
-                      >
-                        <Grid item>
-                          <Button
-                            style={{ width: "200px" }}
-                            variant="contained"
-                            className={classes.button}
-                            color="secondary"
-                            startIcon={<ContactSupportIcon />}
-                            href="https://docs.google.com/document/d/1wsMUM1K3ntzsjr6o8HrAoQOWAXhg4Zk2l0V-YviJ1IY/edit?usp=sharing"
-                            target="_blank"
-                          >
-                            FAQs & Inquiries
-                          </Button>
-                        </Grid>
-                        <Grid item>
-                          <Button
-                            style={{ width: "200px" }}
-                            variant="contained"
-                            className={classes.button}
-                            color="secondary"
-                            startIcon={<DescriptionIcon />}
-                            href="https://docs.google.com/document/d/1LVzyM2VhW-5Yl3ULOfOerQ_9KW4l-eR1anjToIc7084/edit?usp=sharing"
-                            target="_blank"
-                          >
-                            How it Works ?
-                          </Button>
-                        </Grid>
-                      </Grid>
-                    </Grid>
-                  </Paper>
-                </Container>
-              </Grid>
+                            <Grid className="section " item xs={12}>
+                                <Container maxWidth="md">
+                                    <Paper className={classes.paperCounter}>
+                                        <Countdown toDate={new Date(2023, 9, 11)} />
+                                    </Paper>
+                                </Container>
+                            </Grid>
+                            <Grid className="section xs:py-12" item xs={12}>
+                                <Container maxWidth="md">
+                                    <Paper className={classes.paper}>
+                                        <Grid container direction="column">
+                                            <Grid item>
+                                                <Typography
+                                                    variant="h4"
+                                                    className="txt--gradient-blue mb-6"
+                                                >
+                                                    <b>What is SLoP ?</b>
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant="body1" align="left">
+                                                    Semester Long Projects or SLoP is an initiative by the
+                                                    Google Developer Student Club (DA-IICT), exclusively for
+                                                    students who are new to open source software
+                                                    development to get started with open source
+                                                    contributions.
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant="body1" align="left">
+                                                    We want to increase the development culture and
+                                                    involvement of students with open-source technologies
+                                                    which will present the benefits of open source as well
+                                                    as introduce them to the cutting edge tech and coding
+                                                    practices.
+                                                </Typography>
+                                            </Grid>
+                                        </Grid>
+                                    </Paper>
+                                </Container>
+                                <Container maxWidth="md">
+                                    <Paper className={classes.paper}>
+                                        <Grid container direction="column">
+                                            <Grid item>
+                                                <Typography
+                                                    variant="h4"
+                                                    className="text-center txt--gradient-blue mb-6"
+                                                >
+                                                    <b>How it Works ?</b>
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant="body1" align="left">
+                                                    Participants can apply for the program either as a
+                                                    student or as a mentor. Mentors are selected through a
+                                                    process at the discretion of the organizers. The
+                                                    selected mentors propose projects, the best of which
+                                                    are chosen to be included in the program. Students
+                                                    work on these projects during the semester and try to
+                                                    contribute as much as they can. The mentors review the
+                                                    PRs and the overall work on their project of various
+                                                    contributors throughout the coding period of the
+                                                    program by assigning them some points. At the end of
+                                                    the coding period, the students are compared on the
+                                                    basis of the value of their contributions and their
+                                                    points.
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant="body1" align="left">
+                                                    For more info, please download the student or mentor
+                                                    manual.
+                                                </Typography>
+                                            </Grid>
+                                            <Grid
+                                                item
+                                                container
+                                                direction="row"
+                                                className="mt-6"
+                                                justify="center"
+                                            >
+                                                <Grid item>
+                                                    <Button
+                                                        style={{ width: "200px" }}
+                                                        variant="contained"
+                                                        className={classes.button}
+                                                        color="secondary"
+                                                        startIcon={<School />}
+                                                        href="https://docs.google.com/document/d/1YXk388DCvZ3h3D_NJRnWo-pr7OcHGekq-zEuYkWy83A/edit?usp=sharing"
+                                                        target="_blank"
+                                                    >
+                                                        Student Manual
+                                                    </Button>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Button
+                                                        style={{ width: "200px" }}
+                                                        variant="contained"
+                                                        className={classes.button}
+                                                        color="secondary"
+                                                        startIcon={<LaptopMac />}
+                                                        href="https://docs.google.com/document/d/1WZPMJCs6G0QUQvATuaiaqm8rvweozOT-QC7JoQeZpsE/edit?usp=sharing"
+                                                        target="_blank"
+                                                    >
+                                                        Mentor Manual
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                            <Grid
+                                                item
+                                                container
+                                                direction="row"
+                                                className="mt-4"
+                                                justify="center"
+                                                alignItems="center"
+                                            >
+                                                <Grid item>
+                                                    <Button
+                                                        style={{ width: "200px" }}
+                                                        variant="contained"
+                                                        className={classes.button}
+                                                        color="secondary"
+                                                        startIcon={<ContactSupportIcon />}
+                                                        href="https://docs.google.com/document/d/1wsMUM1K3ntzsjr6o8HrAoQOWAXhg4Zk2l0V-YviJ1IY/edit?usp=sharing"
+                                                        target="_blank"
+                                                    >
+                                                        FAQs & Inquiries
+                                                    </Button>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Button
+                                                        style={{ width: "200px" }}
+                                                        variant="contained"
+                                                        className={classes.button}
+                                                        color="secondary"
+                                                        startIcon={<DescriptionIcon />}
+                                                        href="https://docs.google.com/document/d/1LVzyM2VhW-5Yl3ULOfOerQ_9KW4l-eR1anjToIc7084/edit?usp=sharing"
+                                                        target="_blank"
+                                                    >
+                                                        How it Works ?
+                                                    </Button>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                    </Paper>
+                                </Container>
+                            </Grid>
 
               <Grid className="section xs:py-2 xs:pb-20" item xs={12}>
                 <Container maxWidth="md">

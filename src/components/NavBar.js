@@ -16,74 +16,71 @@ import TimelineIcon from '@material-ui/icons/Timeline';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    width: '100%',
-    zIndex: '100',
-    flexGrow: 1,
-    blur: '30%',
-    // opacity: '90%',
-    marginBottom: '28px',
-    '& a': {
-      color: 'inherit',
-      textDecoration: 'none',
+    grow: {
+        width: '100%',
+        zIndex: '100',
+        flexGrow: 1,
+        blur: '30%',
+        // opacity: '90%',
+        marginBottom: '28px',
+        '& a': {
+            color: 'inherit',
+            textDecoration: 'none',
+        },
     },
-  },
-  menu: {
-    '& a': {
-      color: 'inherit',
-      textDecoration: 'none',
+    menu: {
+        '& a': {
+            color: 'inherit',
+            textDecoration: 'none',
+        },
     },
-  },
-
-  title: {
-    marginLeft: 8,
-  },
-
-  menuButton: {
-    paddingRight: theme.spacing(2),
-  },
-  logo: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-
-  sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
+    title: {
+        marginLeft: 8,
     },
-  },
-  sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+    menuButton: {
+        paddingRight: theme.spacing(2),
     },
-  },
+    logo: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    sectionDesktop: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'flex',
+        },
+    },
+    sectionMobile: {
+        display: 'flex',
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        },
+    },
 }));
 
 export default function PrimarySearchAppBar() {
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const classes = useStyles();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    const handleProfileMenuOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
+    const handleMobileMenuClose = () => {
+        setMobileMoreAnchorEl(null);
+    };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+        handleMobileMenuClose();
+    };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
+    const handleMobileMenuOpen = (event) => {
+        setMobileMoreAnchorEl(event.currentTarget);
+    };
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (

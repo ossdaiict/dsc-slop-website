@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import {
-  Grid,
-  Grow,
-  Container,
-  CircularProgress,
-  makeStyles,
-  Typography,
-  Divider,
+    Grid,
+    Grow,
+    Container,
+    CircularProgress,
+    makeStyles,
+    Typography,
+    Divider,
 } from "@material-ui/core";
 import Project from "../components/Project";
 import axios from "axios";
@@ -32,92 +32,79 @@ const cookies = new Cookies();
 // }
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-  },
-  root: {
-    padding: "4px 4px",
-    marginRight: "8px",
-    marginBottom: "8px",
-    display: "flex",
-    alignItems: "center",
-    width: "100%",
-    backgroundColor: "#1c1c1c",
-  },
-  input: {
-    marginLeft: theme.spacing(1),
-    flex: 1,
-  },
-  iconButton: {},
+    container: {
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
+    },
+    root: {
+        padding: "4px 4px",
+        marginRight: "8px",
+        marginBottom: "8px",
+        display: "flex",
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: "#1c1c1c",
+    },
+    input: {
+        marginLeft: theme.spacing(1),
+        flex: 1,
+    },
+    iconButton: {},
 }));
 
 export default function Projects() {
-  const [cookie, setCookie] = useCookies([""]);
+    const [cookie, setCookie] = useCookies([""]);
 
-  React.useEffect(() => {
-    const bearCookie = cookies.get("bearCookie");
-    console.log(bearCookie);
-    setCookie("bearCookie", { loaded: false }, { path: "/" });
-  }, [cookies]);
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [dummy, setDummy] = useState([]);
-  const [showLinux, setShowLinux] = useState(true);
-  const classes = useStyles();
+    React.useEffect(() => {
+        const bearCookie = cookies.get("bearCookie");
+        console.log(bearCookie);
+        setCookie("bearCookie", { loaded: false }, { path: "/" });
+    }, [cookies]);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [dummy, setDummy] = useState([]);
+    const [showLinux, setShowLinux] = useState(true);
+    const classes = useStyles();
 
-  useEffect(() => {
-    // Example projects data
-    // {
-      // description: "Demonstration of different algorithms and operations on faces. Star the repo⭐"
-      // forks: 503
-      // isbeginnerFreindly: true
-      // langs: ""
-      // mentors: "Akshita Gupta"
-      // project: "Face-X"
-      // stars: 546
-      // updated_at: "2023-09-26T02:48:12Z"
-      // url: "https://github.com/akshitagupta15june/Face-X"
-    // }
+    useEffect(() => {
+        const fetch = () => {
+            axios
+                .get("https://git-webhooks.onrender.com/get-projects-data")
+                .then(({ data }) => {
+                    console.log("data of projects:", data);
+                    setData(data.projects);
+                    setDummy(data.projects);
+                    setLoading(false);
+                });
+        };
 
-    const fetch = () => {
-      axios
-        .get("https://git-webhooks.onrender.com/get-projects-data")
-        .then(({ data }) => {
-          console.log("data of projects:", data);
-          setData(data.projects);
-          setDummy(data.projects);
-          setLoading(false);
-        });
-    };
+        fetch();
+    }, []);
 
-    fetch();
-  }, []);
-
-  function FilterList(keyword) {
-    const dumdata = data
-      .filter((obj) => {
-        return (
-          (obj.langs != null &&
-            obj.langs.toLowerCase().includes(keyword.toLowerCase())) ||
-          (obj.project != null &&
-            obj.project.toLowerCase().includes(keyword.toLowerCase())) ||
-          (obj.description != null &&
-            obj.description.toLowerCase().includes(keyword.toLowerCase()))
-        );
-      })
-      .map((filteredobj) => filteredobj);
-    setDummy(dumdata);
-    // if (
-    //    linuxData.langs.toLowerCase().includes(keyword.toLowerCase()) ||
-    //    linuxData.projectName.toLowerCase().includes(keyword.toLowerCase()) ||
-    //    linuxData.description.toLowerCase().includes(keyword.toLowerCase())
-    // ) {
-    //    setShowLinux(true)
-    // } else {
-    //    setShowLinux(false)
-    // }
-  }
+    function FilterList(keyword) {
+        const dumdata = data
+            .filter((obj) => {
+                return (
+                    (obj.langs != null &&
+                        obj.langs.toLowerCase().includes(keyword.toLowerCase())) ||
+                    (obj.project != null &&
+                        obj.project.toLowerCase().includes(keyword.toLowerCase())) ||
+                    (obj.description != null &&
+                        obj.description.toLowerCase().includes(keyword.toLowerCase()))
+                );
+            })
+            .map((filteredobj) => filteredobj);
+        setDummy(dumdata);
+        // if (
+        //    linuxData.langs.toLowerCase().includes(keyword.toLowerCase()) ||
+        //    linuxData.projectName.toLowerCase().includes(keyword.toLowerCase()) ||
+        //    linuxData.description.toLowerCase().includes(keyword.toLowerCase())
+        // ) {
+        //    setShowLinux(true)
+        // } else {
+        //    setShowLinux(false)
+        // }
+    }
 
   if (loading) {
     return (
