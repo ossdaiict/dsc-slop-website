@@ -340,14 +340,13 @@ export default function HomePage() {
                           <b> Are You Student ? </b>
                         </Typography>
                         <Typography variant="body1" className={classes.typo}>
-                          If you are new to the ginormous world of open source
-                          development or development in general, or just want to
-                          explore, then SLoP is perfect for you. You'll get to
-                          learn some super cool stuff from great mentors (most
-                          of them will be working on awesome tech!) and can
-                          compete for amazing prizes with your fellow beginners.
-                          For more details, check out the Student's Manual above
-                          and to register click below!
+                        If you're new to the vast world of open-source development, 
+                        development in general, or simply want to explore, SLoP is 
+                        the perfect opportunity for you! Start by visiting the 
+                        <a className="text-blue-500 underline text-xl" href="https://slop.dscdaiict.in/projects"> Projects page</a> to discover some exciting opportunities. Be 
+                        sure to read the <a className="text-blue-500 underline text-xl" href ="https://docs.google.com/document/d/1YXk388DCvZ3h3D_NJRnWo-pr7OcHGekq-zEuYkWy83A/edit?usp=sharing">Student's Manual</a>. Once you're ready, press 
+                        the Register button below to join the competition and learn 
+                        alongside fellow beginners!
                         </Typography>
                         <div className="flex justify-center">
                           <div
