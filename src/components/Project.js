@@ -31,7 +31,7 @@ export default function Project({
   langs,
   description,
   updated_at,
-  isbeginnerFreindly,
+  // isbeginnerFreindly,
 }) {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
@@ -46,13 +46,13 @@ export default function Project({
 
   var projecturl = url;
 
-  if (projectName === "Oppia") {
-    projecturl = "https://github.com/oppia/oppia/wiki/SLoP-2020";
-  } else if (projectName === "Oppia Android") {
-    projecturl = "https://github.com/oppia/oppia-android/wiki/SLoP-2020";
-  }
+  // if (projectName === "Oppia") {
+  //   projecturl = "https://github.com/oppia/oppia/wiki/SLoP-2020";
+  // } else if (projectName === "Oppia Android") {
+  //   projecturl = "https://github.com/oppia/oppia-android/wiki/SLoP-2020";
+  // }
 
-  const modifiedurl = url.replace("github.com", "api.github.com/repos");
+  // const modifiedurl = url.replace("github.com", "api.github.com/repos");
 
   //   useEffect(()=>{
   //     const fetch = ()=>{
@@ -77,23 +77,23 @@ export default function Project({
 
   //   },[]);
 
-  //   if (loading) {
-  //     return (
-  //       <Paper variant="outlined" className={classes.paper}>
-  //         <Grid
-  //           container
-  //           spacing={2}
-  //           justify="center"
-  //           alignItems="center"
-  //           style={{ height: '25vh', textAlign: 'center' }}
-  //         >
-  //           <Grid item>
-  //             <CircularProgress size={50} />
-  //           </Grid>
-  //         </Grid>
-  //       </Paper>
-  //     );
-  //   }
+    // if (loading) {
+    //   return (
+    //     <Paper variant="outlined" className={classes.paper}>
+    //       <Grid
+    //         container
+    //         spacing={2}
+    //         justify="center"
+    //         alignItems="center"
+    //         style={{ height: '25vh', textAlign: 'center' }}
+    //       >
+    //         <Grid item>
+    //           <CircularProgress size={50} />
+    //         </Grid>
+    //       </Grid>
+    //     </Paper>
+    //   );
+    // }
 
   return (
     <Paper elevation={5} variant="outlined" className={classes.paper}>
@@ -168,13 +168,13 @@ export default function Project({
             <Usb />
             <Typography>{forks}</Typography>
           </IconButton>
-          {isbeginnerFreindly && (
+          {/* {isbeginnerFreindly && (
             <Chip
               color="primary"
               label="Beginner Friendly"
               variant="outlined"
             />
-          )}
+          )} */}
         </Grid>
       </Grid>
     </Paper>

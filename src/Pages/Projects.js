@@ -67,9 +67,22 @@ export default function Projects() {
   const classes = useStyles();
 
   useEffect(() => {
+    // Example projects data
+    // {
+      // description: "Demonstration of different algorithms and operations on faces. Star the repo⭐"
+      // forks: 503
+      // isbeginnerFreindly: true
+      // langs: ""
+      // mentors: "Akshita Gupta"
+      // project: "Face-X"
+      // stars: 546
+      // updated_at: "2023-09-26T02:48:12Z"
+      // url: "https://github.com/akshitagupta15june/Face-X"
+    // }
+
     const fetch = () => {
       axios
-        .get("https://slop-backend-tmgh.onrender.com/get-projects-data")
+        .get("https://git-webhooks.onrender.com/get-projects-data")
         .then(({ data }) => {
           console.log("data of projects:", data);
           setData(data.projects);
@@ -177,7 +190,7 @@ export default function Projects() {
                         id={index}
                         mentors={obj.mentors}
                         url={obj.url}
-                        isbeginnerFreindly={obj.isbeginnerFreindly}
+                        // isbeginnerFreindly={obj.isbeginnerFreindly}
                       />
                     </Grid>
                   );

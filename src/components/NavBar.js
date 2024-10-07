@@ -112,7 +112,7 @@ export default function PrimarySearchAppBar() {
           </IconButton>
           <p>Leaderboard</p>
         </MenuItem>
-      </Link>
+      </Link> */}
       <Link to="projects">
         <MenuItem onClick={handleProfileMenuOpen}>
           <IconButton color="inherit">
@@ -120,7 +120,7 @@ export default function PrimarySearchAppBar() {
           </IconButton>
           <p>Projects</p>
         </MenuItem>
-      </Link> */}
+      </Link>
       <Link to="contacts">
         <MenuItem onClick={handleProfileMenuOpen}>
           <IconButton color="inherit">
@@ -166,12 +166,12 @@ export default function PrimarySearchAppBar() {
               <IconButton color="inherit">
                 <Typography color="textPrimary">Leaderboard</Typography>
               </IconButton>
-            </Link>
+            </Link> */}
             <Link to="/projects">
               <IconButton color="inherit">
                 <Typography color="textPrimary">Projects</Typography>
               </IconButton>
-            </Link> */}
+            </Link>
             <Link to="/contacts">
               <IconButton edge="end" color="inherit">
                 <Typography color="textPrimary">Contacts</Typography>
