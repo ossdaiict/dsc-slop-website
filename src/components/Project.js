@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Project({
-  id,
-  mentors,
-  url,
-  projectName,
-  stars,
-  forks,
-  langs,
-  description,
-  updated_at,
-  // isbeginnerFreindly,
+    id,
+    mentors,
+    url,
+    projectName,
+    stars,
+    forks,
+    langs,
+    description,
+    updated_at,
+    // isbeginnerFreindly,
 }) {
     const classes = useStyles();
     const [loading, setLoading] = useState(true);
@@ -46,13 +46,13 @@ export default function Project({
 
     var projecturl = url;
 
-  // if (projectName === "Oppia") {
-  //   projecturl = "https://github.com/oppia/oppia/wiki/SLoP-2020";
-  // } else if (projectName === "Oppia Android") {
-  //   projecturl = "https://github.com/oppia/oppia-android/wiki/SLoP-2020";
-  // }
+    // if (projectName === "Oppia") {
+    //   projecturl = "https://github.com/oppia/oppia/wiki/SLoP-2020";
+    // } else if (projectName === "Oppia Android") {
+    //   projecturl = "https://github.com/oppia/oppia-android/wiki/SLoP-2020";
+    // }
 
-  // const modifiedurl = url.replace("github.com", "api.github.com/repos");
+    // const modifiedurl = url.replace("github.com", "api.github.com/repos");
 
     //   useEffect(()=>{
     //     const fetch = ()=>{
@@ -164,19 +164,19 @@ export default function Project({
                         <Typography>{stars}</Typography>
                     </IconButton>
 
-          <IconButton className="mx-2" aria-label="Contributors" size="small">
-            <Usb />
-            <Typography>{forks}</Typography>
-          </IconButton>
-          {/* {isbeginnerFreindly && (
-            <Chip
-              color="primary"
-              label="Beginner Friendly"
-              variant="outlined"
-            />
-          )} */}
-        </Grid>
-      </Grid>
-    </Paper>
-  );
+                    <IconButton className="mx-2" aria-label="Contributors" size="small">
+                        <Usb />
+                        <Typography>{forks}</Typography>
+                    </IconButton>
+                    {/* {isbeginnerFreindly && (
+                        <Chip
+                            color="primary"
+                            label="Beginner Friendly"
+                            variant="outlined"
+                        />
+                    )} */}
+                </Grid>
+            </Grid>
+        </Paper>
+    );
 }

@@ -16,26 +16,24 @@ const CountdownDisplay = (props) => {
             <Typography className="text-center txt--gradient-orange font-sans xs:text-2xl text-4xl">
                 🚀Student Registrations has Started🚀
             </Typography>
-
             {/* <div className="flex w-full justify-center mt-4">
-        <CountdownBlock>
-          {String(days).padStart(2, 0)}
-          <br /> Days
-        </CountdownBlock>
-        <CountdownBlock>
-          {String(hours).padStart(2, 0)}
-          <br /> Hours
-        </CountdownBlock>
-        <CountdownBlock>
-          {String(minutes).padStart(2, 0)}
-          <br /> Minutes
-        </CountdownBlock>
-        <CountdownBlock>
-          {String(seconds).padStart(2, 0)}
-          <br /> Seconds
-        </CountdownBlock>
-      </div> */}
-
+                <CountdownBlock>
+                    {String(days).padStart(2, 0)}
+                    <br /> Days
+                </CountdownBlock>
+                <CountdownBlock>
+                    {String(hours).padStart(2, 0)}
+                    <br /> Hours
+                </CountdownBlock>
+                <CountdownBlock>
+                    {String(minutes).padStart(2, 0)}
+                    <br /> Minutes
+                </CountdownBlock>
+                <CountdownBlock>
+                    {String(seconds).padStart(2, 0)}
+                    <br /> Seconds
+                </CountdownBlock>
+            </div> */}
         </>
     );
 };
