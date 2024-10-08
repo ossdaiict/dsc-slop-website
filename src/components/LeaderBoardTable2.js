@@ -14,7 +14,7 @@ function LeaderBoardTable2() {
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios.get(
-                'https://slop-backend-tmgh.onrender.com/student'
+                'https://git-webhooks.onrender.com/student'
             );
             // console.log(response.data);
             const usersList = response.data;
