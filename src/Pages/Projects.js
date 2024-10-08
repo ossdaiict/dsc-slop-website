@@ -96,99 +96,99 @@ export default function Projects() {
             .map((filteredobj) => filteredobj);
         setDummy(dumdata);
         // if (
-        //    linuxData.langs.toLowerCase().includes(keyword.toLowerCase()) ||
-        //    linuxData.projectName.toLowerCase().includes(keyword.toLowerCase()) ||
-        //    linuxData.description.toLowerCase().includes(keyword.toLowerCase())
+        //     linuxData.langs.toLowerCase().includes(keyword.toLowerCase()) ||
+        //     linuxData.projectName.toLowerCase().includes(keyword.toLowerCase()) ||
+        //     linuxData.description.toLowerCase().includes(keyword.toLowerCase())
         // ) {
-        //    setShowLinux(true)
+        //     setShowLinux(true)
         // } else {
-        //    setShowLinux(false)
+        //     setShowLinux(false)
         // }
     }
 
-  if (loading) {
-    return (
-      <Grid
-        container
-        spacing={3}
-        justify="center"
-        alignItems="center"
-        style={{ height: "100vh", textAlign: "center" }}
-      >
-        <Grid item>
-          <CircularProgress size={100} />
-        </Grid>
-      </Grid>
-    );
-  } else {
-    return (
-      <div className="mt-20 min-h-screen">
-        <Container>
-          <Grow in>
-            <Grid container className={classes.container}>
-              <Grid item md={12}>
-                <Typography
-                  className="mt-4 xs:text-xl sm:text-2xl text-4xl text-center w-full"
-                  color="textPrimary"
-                >
-                  <b className="txt--gradient-pink">Projects</b>
-                </Typography>
-                <Typography
-                  className="xs:text-lg sm:text-xl text-2xl text-center"
-                  variant="h6"
-                  color="textPrimary"
-                >
-                  {/* <b className="txt--gradient-orange-lite">
-                              Here are the previos projects under SLoP 2020!!!
-                           </b> */}
-                </Typography>
-                <Divider
-                  className="my-4"
-                  variant="middle"
-                  color="textPrimary"
-                />
-                <Paper component="form" className={classes.root}>
-                  <IconButton className={classes.iconButton} aria-label="menu">
-                    <MenuIcon />
-                  </IconButton>
-                  <InputBase
-                    className={classes.input}
-                    placeholder="Search Projects,Tags"
-                    onChange={(e) => FilterList(e.target.value)}
-                  />
-                </Paper>
-              </Grid>
-              {/* {showLinux && (
-                        <Grid item xs={12} sm={12} md={6}>
-                           <LinuxProject {...linuxData} />
-                        </Grid>
-                     )} */}
-              {dummy.map((obj, index) => {
-                if (obj.project !== "") {
-                  return (
-                    <Grid key={index} item xs={12} sm={12} md={6}>
-                      <Project
-                        projectName={obj.project}
-                        description={obj.description}
-                        updated_at={obj.updated_at}
-                        langs={obj.langs}
-                        forks={obj.forks}
-                        stars={obj.stars}
-                        id={index}
-                        mentors={obj.mentors}
-                        url={obj.url}
-                        // isbeginnerFreindly={obj.isbeginnerFreindly}
-                      />
-                    </Grid>
-                  );
-                } else {
-                  return null;
-                }
-              })}
+    if (loading) {
+        return (
+            <Grid
+                container
+                spacing={3}
+                justify="center"
+                alignItems="center"
+                style={{ height: "100vh", textAlign: "center" }}
+            >
+                <Grid item>
+                    <CircularProgress size={100} />
+                </Grid>
             </Grid>
-          </Grow>
-        </Container>
-      </div>
-    );
-  }
+        );
+    } else {
+        return (
+            <div className="mt-20 min-h-screen">
+                <Container>
+                    <Grow in>
+                        <Grid container className={classes.container}>
+                            <Grid item md={12}>
+                                <Typography
+                                    className="mt-4 xs:text-xl sm:text-2xl text-4xl text-center w-full"
+                                    color="textPrimary"
+                                >
+                                    <b className="txt--gradient-pink">Projects</b>
+                                </Typography>
+                                <Typography
+                                    className="xs:text-lg sm:text-xl text-2xl text-center"
+                                    variant="h6"
+                                    color="textPrimary"
+                                >
+                                    {/* <b className="txt--gradient-orange-lite">
+                                        Here are the previos projects under SLoP 2020!!!
+                                    </b> */}
+                                </Typography>
+                                <Divider
+                                    className="my-4"
+                                    variant="middle"
+                                    color="textPrimary"
+                                />
+                                <Paper component="form" className={classes.root}>
+                                    <IconButton className={classes.iconButton} aria-label="menu">
+                                        <MenuIcon />
+                                    </IconButton>
+                                    <InputBase
+                                        className={classes.input}
+                                        placeholder="Search Projects,Tags"
+                                        onChange={(e) => FilterList(e.target.value)}
+                                    />
+                                </Paper>
+                            </Grid>
+                            {/* {showLinux && (
+                                <Grid item xs={12} sm={12} md={6}>
+                                    <LinuxProject {...linuxData} />
+                                </Grid>
+                            )} */}
+                            {dummy.map((obj, index) => {
+                                if (obj.project !== "") {
+                                    return (
+                                        <Grid key={index} item xs={12} sm={12} md={6}>
+                                            <Project
+                                                projectName={obj.project}
+                                                description={obj.description}
+                                                updated_at={obj.updated_at}
+                                                langs={obj.langs}
+                                                forks={obj.forks}
+                                                stars={obj.stars}
+                                                id={index}
+                                                mentors={obj.mentors}
+                                                url={obj.url}
+                                            // isbeginnerFreindly={obj.isbeginnerFreindly}
+                                            />
+                                        </Grid>
+                                    );
+                                } else {
+                                    return null;
+                                }
+                            })}
+                        </Grid>
+                    </Grow>
+                </Container>
+            </div>
+        );
+    }
 }
