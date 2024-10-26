@@ -22,6 +22,12 @@ import LogoBear from "../components/LogoBear";
 import devfolio_logo from "../images/Devfolio_Logo-White.png";
 import ploygon_logo from "../images/Polygon_Logo-White.png";
 import ethindia_logo from "../images/ethindia-light.png";
+import aptos_logo from "../images/Aptos_Primary_WHT.png"
+import balsamiq_logo from "../images/smileyface-transparent-1080x1080.png"
+import intb_logo from "../images/InterviewBuddy Logo updated_White BG.png"
+import xyz_logo from "../images/xyz-logo-white.png"
+import flatlogic_logo from "../images/flatlogic.png"
+import GMC_logo from "../images/GMC.png"
 // import ApplyWithDevfolio from "../components/ApplyWithDevfolio";
 import Footer from "../components/Footer";
 import Countdown from "../components/Countdown";
@@ -427,22 +433,75 @@ export default function HomePage() {
                                         <Typography className="txt--gradient-orange" variant="h4">
                                             <b>Sponsors</b>
                                         </Typography>
-                                        <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4">
-                                            <img
-                                                src={devfolio_logo}
-                                                alt="DEVFOLIO LOGO"
-                                                className="max-w-xs sm:max-w-md md:max-w-xl mt-4"
-                                            />
-                                            <img
-                                                src={ploygon_logo}
-                                                alt="POLYGON LOGO"
-                                                className="max-w-xs sm:max-w-md md:max-w-xl mt-4"
-                                            />
-                                            <img
-                                                src={ethindia_logo}
-                                                alt="ETHINDIA LOGO"
-                                                className="max-w-xs sm:max-w-xs md:max-w-sm mt-4"
-                                            />
+                                        <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center mt-6 items-center">
+                                            <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={devfolio_logo}
+                                                    alt="DEVFOLIO LOGO"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                            <a href="https://polygon.technology/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={ploygon_logo}
+                                                    alt="POLYGON LOGO"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                            <a href="https://ethindia.co/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={ethindia_logo}
+                                                    alt="ETHINDIA LOGO"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                            <a href="https://aptosfoundation.org/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={aptos_logo}
+                                                    alt="APTOS LOGO"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                        </div>
+                                        <Typography className="txt--gradient-orange mt-10" variant="h4">
+                                            <b>Co-Sponsors</b>
+                                        </Typography>
+                                        <div className="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center mt-6 items-center">
+                                            <a href="https://balsamiq.com/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={balsamiq_logo}
+                                                    alt="Balsamiq Logo"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                            <a href="https://gen.xyz/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={xyz_logo}
+                                                    alt=".xyz logo"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                            <a href="https://interviewbuddy.net/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={intb_logo}
+                                                    alt="InterviewBuddy Logo"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                            <a href="https://flatlogic.com/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={flatlogic_logo}
+                                                    alt="FlatLogic LOGO"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
+                                            <a href="https://givemycertificate.com/" target="_blank" rel="noopener noreferrer">
+                                                <img
+                                                    src={GMC_logo}
+                                                    alt="GMC LOGO"
+                                                    className="max-h-20 object-contain"
+                                                />
+                                            </a>
                                         </div>
                                     </Paper>
                                 </Container>
